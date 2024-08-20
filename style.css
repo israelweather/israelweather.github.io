@@ -319,3 +319,15 @@ body.dark-mode .dark-mode-toggle {
 body.dark-mode .intro-text {
     color: #f0f0f0; /* or any light color that fits your design */
 }
+
+.ad-container {
+    margin: 20px 0;
+    text-align: center;
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+body.dark-mode .ad-container {
+    background-color: #34495e;
+}
