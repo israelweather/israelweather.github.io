@@ -1,0 +1,321 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Assistant', sans-serif;
+    background: linear-gradient(135deg, #6dd5ed, #2193b0);
+    color: #333;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    direction: rtl;
+}
+
+/* Container Styling */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header Styling */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Main Content Styling */
+main {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Search Container Styling */
+.search-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-direction: row-reverse;
+}
+
+.input-group {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: row-reverse;
+}
+
+input[type="text"] {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 0 5px 5px 0;
+    font-size: 1rem;
+}
+
+.btn {
+    padding: 10px 20px;
+    background-color: #2193b0;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 1rem;
+}
+
+#getWeatherByCityBtn {
+    border-radius: 5px 0 0 5px;
+}
+
+.btn:hover {
+    background-color: #1c7a94;
+}
+
+/* Weather Info Styling */
+.weather-info {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.current-weather,
+.next-5-days {
+    width: 100%;
+    max-width: 800px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.current-weather h2, .next-5-days h2 {
+    margin-bottom: 15px;
+    color: #2193b0;
+}
+
+.weather-icon {
+    width: 50px;
+    height: 50px;
+}
+
+/* Daily Forecast Styling */
+.daily-forecast {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 15px;
+    padding-bottom: 10px;
+    justify-content: flex-start;
+}
+
+.day {
+    flex: 0 0 auto;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    min-width: 120px;
+    max-width: 150px;
+}
+
+.date {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.temperature {
+    font-size: 1.2em;
+    margin: 5px 0;
+}
+
+.description {
+    font-size: 0.9em;
+    color: #666;
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    margin-top: 30px;
+    color: #fff;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .search-container {
+        flex-direction: column-reverse;
+    }
+
+    .input-group {
+        width: 100%;
+        flex-direction: row-reverse;
+    }
+
+    input[type="text"], .btn {
+        width: 100%;
+        border-radius: 5px;
+    }
+
+    #getWeatherByCityBtn {
+        border-radius: 5px;
+        margin-top: 10px;
+    }
+
+    .current-weather, .next-5-days {
+        padding: 15px;
+    }
+
+    .daily-forecast {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .day {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+/* Fade-in Animation */
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Popular Cities Styling */
+.popular-cities {
+    margin-top: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.popular-cities h2 {
+    color: #2193b0;
+    margin-bottom: 15px;
+}
+
+.popular-cities ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.popular-cities li {
+    flex: 1 1 calc(25% - 10px);
+    min-width: 120px;
+}
+
+.popular-cities a {
+    display: block;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    text-align: center;
+    color: #333;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.popular-cities a:hover {
+    background-color: #e0e0e0;
+}
+
+/* Intro Text Styling */
+.intro-text {
+    margin-bottom: 20px;
+    line-height: 1.6;
+    color: #333;
+}
+/* Dark mode styles */
+body.dark-mode {
+    background: linear-gradient(135deg, #2c3e50, #34495e);
+    color: #f0f0f0;
+}
+
+body.dark-mode main {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #f0f0f0; /* Add this line to ensure all text in main is light colored */
+}
+
+body.dark-mode .current-weather,
+body.dark-mode .next-5-days,
+body.dark-mode .popular-cities {
+    background-color: #2c3e50;
+    color: #f0f0f0;
+}
+
+body.dark-mode h2 {
+    color: #3498db;
+}
+
+body.dark-mode input[type="text"] {
+    background-color: #34495e;
+    color: #f0f0f0;
+    border-color: #2c3e50;
+}
+
+body.dark-mode .btn {
+    background-color: #3498db;
+}
+
+body.dark-mode .btn:hover {
+    background-color: #2980b9;
+}
+
+body.dark-mode .popular-cities a {
+    background-color: #34495e;
+    color: #f0f0f0;
+}
+
+body.dark-mode .popular-cities a:hover {
+    background-color: #2c3e50;
+}
+
+/* Dark mode toggle button */
+.dark-mode-toggle {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+body.dark-mode .dark-mode-toggle {
+    color: #f0f0f0;
+}
+body.dark-mode .intro-text {
+    color: #f0f0f0; /* or any light color that fits your design */
+}
