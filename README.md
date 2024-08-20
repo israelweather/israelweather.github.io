@@ -5,7 +5,7 @@ This project is a weather application for Israel, providing current weather cond
 ## Live View
 
 You can see the live version of the application here:
-[Israel Weather App](https://yehudaheller.github.io/israelweather/)
+[Live demo here](https://israelweather.github.io/)
 
 ## Technologies Used
 
