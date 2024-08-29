@@ -43,8 +43,8 @@
     <i class="fas fa-search"></i> אנא הזן שם עיר או השתמש במיקום הנוכחי שלך כדי לקבל נתוני מזג אוויר.
 </div>
                 <div class="search-box">
-
                     <input type="text" id="cityInput" placeholder="הזן שם עיר" aria-label="הזן שם עיר">
+                    <ul id="suggestions" class="suggestions"></ul>
                     <button id="getWeatherByCityBtn" class="btn search-btn" aria-label="חפש מזג אוויר">
                         <i class="fas fa-search" aria-hidden="true"></i>
                     </button>
@@ -65,7 +65,7 @@
                         <i class="fas fa-landmark"></i>
                         <span>ירושלים</span>
                     </div>
-                    <div class="city-item" onclick="weatherApp.fetchWeatherData('תל אביב')">
+                    <div class="city-item" onclick="weatherApp.fetchWeatherData('תל אביב-יפו')">
                         <i class="fas fa-building"></i>
                         <span>תל אביב</span>
                     </div>
@@ -87,7 +87,6 @@
                     </div>
                 </div>
             </section>
-
 
             <section class="weather-explanation">
                 <h2><i class="fas fa-graduation-cap"></i> הבנת נתוני מזג האוויר</h2>

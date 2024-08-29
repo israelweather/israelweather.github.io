@@ -1229,3 +1229,131 @@ body {
     text-align: right;
 }
 
+.suggestions {
+    position: absolute;
+    z-index: 1000;
+    background: white;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    max-height: 200px;
+    overflow-y: auto;
+    width: 100%;
+}
+
+.suggestions li {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.suggestions li:hover {
+    background-color: #f0f0f0;
+}
+
+.search-box {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.search-input {
+    width: 100%;
+    padding: 12px 15px 12px 40px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.search-input:focus {
+    box-shadow: 0 0 0 2px rgba(0,123,255,0.25);
+}
+
+.search-icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #666;
+}
+
+.suggestions {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: white;
+    list-style-type: none;
+    padding: 0;
+    margin: 5px 0 0;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1), 0 1px 3px rgba(0,0,0,0.08);
+    max-height: 250px;
+    overflow-y: auto;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+.suggestions:empty {
+    display: none;
+}
+
+.suggestions li {
+    padding: 12px 15px 12px 40px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    font-size: 14px;
+    border-bottom: 1px solid #f0f0f0;
+    position: relative;
+}
+
+.suggestions li:last-child {
+    border-bottom: none;
+}
+
+.suggestions li:hover {
+    background-color: #f7f7f7;
+}
+
+.suggestions li:active {
+    background-color: #e8e8e8;
+}
+
+.suggestions li::before {
+    content: '\f3c5';  /* FontAwesome icon for map marker */
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #007bff;
+}
+
+/* Custom scrollbar for webkit browsers */
+.suggestions::-webkit-scrollbar {
+    width: 8px;
+}
+
+.suggestions::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 0 15px 15px 0;
+}
+
+.suggestions::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+.suggestions::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Smooth scroll for Firefox */
+.suggestions {
+    scrollbar-width: thin;
+    scrollbar-color: #888 #f1f1f1;
+}
