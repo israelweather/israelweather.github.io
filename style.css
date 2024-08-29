@@ -775,3 +775,67 @@ body.dark-mode footer {
 body.dark-mode #climate-map {
     filter: invert(1) hue-rotate(180deg);
 }
+
+
+/* Existing styles remain unchanged */
+
+/* Media query for mobile devices */
+@media only screen and (max-width: 767px) {
+  html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  body {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  .container {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Adjust other elements for better fit on mobile */
+  header {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .search-container {
+    flex-direction: column;
+  }
+
+  .search-box, #cityInput, .search-btn, .location-btn {
+    width: 100%;
+    margin: 5px 0;
+  }
+
+  .city-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .weather-details, .daily-forecast-item {
+    padding: 10px;
+  }
+
+  .main-info {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .details-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
