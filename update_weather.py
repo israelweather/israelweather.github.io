@@ -3,13 +3,12 @@ import json
 import requests
 import logging
 import time
-from datetime import datetime
+from datetime import datetime, timedelta
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 API_KEY = os.environ['OPENWEATHERMAP_API_KEY']
 CITY_MAP = {
-    'תל אביב-יפו': 'Tel Aviv',
     'ירושלים': 'Jerusalem',
     'חיפה': 'Haifa',
     'ראשון לציון': 'Rishon LeZion',
@@ -215,8 +214,8 @@ def get_weather(city):
                 'pressure': current_data['main']['pressure'],
                 'visibility': current_data.get('visibility', 'N/A'),
                 'cloudiness': current_data['clouds']['all'],
-                'sunrise': datetime.fromtimestamp(current_data['sys']['sunrise']).strftime('%H:%M'),
-                'sunset': datetime.fromtimestamp(current_data['sys']['sunset']).strftime('%H:%M')
+                'sunrise': (datetime.fromtimestamp(current_data['sys']['sunrise']) + timedelta(hours=3)).strftime('%H:%M'),
+                'sunset': (datetime.fromtimestamp(current_data['sys']['sunset']) + timedelta(hours=3)).strftime('%H:%M')
             },
             'forecast': daily_forecasts
         }
