@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const scrollToTopBtn = document.getElementById('scrollToTopBtn');
 
     // Scroll to top functionality
-    window.addEventListener('scroll', () => {
+       window.addEventListener('scroll', () => {
         if (window.pageYOffset > 100) {
             scrollToTopBtn.classList.add('show');
         } else {
