@@ -20,7 +20,7 @@ CITIES = [
     'טורעאן', 'באר יעקב', 'בית גן', 'גת', 'דבוריה', 'זכרון יעקב', 'יפיע', 'ירוחם', 'כסיפה', 'כפר ברא',
     'כפר מנדא', 'כפר קרע', 'להבים', 'מזכרת בתיה', 'מעיליא', 'מצפה רמון', 'משהד', 'נחף', 'עומר', 'עין מאהל',
     'עספיא', 'ערערה', 'פוריידיס', 'פסוטה', 'פרדס חנה-כרכור', 'פרדסיה', 'צור הדסה', 'קצרין', 'קריית טבעון', 'ראמה',
-    'ריינה', 'רמת ישי', 'שוהם', 'שלומי', 'שעב', 'תל מונד'
+    'ריינה', 'רמת ישי', 'שוהם', 'שלומי', 'שעב', 'תל מונד','מעלות תרשיחא'
 ]
 
 def calculate_feels_like(temperature, humidity, wind_speed):
@@ -78,8 +78,8 @@ def get_weather(city):
                 'pressure': current_data['main']['pressure'],
                 'visibility': current_data.get('visibility', 'N/A'),
                 'cloudiness': current_data['clouds']['all'],
-                'sunrise': (datetime.fromtimestamp(current_data['sys']['sunrise']) + timedelta(hours=3)).strftime('%H:%M'),
-                'sunset': (datetime.fromtimestamp(current_data['sys']['sunset']) + timedelta(hours=3)).strftime('%H:%M')
+                'sunrise': datetime.fromtimestamp(current_data['sys']['sunrise']).strftime('%H:%M'),
+                'sunset': datetime.fromtimestamp(current_data['sys']['sunset']).strftime('%H:%M')
             },
             'forecast': daily_forecasts
         }
