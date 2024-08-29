@@ -1,29 +1,29 @@
 {
-  "last_updated": "2024-08-30T00:03:41.932157",
+  "last_updated": "2024-08-30T00:55:48.588222",
   "cities": [
     {
       "city": "ירושלים",
       "current": {
-        "temperature": 21.5,
-        "feels_like": 21.85,
-        "description": "clear sky",
-        "icon": "01n",
-        "humidity": 82,
-        "wind_speed": 3.13,
-        "wind_direction": 316,
+        "temperature": 21.16,
+        "feels_like": 21.5,
+        "description": "few clouds",
+        "icon": "02n",
+        "humidity": 83,
+        "wind_speed": 4.02,
+        "wind_direction": 0,
         "pressure": 1012,
         "visibility": 10000,
-        "cloudiness": 10,
-        "sunrise": "09:13",
-        "sunset": "22:06"
+        "cloudiness": 14,
+        "sunrise": "06:13",
+        "sunset": "19:06"
       },
       "forecast": {
         "2024-08-30": {
-          "temp": 21.23,
-          "feels_like": 21.52,
+          "temp": 21,
+          "feels_like": 21.3,
           "description": "few clouds",
           "icon": "02n",
-          "humidity": 81,
+          "humidity": 82,
           "wind_speed": 4.66,
           "wind_direction": 295,
           "pressure": 1012,
@@ -78,30 +78,30 @@
     {
       "city": "תל אביב-יפו",
       "current": {
-        "temperature": 27.85,
-        "feels_like": 30.13,
+        "temperature": 27.6,
+        "feels_like": 29.69,
         "description": "broken clouds",
         "icon": "04n",
         "humidity": 68,
-        "wind_speed": 2.06,
-        "wind_direction": 240,
+        "wind_speed": 1.03,
+        "wind_direction": 0,
         "pressure": 1011,
         "visibility": 10000,
         "cloudiness": 75,
-        "sunrise": "09:15",
-        "sunset": "22:08"
+        "sunrise": "06:15",
+        "sunset": "19:08"
       },
       "forecast": {
         "2024-08-30": {
-          "temp": 27.55,
-          "feels_like": 29.5,
-          "description": "broken clouds",
-          "icon": "04n",
+          "temp": 27.38,
+          "feels_like": 29.22,
+          "description": "scattered clouds",
+          "icon": "03n",
           "humidity": 67,
           "wind_speed": 3.2,
           "wind_direction": 292,
           "pressure": 1011,
-          "cloudiness": 53
+          "cloudiness": 30
         },
         "2024-08-31": {
           "temp": 27.65,
@@ -157,21 +157,21 @@
         "description": "few clouds",
         "icon": "02n",
         "humidity": 69,
-        "wind_speed": 0.45,
+        "wind_speed": 0.89,
         "wind_direction": 287,
         "pressure": 1010,
         "visibility": 10000,
-        "cloudiness": 16,
-        "sunrise": "09:13",
-        "sunset": "22:07"
+        "cloudiness": 15,
+        "sunrise": "06:13",
+        "sunset": "19:07"
       },
       "forecast": {
         "2024-08-30": {
           "temp": 27.41,
-          "feels_like": 29.47,
+          "feels_like": 29.37,
           "description": "few clouds",
           "icon": "02n",
-          "humidity": 69,
+          "humidity": 68,
           "wind_speed": 4.13,
           "wind_direction": 283,
           "pressure": 1010,
@@ -226,30 +226,30 @@
     {
       "city": "ראשון לציון",
       "current": {
-        "temperature": 27.21,
-        "feels_like": 29.12,
-        "description": "broken clouds",
-        "icon": "04n",
-        "humidity": 69,
-        "wind_speed": 2.06,
-        "wind_direction": 240,
+        "temperature": 26.14,
+        "feels_like": 26.14,
+        "description": "clear sky",
+        "icon": "01n",
+        "humidity": 71,
+        "wind_speed": 0.45,
+        "wind_direction": 209,
         "pressure": 1011,
         "visibility": 10000,
-        "cloudiness": 75,
-        "sunrise": "09:15",
-        "sunset": "22:07"
+        "cloudiness": 7,
+        "sunrise": "06:15",
+        "sunset": "19:07"
       },
       "forecast": {
         "2024-08-30": {
-          "temp": 26.9,
-          "feels_like": 28.61,
-          "description": "broken clouds",
-          "icon": "04n",
-          "humidity": 69,
+          "temp": 26.19,
+          "feels_like": 26.19,
+          "description": "clear sky",
+          "icon": "01n",
+          "humidity": 70,
           "wind_speed": 2.58,
           "wind_direction": 292,
           "pressure": 1011,
-          "cloudiness": 54
+          "cloudiness": 7
         },
         "2024-08-31": {
           "temp": 27.1,
@@ -300,30 +300,30 @@
     {
       "city": "פתח תקווה",
       "current": {
-        "temperature": 27.43,
-        "feels_like": 29.6,
-        "description": "broken clouds",
-        "icon": "04n",
-        "humidity": 70,
-        "wind_speed": 2.06,
-        "wind_direction": 240,
+        "temperature": 26.19,
+        "feels_like": 26.19,
+        "description": "few clouds",
+        "icon": "02n",
+        "humidity": 76,
+        "wind_speed": 2.97,
+        "wind_direction": 300,
         "pressure": 1011,
         "visibility": 10000,
-        "cloudiness": 75,
-        "sunrise": "09:14",
-        "sunset": "22:07"
+        "cloudiness": 14,
+        "sunrise": "06:14",
+        "sunset": "19:07"
       },
       "forecast": {
         "2024-08-30": {
-          "temp": 27.21,
-          "feels_like": 29.12,
-          "description": "broken clouds",
-          "icon": "04n",
-          "humidity": 69,
+          "temp": 26.38,
+          "feels_like": 26.38,
+          "description": "few clouds",
+          "icon": "02n",
+          "humidity": 73,
           "wind_speed": 2.97,
           "wind_direction": 292,
           "pressure": 1011,
-          "cloudiness": 57
+          "cloudiness": 13
         },
         "2024-08-31": {
           "temp": 27.37,
@@ -374,23 +374,23 @@
     {
       "city": "אשדוד",
       "current": {
-        "temperature": 27.46,
-        "feels_like": 29.76,
+        "temperature": 26.75,
+        "feels_like": 28.59,
         "description": "clear sky",
         "icon": "01n",
-        "humidity": 71,
-        "wind_speed": 3.12,
-        "wind_direction": 312,
+        "humidity": 72,
+        "wind_speed": 3.06,
+        "wind_direction": 310,
         "pressure": 1011,
         "visibility": 10000,
         "cloudiness": 0,
-        "sunrise": "09:15",
-        "sunset": "22:08"
+        "sunrise": "06:15",
+        "sunset": "19:08"
       },
       "forecast": {
         "2024-08-30": {
-          "temp": 27.16,
-          "feels_like": 29.22,
+          "temp": 26.69,
+          "feels_like": 28.41,
           "description": "clear sky",
           "icon": "01n",
           "humidity": 71,
@@ -448,23 +448,23 @@
     {
       "city": "נתניה",
       "current": {
-        "temperature": 27.42,
-        "feels_like": 29.69,
+        "temperature": 26.56,
+        "feels_like": 26.56,
         "description": "clear sky",
         "icon": "01n",
-        "humidity": 71,
-        "wind_speed": 3.48,
-        "wind_direction": 300,
+        "humidity": 70,
+        "wind_speed": 3.42,
+        "wind_direction": 293,
         "pressure": 1011,
         "visibility": 10000,
-        "cloudiness": 6,
-        "sunrise": "09:14",
-        "sunset": "22:08"
+        "cloudiness": 9,
+        "sunrise": "06:14",
+        "sunset": "19:08"
       },
       "forecast": {
         "2024-08-30": {
-          "temp": 27.14,
-          "feels_like": 29.09,
+          "temp": 26.57,
+          "feels_like": 26.57,
           "description": "clear sky",
           "icon": "01n",
           "humidity": 70,
@@ -522,18 +522,18 @@
     {
       "city": "באר שבע",
       "current": {
-        "temperature": 24.5,
-        "feels_like": 25.02,
+        "temperature": 24.22,
+        "feels_like": 24.76,
         "description": "clear sky",
         "icon": "01n",
-        "humidity": 77,
-        "wind_speed": 4.02,
-        "wind_direction": 326,
+        "humidity": 79,
+        "wind_speed": 2.8,
+        "wind_direction": 324,
         "pressure": 1012,
         "visibility": 10000,
-        "cloudiness": 1,
-        "sunrise": "09:15",
-        "sunset": "22:07"
+        "cloudiness": 3,
+        "sunrise": "06:15",
+        "sunset": "19:07"
       },
       "forecast": {
         "2024-08-30": {
@@ -596,30 +596,30 @@
     {
       "city": "חולון",
       "current": {
-        "temperature": 27.5,
-        "feels_like": 29.62,
-        "description": "broken clouds",
-        "icon": "04n",
-        "humidity": 69,
-        "wind_speed": 2.06,
-        "wind_direction": 240,
+        "temperature": 26.39,
+        "feels_like": 26.39,
+        "description": "clear sky",
+        "icon": "01n",
+        "humidity": 72,
+        "wind_speed": 3.2,
+        "wind_direction": 301,
         "pressure": 1011,
         "visibility": 10000,
-        "cloudiness": 75,
-        "sunrise": "09:15",
-        "sunset": "22:08"
+        "cloudiness": 2,
+        "sunrise": "06:15",
+        "sunset": "19:08"
       },
       "forecast": {
         "2024-08-30": {
-          "temp": 27.23,
-          "feels_like": 29.06,
-          "description": "broken clouds",
-          "icon": "04n",
-          "humidity": 68,
+          "temp": 26.49,
+          "feels_like": 26.49,
+          "description": "clear sky",
+          "icon": "01n",
+          "humidity": 70,
           "wind_speed": 3.05,
           "wind_direction": 293,
           "pressure": 1011,
-          "cloudiness": 51
+          "cloudiness": 3
         },
         "2024-08-31": {
           "temp": 27.47,
@@ -670,30 +670,30 @@
     {
       "city": "בני ברק",
       "current": {
-        "temperature": 27.58,
-        "feels_like": 29.88,
-        "description": "broken clouds",
-        "icon": "04n",
-        "humidity": 70,
-        "wind_speed": 2.06,
-        "wind_direction": 240,
+        "temperature": 26.36,
+        "feels_like": 26.36,
+        "description": "clear sky",
+        "icon": "01n",
+        "humidity": 73,
+        "wind_speed": 3.11,
+        "wind_direction": 299,
         "pressure": 1011,
         "visibility": 10000,
-        "cloudiness": 75,
-        "sunrise": "09:14",
-        "sunset": "22:07"
+        "cloudiness": 9,
+        "sunrise": "06:14",
+        "sunset": "19:07"
       },
       "forecast": {
         "2024-08-30": {
-          "temp": 27.32,
-          "feels_like": 29.31,
-          "description": "broken clouds",
-          "icon": "04n",
-          "humidity": 69,
+          "temp": 26.5,
+          "feels_like": 26.5,
+          "description": "clear sky",
+          "icon": "01n",
+          "humidity": 71,
           "wind_speed": 3.08,
           "wind_direction": 292,
           "pressure": 1011,
-          "cloudiness": 55
+          "cloudiness": 9
         },
         "2024-08-31": {
           "temp": 27.44,
@@ -744,23 +744,23 @@
     {
       "city": "רמת גן",
       "current": {
-        "temperature": 27.82,
-        "feels_like": 29.96,
+        "temperature": 27.78,
+        "feels_like": 29.89,
         "description": "broken clouds",
         "icon": "04n",
         "humidity": 67,
-        "wind_speed": 2.06,
-        "wind_direction": 240,
+        "wind_speed": 1.03,
+        "wind_direction": 0,
         "pressure": 1011,
         "visibility": 10000,
         "cloudiness": 75,
-        "sunrise": "09:15",
-        "sunset": "22:08"
+        "sunrise": "06:15",
+        "sunset": "19:08"
       },
       "forecast": {
         "2024-08-30": {
-          "temp": 27.53,
-          "feels_like": 29.47,
+          "temp": 27.49,
+          "feels_like": 29.4,
           "description": "broken clouds",
           "icon": "04n",
           "humidity": 67,
@@ -818,23 +818,23 @@
     {
       "city": "אשקלון",
       "current": {
-        "temperature": 27.12,
-        "feels_like": 29.06,
+        "temperature": 26.28,
+        "feels_like": 26.28,
         "description": "clear sky",
         "icon": "01n",
-        "humidity": 70,
-        "wind_speed": 2.88,
-        "wind_direction": 321,
+        "humidity": 71,
+        "wind_speed": 2.8,
+        "wind_direction": 318,
         "pressure": 1011,
         "visibility": 10000,
-        "cloudiness": 1,
-        "sunrise": "09:16",
-        "sunset": "22:08"
+        "cloudiness": 0,
+        "sunrise": "06:16",
+        "sunset": "19:08"
       },
       "forecast": {
         "2024-08-30": {
-          "temp": 26.79,
-          "feels_like": 28.58,
+          "temp": 26.23,
+          "feels_like": 26.23,
           "description": "clear sky",
           "icon": "01n",
           "humidity": 71,
@@ -892,30 +892,30 @@
     {
       "city": "רחובות",
       "current": {
-        "temperature": 27.18,
-        "feels_like": 29.07,
-        "description": "broken clouds",
-        "icon": "04n",
-        "humidity": 69,
-        "wind_speed": 2.06,
-        "wind_direction": 240,
+        "temperature": 26.16,
+        "feels_like": 26.16,
+        "description": "clear sky",
+        "icon": "01n",
+        "humidity": 71,
+        "wind_speed": 0.45,
+        "wind_direction": 209,
         "pressure": 1011,
         "visibility": 10000,
-        "cloudiness": 75,
-        "sunrise": "09:15",
-        "sunset": "22:07"
+        "cloudiness": 8,
+        "sunrise": "06:15",
+        "sunset": "19:07"
       },
       "forecast": {
         "2024-08-30": {
-          "temp": 26.78,
-          "feels_like": 28.49,
-          "description": "broken clouds",
-          "icon": "04n",
-          "humidity": 70,
+          "temp": 26.1,
+          "feels_like": 26.1,
+          "description": "clear sky",
+          "icon": "01n",
+          "humidity": 71,
           "wind_speed": 2.18,
           "wind_direction": 292,
           "pressure": 1011,
-          "cloudiness": 54
+          "cloudiness": 8
         },
         "2024-08-31": {
           "temp": 26.89,
@@ -966,30 +966,30 @@
     {
       "city": "בת ים",
       "current": {
-        "temperature": 27.51,
-        "feels_like": 29.64,
+        "temperature": 26.95,
+        "feels_like": 28.69,
         "description": "broken clouds",
         "icon": "04n",
         "humidity": 69,
-        "wind_speed": 2.06,
-        "wind_direction": 240,
+        "wind_speed": 1.03,
+        "wind_direction": 0,
         "pressure": 1011,
         "visibility": 10000,
         "cloudiness": 75,
-        "sunrise": "09:15",
-        "sunset": "22:08"
+        "sunrise": "06:15",
+        "sunset": "19:08"
       },
       "forecast": {
         "2024-08-30": {
-          "temp": 27.23,
-          "feels_like": 29.06,
-          "description": "broken clouds",
-          "icon": "04n",
+          "temp": 26.86,
+          "feels_like": 28.47,
+          "description": "scattered clouds",
+          "icon": "03n",
           "humidity": 68,
           "wind_speed": 3.05,
           "wind_direction": 293,
           "pressure": 1011,
-          "cloudiness": 51
+          "cloudiness": 28
         },
         "2024-08-31": {
           "temp": 27.47,
@@ -1040,23 +1040,23 @@
     {
       "city": "בית שמש",
       "current": {
-        "temperature": 25.26,
-        "feels_like": 25.93,
-        "description": "scattered clouds",
-        "icon": "03n",
+        "temperature": 24.51,
+        "feels_like": 25.11,
+        "description": "broken clouds",
+        "icon": "04n",
         "humidity": 80,
-        "wind_speed": 2.11,
+        "wind_speed": 2.09,
         "wind_direction": 304,
         "pressure": 1012,
         "visibility": 10000,
-        "cloudiness": 45,
-        "sunrise": "09:14",
-        "sunset": "22:07"
+        "cloudiness": 52,
+        "sunrise": "06:14",
+        "sunset": "19:07"
       },
       "forecast": {
         "2024-08-30": {
-          "temp": 24.95,
-          "feels_like": 25.59,
+          "temp": 24.45,
+          "feels_like": 25.04,
           "description": "broken clouds",
           "icon": "04n",
           "humidity": 80,
@@ -1114,30 +1114,30 @@
     {
       "city": "כפר סבא",
       "current": {
-        "temperature": 27.35,
-        "feels_like": 29.56,
-        "description": "broken clouds",
-        "icon": "04n",
-        "humidity": 71,
-        "wind_speed": 2.06,
-        "wind_direction": 240,
+        "temperature": 26.56,
+        "feels_like": 26.56,
+        "description": "scattered clouds",
+        "icon": "03n",
+        "humidity": 72,
+        "wind_speed": 1.03,
+        "wind_direction": 0,
         "pressure": 1011,
         "visibility": 10000,
-        "cloudiness": 75,
-        "sunrise": "09:14",
-        "sunset": "22:07"
+        "cloudiness": 40,
+        "sunrise": "06:14",
+        "sunset": "19:07"
       },
       "forecast": {
         "2024-08-30": {
-          "temp": 27.02,
-          "feels_like": 28.81,
-          "description": "broken clouds",
-          "icon": "04n",
-          "humidity": 69,
+          "temp": 26.49,
+          "feels_like": 26.49,
+          "description": "scattered clouds",
+          "icon": "03n",
+          "humidity": 70,
           "wind_speed": 2.99,
           "wind_direction": 291,
           "pressure": 1011,
-          "cloudiness": 60
+          "cloudiness": 36
         },
         "2024-08-31": {
           "temp": 26.89,
@@ -1188,30 +1188,30 @@
     {
       "city": "הרצליה",
       "current": {
-        "temperature": 27.47,
-        "feels_like": 29.68,
-        "description": "broken clouds",
-        "icon": "04n",
-        "humidity": 70,
-        "wind_speed": 2.06,
-        "wind_direction": 240,
+        "temperature": 26.89,
+        "feels_like": 28.75,
+        "description": "scattered clouds",
+        "icon": "03n",
+        "humidity": 71,
+        "wind_speed": 1.03,
+        "wind_direction": 0,
         "pressure": 1011,
         "visibility": 10000,
-        "cloudiness": 75,
-        "sunrise": "09:14",
-        "sunset": "22:08"
+        "cloudiness": 40,
+        "sunrise": "06:14",
+        "sunset": "19:08"
       },
       "forecast": {
         "2024-08-30": {
-          "temp": 27.29,
-          "feels_like": 29.26,
-          "description": "broken clouds",
-          "icon": "04n",
+          "temp": 26.9,
+          "feels_like": 28.61,
+          "description": "scattered clouds",
+          "icon": "03n",
           "humidity": 69,
           "wind_speed": 3.37,
           "wind_direction": 291,
           "pressure": 1011,
-          "cloudiness": 54
+          "cloudiness": 31
         },
         "2024-08-31": {
           "temp": 27.53,
@@ -1262,23 +1262,23 @@
     {
       "city": "חדרה",
       "current": {
-        "temperature": 27.27,
-        "feels_like": 29.51,
+        "temperature": 26.19,
+        "feels_like": 26.19,
         "description": "clear sky",
         "icon": "01n",
         "humidity": 72,
-        "wind_speed": 3.16,
-        "wind_direction": 297,
+        "wind_speed": 3.1,
+        "wind_direction": 290,
         "pressure": 1011,
         "visibility": 10000,
-        "cloudiness": 4,
-        "sunrise": "09:14",
-        "sunset": "22:07"
+        "cloudiness": 9,
+        "sunrise": "06:14",
+        "sunset": "19:07"
       },
       "forecast": {
         "2024-08-30": {
-          "temp": 26.9,
-          "feels_like": 28.77,
+          "temp": 26.18,
+          "feels_like": 26.18,
           "description": "clear sky",
           "icon": "01n",
           "humidity": 71,
@@ -1337,17 +1337,17 @@
       "city": "נצרת",
       "current": {
         "temperature": 25.04,
-        "feels_like": 25.58,
+        "feels_like": 25.61,
         "description": "clear sky",
         "icon": "01n",
-        "humidity": 76,
-        "wind_speed": 3.07,
-        "wind_direction": 287,
-        "pressure": 1011,
+        "humidity": 77,
+        "wind_speed": 2.93,
+        "wind_direction": 282,
+        "pressure": 1010,
         "visibility": 10000,
         "cloudiness": 0,
-        "sunrise": "09:12",
-        "sunset": "22:06"
+        "sunrise": "06:12",
+        "sunset": "19:06"
       },
       "forecast": {
         "2024-08-30": {
@@ -1410,30 +1410,30 @@
     {
       "city": "לוד",
       "current": {
-        "temperature": 27.23,
-        "feels_like": 29.16,
-        "description": "broken clouds",
-        "icon": "04n",
-        "humidity": 69,
-        "wind_speed": 2.06,
-        "wind_direction": 240,
+        "temperature": 26.09,
+        "feels_like": 26.09,
+        "description": "few clouds",
+        "icon": "02n",
+        "humidity": 71,
+        "wind_speed": 0.45,
+        "wind_direction": 209,
         "pressure": 1011,
         "visibility": 10000,
-        "cloudiness": 75,
-        "sunrise": "09:14",
-        "sunset": "22:07"
+        "cloudiness": 18,
+        "sunrise": "06:14",
+        "sunset": "19:07"
       },
       "forecast": {
         "2024-08-30": {
-          "temp": 26.88,
-          "feels_like": 28.58,
-          "description": "broken clouds",
-          "icon": "04n",
-          "humidity": 69,
+          "temp": 26.12,
+          "feels_like": 26.12,
+          "description": "few clouds",
+          "icon": "02n",
+          "humidity": 70,
           "wind_speed": 2.35,
           "wind_direction": 290,
           "pressure": 1011,
-          "cloudiness": 59
+          "cloudiness": 17
         },
         "2024-08-31": {
           "temp": 26.9,
@@ -1484,30 +1484,30 @@
     {
       "city": "רמלה",
       "current": {
-        "temperature": 27.08,
-        "feels_like": 28.91,
-        "description": "broken clouds",
-        "icon": "04n",
-        "humidity": 69,
-        "wind_speed": 2.06,
-        "wind_direction": 240,
+        "temperature": 26,
+        "feels_like": 26,
+        "description": "few clouds",
+        "icon": "02n",
+        "humidity": 71,
+        "wind_speed": 0.45,
+        "wind_direction": 209,
         "pressure": 1011,
         "visibility": 10000,
-        "cloudiness": 75,
-        "sunrise": "09:15",
-        "sunset": "22:07"
+        "cloudiness": 20,
+        "sunrise": "06:15",
+        "sunset": "19:07"
       },
       "forecast": {
         "2024-08-30": {
-          "temp": 26.66,
-          "feels_like": 26.66,
-          "description": "broken clouds",
-          "icon": "04n",
+          "temp": 25.94,
+          "feels_like": 26.42,
+          "description": "few clouds",
+          "icon": "02n",
           "humidity": 70,
           "wind_speed": 2.14,
           "wind_direction": 290,
           "pressure": 1011,
-          "cloudiness": 59
+          "cloudiness": 19
         },
         "2024-08-31": {
           "temp": 26.57,
@@ -1558,30 +1558,30 @@
     {
       "city": "רעננה",
       "current": {
-        "temperature": 27.48,
-        "feels_like": 29.8,
-        "description": "broken clouds",
-        "icon": "04n",
+        "temperature": 26.74,
+        "feels_like": 28.5,
+        "description": "scattered clouds",
+        "icon": "03n",
         "humidity": 71,
-        "wind_speed": 2.06,
-        "wind_direction": 240,
+        "wind_speed": 1.03,
+        "wind_direction": 0,
         "pressure": 1011,
         "visibility": 10000,
-        "cloudiness": 75,
-        "sunrise": "09:14",
-        "sunset": "22:07"
+        "cloudiness": 40,
+        "sunrise": "06:14",
+        "sunset": "19:07"
       },
       "forecast": {
         "2024-08-30": {
-          "temp": 27.22,
-          "feels_like": 29.14,
-          "description": "broken clouds",
-          "icon": "04n",
+          "temp": 26.73,
+          "feels_like": 28.34,
+          "description": "scattered clouds",
+          "icon": "03n",
           "humidity": 69,
           "wind_speed": 3.21,
           "wind_direction": 291,
           "pressure": 1011,
-          "cloudiness": 56
+          "cloudiness": 33
         },
         "2024-08-31": {
           "temp": 27.29,
@@ -1632,30 +1632,30 @@
     {
       "city": "גבעתיים",
       "current": {
-        "temperature": 27.38,
-        "feels_like": 29.31,
-        "description": "broken clouds",
-        "icon": "04n",
-        "humidity": 68,
-        "wind_speed": 2.06,
-        "wind_direction": 240,
+        "temperature": 26.19,
+        "feels_like": 26.19,
+        "description": "clear sky",
+        "icon": "01n",
+        "humidity": 71,
+        "wind_speed": 3.26,
+        "wind_direction": 299,
         "pressure": 1011,
         "visibility": 10000,
-        "cloudiness": 75,
-        "sunrise": "09:15",
-        "sunset": "22:08"
+        "cloudiness": 5,
+        "sunrise": "06:15",
+        "sunset": "19:08"
       },
       "forecast": {
         "2024-08-30": {
-          "temp": 27.24,
-          "feels_like": 28.99,
-          "description": "broken clouds",
-          "icon": "04n",
-          "humidity": 67,
+          "temp": 26.44,
+          "feels_like": 26.44,
+          "description": "clear sky",
+          "icon": "01n",
+          "humidity": 69,
           "wind_speed": 3.2,
           "wind_direction": 292,
           "pressure": 1011,
-          "cloudiness": 53
+          "cloudiness": 6
         },
         "2024-08-31": {
           "temp": 27.65,
@@ -1706,30 +1706,30 @@
     {
       "city": "הוד השרון",
       "current": {
-        "temperature": 27.54,
-        "feels_like": 29.91,
-        "description": "broken clouds",
-        "icon": "04n",
+        "temperature": 26.86,
+        "feels_like": 28.7,
+        "description": "scattered clouds",
+        "icon": "03n",
         "humidity": 71,
-        "wind_speed": 2.06,
-        "wind_direction": 240,
+        "wind_speed": 1.03,
+        "wind_direction": 0,
         "pressure": 1011,
         "visibility": 10000,
-        "cloudiness": 75,
-        "sunrise": "09:14",
-        "sunset": "22:07"
+        "cloudiness": 40,
+        "sunrise": "06:14",
+        "sunset": "19:07"
       },
       "forecast": {
         "2024-08-30": {
-          "temp": 27.23,
-          "feels_like": 29.16,
-          "description": "broken clouds",
-          "icon": "04n",
+          "temp": 26.78,
+          "feels_like": 28.42,
+          "description": "scattered clouds",
+          "icon": "03n",
           "humidity": 69,
           "wind_speed": 3.15,
           "wind_direction": 291,
           "pressure": 1011,
-          "cloudiness": 56
+          "cloudiness": 33
         },
         "2024-08-31": {
           "temp": 27.2,
@@ -1781,25 +1781,25 @@
       "city": "קריית אתא",
       "current": {
         "temperature": 27.73,
-        "feels_like": 30.39,
+        "feels_like": 30.15,
         "description": "few clouds",
         "icon": "02n",
-        "humidity": 72,
-        "wind_speed": 0.45,
-        "wind_direction": 268,
+        "humidity": 70,
+        "wind_speed": 0.89,
+        "wind_direction": 287,
         "pressure": 1011,
         "visibility": 10000,
-        "cloudiness": 19,
-        "sunrise": "09:13",
-        "sunset": "22:07"
+        "cloudiness": 17,
+        "sunrise": "06:13",
+        "sunset": "19:07"
       },
       "forecast": {
         "2024-08-30": {
           "temp": 27.09,
-          "feels_like": 29.28,
+          "feels_like": 29.19,
           "description": "few clouds",
           "icon": "02n",
-          "humidity": 73,
+          "humidity": 72,
           "wind_speed": 3.29,
           "wind_direction": 288,
           "pressure": 1011,
@@ -1854,23 +1854,23 @@
     {
       "city": "קריית גת",
       "current": {
-        "temperature": 26.56,
-        "feels_like": 26.56,
+        "temperature": 25.73,
+        "feels_like": 26.37,
         "description": "clear sky",
         "icon": "01n",
-        "humidity": 76,
-        "wind_speed": 2.25,
-        "wind_direction": 320,
+        "humidity": 77,
+        "wind_speed": 2.05,
+        "wind_direction": 321,
         "pressure": 1011,
         "visibility": 10000,
-        "cloudiness": 7,
-        "sunrise": "09:15",
-        "sunset": "22:07"
+        "cloudiness": 6,
+        "sunrise": "06:15",
+        "sunset": "19:07"
       },
       "forecast": {
         "2024-08-30": {
-          "temp": 25.93,
-          "feels_like": 26.59,
+          "temp": 25.37,
+          "feels_like": 25.97,
           "description": "clear sky",
           "icon": "01n",
           "humidity": 77,
@@ -1929,17 +1929,17 @@
       "city": "נהריה",
       "current": {
         "temperature": 28.87,
-        "feels_like": 31.12,
+        "feels_like": 31.27,
         "description": "few clouds",
         "icon": "02n",
-        "humidity": 62,
-        "wind_speed": 3.26,
-        "wind_direction": 304,
+        "humidity": 63,
+        "wind_speed": 3.24,
+        "wind_direction": 296,
         "pressure": 1011,
         "visibility": 10000,
-        "cloudiness": 17,
-        "sunrise": "09:13",
-        "sunset": "22:07"
+        "cloudiness": 15,
+        "sunrise": "06:13",
+        "sunset": "19:07"
       },
       "forecast": {
         "2024-08-30": {
@@ -2003,25 +2003,25 @@
       "city": "קריית מוצקין",
       "current": {
         "temperature": 27.96,
-        "feels_like": 30.59,
+        "feels_like": 30.46,
         "description": "few clouds",
         "icon": "02n",
-        "humidity": 70,
-        "wind_speed": 0.45,
-        "wind_direction": 268,
+        "humidity": 69,
+        "wind_speed": 0.89,
+        "wind_direction": 287,
         "pressure": 1011,
         "visibility": 10000,
-        "cloudiness": 19,
-        "sunrise": "09:13",
-        "sunset": "22:07"
+        "cloudiness": 18,
+        "sunrise": "06:13",
+        "sunset": "19:07"
       },
       "forecast": {
         "2024-08-30": {
           "temp": 27.38,
-          "feels_like": 29.62,
+          "feels_like": 29.51,
           "description": "few clouds",
           "icon": "02n",
-          "humidity": 71,
+          "humidity": 70,
           "wind_speed": 3.51,
           "wind_direction": 287,
           "pressure": 1011,
@@ -2076,26 +2076,26 @@
     {
       "city": "אילת",
       "current": {
-        "temperature": 29.33,
-        "feels_like": 29.6,
+        "temperature": 30.91,
+        "feels_like": 31.09,
         "description": "clear sky",
         "icon": "01n",
-        "humidity": 46,
-        "wind_speed": 5.13,
-        "wind_direction": 8,
+        "humidity": 42,
+        "wind_speed": 5.14,
+        "wind_direction": 330,
         "pressure": 1011,
         "visibility": 10000,
         "cloudiness": 0,
-        "sunrise": "09:16",
-        "sunset": "22:05"
+        "sunrise": "06:16",
+        "sunset": "19:05"
       },
       "forecast": {
         "2024-08-30": {
-          "temp": 28.71,
-          "feels_like": 29.18,
+          "temp": 29.76,
+          "feels_like": 30.27,
           "description": "clear sky",
           "icon": "01n",
-          "humidity": 49,
+          "humidity": 47,
           "wind_speed": 4.07,
           "wind_direction": 352,
           "pressure": 1011,
@@ -2150,23 +2150,23 @@
     {
       "city": "אום אל-פחם",
       "current": {
-        "temperature": 25.12,
-        "feels_like": 25.72,
+        "temperature": 25.02,
+        "feels_like": 25.64,
         "description": "clear sky",
         "icon": "01n",
-        "humidity": 78,
-        "wind_speed": 2.87,
-        "wind_direction": 280,
+        "humidity": 79,
+        "wind_speed": 2.84,
+        "wind_direction": 273,
         "pressure": 1011,
         "visibility": 10000,
-        "cloudiness": 4,
-        "sunrise": "09:13",
-        "sunset": "22:07"
+        "cloudiness": 8,
+        "sunrise": "06:13",
+        "sunset": "19:07"
       },
       "forecast": {
         "2024-08-30": {
-          "temp": 24.3,
-          "feels_like": 24.82,
+          "temp": 24.24,
+          "feels_like": 24.76,
           "description": "clear sky",
           "icon": "01n",
           "humidity": 78,
@@ -2224,30 +2224,30 @@
     {
       "city": "ראש העין",
       "current": {
-        "temperature": 27.46,
-        "feels_like": 29.76,
-        "description": "broken clouds",
-        "icon": "04n",
-        "humidity": 71,
-        "wind_speed": 2.06,
-        "wind_direction": 240,
+        "temperature": 26.22,
+        "feels_like": 26.22,
+        "description": "scattered clouds",
+        "icon": "03n",
+        "humidity": 76,
+        "wind_speed": 2.82,
+        "wind_direction": 300,
         "pressure": 1011,
         "visibility": 10000,
-        "cloudiness": 75,
-        "sunrise": "09:14",
-        "sunset": "22:07"
+        "cloudiness": 27,
+        "sunrise": "06:14",
+        "sunset": "19:07"
       },
       "forecast": {
         "2024-08-30": {
-          "temp": 27.11,
-          "feels_like": 29.04,
-          "description": "broken clouds",
-          "icon": "04n",
-          "humidity": 70,
+          "temp": 26.28,
+          "feels_like": 26.28,
+          "description": "scattered clouds",
+          "icon": "03n",
+          "humidity": 73,
           "wind_speed": 2.92,
           "wind_direction": 291,
           "pressure": 1011,
-          "cloudiness": 63
+          "cloudiness": 27
         },
         "2024-08-31": {
           "temp": 26.86,
@@ -2302,14 +2302,14 @@
         "feels_like": 26.6,
         "description": "clear sky",
         "icon": "01n",
-        "humidity": 74,
-        "wind_speed": 2.71,
-        "wind_direction": 277,
+        "humidity": 75,
+        "wind_speed": 2.59,
+        "wind_direction": 270,
         "pressure": 1010,
         "visibility": 10000,
         "cloudiness": 0,
-        "sunrise": "09:12",
-        "sunset": "22:06"
+        "sunrise": "06:12",
+        "sunset": "19:06"
       },
       "forecast": {
         "2024-08-30": {
@@ -2377,13 +2377,13 @@
         "description": "few clouds",
         "icon": "02n",
         "humidity": 66,
-        "wind_speed": 3.59,
-        "wind_direction": 302,
+        "wind_speed": 3.65,
+        "wind_direction": 296,
         "pressure": 1011,
         "visibility": 10000,
-        "cloudiness": 15,
-        "sunrise": "09:13",
-        "sunset": "22:07"
+        "cloudiness": 13,
+        "sunrise": "06:13",
+        "sunset": "19:07"
       },
       "forecast": {
         "2024-08-30": {
@@ -2446,30 +2446,30 @@
     {
       "city": "אלעד",
       "current": {
-        "temperature": 27.04,
-        "feels_like": 28.92,
-        "description": "broken clouds",
-        "icon": "04n",
-        "humidity": 70,
-        "wind_speed": 2.06,
-        "wind_direction": 240,
+        "temperature": 25.78,
+        "feels_like": 26.4,
+        "description": "scattered clouds",
+        "icon": "03n",
+        "humidity": 76,
+        "wind_speed": 2.79,
+        "wind_direction": 301,
         "pressure": 1011,
         "visibility": 10000,
-        "cloudiness": 75,
-        "sunrise": "09:14",
-        "sunset": "22:07"
+        "cloudiness": 29,
+        "sunrise": "06:14",
+        "sunset": "19:07"
       },
       "forecast": {
         "2024-08-30": {
-          "temp": 26.75,
-          "feels_like": 28.37,
-          "description": "broken clouds",
-          "icon": "04n",
-          "humidity": 69,
+          "temp": 25.91,
+          "feels_like": 26.46,
+          "description": "scattered clouds",
+          "icon": "03n",
+          "humidity": 73,
           "wind_speed": 2.85,
           "wind_direction": 291,
           "pressure": 1011,
-          "cloudiness": 64
+          "cloudiness": 27
         },
         "2024-08-31": {
           "temp": 26.64,
@@ -2521,25 +2521,25 @@
       "city": "כרמיאל",
       "current": {
         "temperature": 25.86,
-        "feels_like": 26.56,
+        "feels_like": 26.51,
         "description": "few clouds",
         "icon": "02n",
-        "humidity": 79,
-        "wind_speed": 2.68,
-        "wind_direction": 270,
+        "humidity": 77,
+        "wind_speed": 0.89,
+        "wind_direction": 283,
         "pressure": 1011,
         "visibility": 10000,
-        "cloudiness": 22,
-        "sunrise": "09:12",
-        "sunset": "22:06"
+        "cloudiness": 20,
+        "sunrise": "06:12",
+        "sunset": "19:06"
       },
       "forecast": {
         "2024-08-30": {
           "temp": 24.76,
-          "feels_like": 25.41,
+          "feels_like": 25.38,
           "description": "few clouds",
           "icon": "02n",
-          "humidity": 81,
+          "humidity": 80,
           "wind_speed": 2.21,
           "wind_direction": 307,
           "pressure": 1011,
@@ -2595,17 +2595,17 @@
       "city": "טבריה",
       "current": {
         "temperature": 28.03,
-        "feels_like": 31.14,
+        "feels_like": 31.42,
         "description": "clear sky",
         "icon": "01n",
-        "humidity": 73,
-        "wind_speed": 3.29,
-        "wind_direction": 276,
+        "humidity": 75,
+        "wind_speed": 3.24,
+        "wind_direction": 272,
         "pressure": 1010,
         "visibility": 10000,
         "cloudiness": 0,
-        "sunrise": "09:11",
-        "sunset": "22:05"
+        "sunrise": "06:11",
+        "sunset": "19:05"
       },
       "forecast": {
         "2024-08-30": {
@@ -2668,30 +2668,30 @@
     {
       "city": "נס ציונה",
       "current": {
-        "temperature": 27.34,
-        "feels_like": 29.34,
-        "description": "broken clouds",
-        "icon": "04n",
-        "humidity": 69,
-        "wind_speed": 2.06,
-        "wind_direction": 240,
+        "temperature": 26.33,
+        "feels_like": 26.33,
+        "description": "clear sky",
+        "icon": "01n",
+        "humidity": 71,
+        "wind_speed": 0.45,
+        "wind_direction": 209,
         "pressure": 1011,
         "visibility": 10000,
-        "cloudiness": 75,
-        "sunrise": "09:15",
-        "sunset": "22:07"
+        "cloudiness": 7,
+        "sunrise": "06:15",
+        "sunset": "19:07"
       },
       "forecast": {
         "2024-08-30": {
-          "temp": 26.96,
-          "feels_like": 28.79,
-          "description": "broken clouds",
-          "icon": "04n",
+          "temp": 26.28,
+          "feels_like": 26.28,
+          "description": "clear sky",
+          "icon": "01n",
           "humidity": 70,
           "wind_speed": 2.39,
           "wind_direction": 292,
           "pressure": 1011,
-          "cloudiness": 54
+          "cloudiness": 8
         },
         "2024-08-31": {
           "temp": 27.06,
@@ -2742,26 +2742,26 @@
     {
       "city": "יבנה",
       "current": {
-        "temperature": 27.4,
-        "feels_like": 29.65,
+        "temperature": 26.42,
+        "feels_like": 26.42,
         "description": "clear sky",
         "icon": "01n",
-        "humidity": 71,
+        "humidity": 72,
         "wind_speed": 0.45,
-        "wind_direction": 211,
+        "wind_direction": 209,
         "pressure": 1011,
         "visibility": 10000,
         "cloudiness": 0,
-        "sunrise": "09:15",
-        "sunset": "22:08"
+        "sunrise": "06:15",
+        "sunset": "19:08"
       },
       "forecast": {
         "2024-08-30": {
-          "temp": 27.05,
-          "feels_like": 28.94,
+          "temp": 26.4,
+          "feels_like": 26.4,
           "description": "clear sky",
           "icon": "01n",
-          "humidity": 70,
+          "humidity": 71,
           "wind_speed": 2.69,
           "wind_direction": 296,
           "pressure": 1011,
@@ -2816,30 +2816,30 @@
     {
       "city": "מודיעין עילית",
       "current": {
-        "temperature": 25.77,
-        "feels_like": 26.1,
-        "description": "broken clouds",
-        "icon": "04n",
-        "humidity": 65,
-        "wind_speed": 2.06,
-        "wind_direction": 240,
-        "pressure": 1012,
+        "temperature": 24.5,
+        "feels_like": 24.94,
+        "description": "scattered clouds",
+        "icon": "03n",
+        "humidity": 74,
+        "wind_speed": 2.9,
+        "wind_direction": 298,
+        "pressure": 1011,
         "visibility": 10000,
-        "cloudiness": 75,
-        "sunrise": "09:14",
-        "sunset": "22:06"
+        "cloudiness": 45,
+        "sunrise": "06:14",
+        "sunset": "19:06"
       },
       "forecast": {
         "2024-08-30": {
-          "temp": 25.42,
-          "feels_like": 25.79,
-          "description": "broken clouds",
-          "icon": "04n",
-          "humidity": 68,
+          "temp": 24.57,
+          "feels_like": 25.01,
+          "description": "scattered clouds",
+          "icon": "03n",
+          "humidity": 74,
           "wind_speed": 2.82,
           "wind_direction": 288,
           "pressure": 1012,
-          "cloudiness": 69
+          "cloudiness": 43
         },
         "2024-08-31": {
           "temp": 25.12,
@@ -2890,18 +2890,18 @@
     {
       "city": "דימונה",
       "current": {
-        "temperature": 22.54,
-        "feels_like": 22.94,
+        "temperature": 22.27,
+        "feels_like": 22.69,
         "description": "clear sky",
         "icon": "01n",
-        "humidity": 80,
-        "wind_speed": 6.12,
-        "wind_direction": 326,
+        "humidity": 82,
+        "wind_speed": 3.77,
+        "wind_direction": 332,
         "pressure": 1012,
         "visibility": 10000,
         "cloudiness": 0,
-        "sunrise": "09:15",
-        "sunset": "22:06"
+        "sunrise": "06:15",
+        "sunset": "19:06"
       },
       "forecast": {
         "2024-08-30": {
@@ -2965,25 +2965,25 @@
       "city": "קריית ביאליק",
       "current": {
         "temperature": 27.89,
-        "feels_like": 30.58,
+        "feels_like": 30.46,
         "description": "few clouds",
         "icon": "02n",
-        "humidity": 71,
-        "wind_speed": 0.45,
-        "wind_direction": 268,
+        "humidity": 70,
+        "wind_speed": 0.89,
+        "wind_direction": 287,
         "pressure": 1011,
         "visibility": 10000,
-        "cloudiness": 19,
-        "sunrise": "09:13",
-        "sunset": "22:07"
+        "cloudiness": 18,
+        "sunrise": "06:13",
+        "sunset": "19:07"
       },
       "forecast": {
         "2024-08-30": {
           "temp": 27.34,
-          "feels_like": 29.64,
+          "feels_like": 29.54,
           "description": "few clouds",
           "icon": "02n",
-          "humidity": 72,
+          "humidity": 71,
           "wind_speed": 3.51,
           "wind_direction": 287,
           "pressure": 1011,
@@ -3039,25 +3039,25 @@
       "city": "קריית ים",
       "current": {
         "temperature": 28.05,
-        "feels_like": 30.76,
+        "feels_like": 30.63,
         "description": "few clouds",
         "icon": "02n",
-        "humidity": 70,
-        "wind_speed": 0.45,
-        "wind_direction": 268,
+        "humidity": 69,
+        "wind_speed": 0.89,
+        "wind_direction": 287,
         "pressure": 1011,
         "visibility": 10000,
-        "cloudiness": 18,
-        "sunrise": "09:13",
-        "sunset": "22:07"
+        "cloudiness": 16,
+        "sunrise": "06:13",
+        "sunset": "19:07"
       },
       "forecast": {
         "2024-08-30": {
           "temp": 27.5,
-          "feels_like": 29.84,
+          "feels_like": 29.73,
           "description": "few clouds",
           "icon": "02n",
-          "humidity": 71,
+          "humidity": 70,
           "wind_speed": 3.5,
           "wind_direction": 288,
           "pressure": 1011,
@@ -3112,30 +3112,30 @@
     {
       "city": "קריית אונו",
       "current": {
-        "temperature": 27.32,
-        "feels_like": 29.41,
-        "description": "broken clouds",
-        "icon": "04n",
-        "humidity": 70,
-        "wind_speed": 2.06,
-        "wind_direction": 240,
+        "temperature": 26.08,
+        "feels_like": 26.08,
+        "description": "few clouds",
+        "icon": "02n",
+        "humidity": 73,
+        "wind_speed": 2.88,
+        "wind_direction": 301,
         "pressure": 1011,
         "visibility": 10000,
-        "cloudiness": 75,
-        "sunrise": "09:14",
-        "sunset": "22:07"
+        "cloudiness": 14,
+        "sunrise": "06:14",
+        "sunset": "19:07"
       },
       "forecast": {
         "2024-08-30": {
-          "temp": 27.06,
-          "feels_like": 28.87,
-          "description": "broken clouds",
-          "icon": "04n",
-          "humidity": 69,
+          "temp": 26.23,
+          "feels_like": 26.23,
+          "description": "few clouds",
+          "icon": "02n",
+          "humidity": 71,
           "wind_speed": 2.85,
           "wind_direction": 292,
           "pressure": 1011,
-          "cloudiness": 57
+          "cloudiness": 13
         },
         "2024-08-31": {
           "temp": 27.15,
@@ -3187,17 +3187,17 @@
       "city": "צפת",
       "current": {
         "temperature": 22.46,
-        "feels_like": 22.88,
+        "feels_like": 22.93,
         "description": "clear sky",
         "icon": "01n",
-        "humidity": 81,
-        "wind_speed": 3.07,
-        "wind_direction": 301,
+        "humidity": 83,
+        "wind_speed": 3.22,
+        "wind_direction": 296,
         "pressure": 1011,
         "visibility": 10000,
         "cloudiness": 2,
-        "sunrise": "09:11",
-        "sunset": "22:06"
+        "sunrise": "06:11",
+        "sunset": "19:06"
       },
       "forecast": {
         "2024-08-30": {
@@ -3260,30 +3260,30 @@
     {
       "city": "אור יהודה",
       "current": {
-        "temperature": 27.56,
-        "feels_like": 29.62,
-        "description": "broken clouds",
-        "icon": "04n",
-        "humidity": 68,
-        "wind_speed": 2.06,
-        "wind_direction": 240,
+        "temperature": 26.35,
+        "feels_like": 26.35,
+        "description": "few clouds",
+        "icon": "02n",
+        "humidity": 71,
+        "wind_speed": 2.89,
+        "wind_direction": 301,
         "pressure": 1011,
         "visibility": 10000,
-        "cloudiness": 75,
-        "sunrise": "09:14",
-        "sunset": "22:07"
+        "cloudiness": 11,
+        "sunrise": "06:14",
+        "sunset": "19:07"
       },
       "forecast": {
         "2024-08-30": {
-          "temp": 27.29,
-          "feels_like": 29.07,
-          "description": "broken clouds",
-          "icon": "04n",
-          "humidity": 67,
+          "temp": 26.48,
+          "feels_like": 26.48,
+          "description": "clear sky",
+          "icon": "01n",
+          "humidity": 69,
           "wind_speed": 2.81,
           "wind_direction": 292,
           "pressure": 1011,
-          "cloudiness": 55
+          "cloudiness": 10
         },
         "2024-08-31": {
           "temp": 27.44,
@@ -3334,18 +3334,18 @@
     {
       "city": "נתיבות",
       "current": {
-        "temperature": 25.93,
-        "feels_like": 26.46,
+        "temperature": 25.61,
+        "feels_like": 26.11,
         "description": "clear sky",
         "icon": "01n",
         "humidity": 72,
-        "wind_speed": 2.71,
-        "wind_direction": 328,
+        "wind_speed": 2.28,
+        "wind_direction": 326,
         "pressure": 1011,
         "visibility": 10000,
-        "cloudiness": 6,
-        "sunrise": "09:16",
-        "sunset": "22:08"
+        "cloudiness": 4,
+        "sunrise": "06:16",
+        "sunset": "19:08"
       },
       "forecast": {
         "2024-08-30": {
@@ -3408,23 +3408,23 @@
     {
       "city": "ביתר עילית",
       "current": {
-        "temperature": 22.32,
-        "feels_like": 22.75,
+        "temperature": 21.88,
+        "feels_like": 22.29,
         "description": "scattered clouds",
         "icon": "03n",
-        "humidity": 82,
-        "wind_speed": 4.06,
-        "wind_direction": 299,
-        "pressure": 1013,
+        "humidity": 83,
+        "wind_speed": 3.93,
+        "wind_direction": 300,
+        "pressure": 1012,
         "visibility": 10000,
-        "cloudiness": 33,
-        "sunrise": "09:14",
-        "sunset": "22:06"
+        "cloudiness": 41,
+        "sunrise": "06:14",
+        "sunset": "19:06"
       },
       "forecast": {
         "2024-08-30": {
-          "temp": 22.04,
-          "feels_like": 22.47,
+          "temp": 21.75,
+          "feels_like": 22.15,
           "description": "scattered clouds",
           "icon": "03n",
           "humidity": 83,
@@ -3483,17 +3483,17 @@
       "city": "שפרעם",
       "current": {
         "temperature": 27.01,
-        "feels_like": 29.3,
+        "feels_like": 29.13,
         "description": "few clouds",
         "icon": "02n",
-        "humidity": 75,
-        "wind_speed": 0.45,
-        "wind_direction": 268,
+        "humidity": 73,
+        "wind_speed": 0.89,
+        "wind_direction": 287,
         "pressure": 1011,
         "visibility": 10000,
-        "cloudiness": 16,
-        "sunrise": "09:12",
-        "sunset": "22:07"
+        "cloudiness": 14,
+        "sunrise": "06:12",
+        "sunset": "19:07"
       },
       "forecast": {
         "2024-08-30": {
@@ -3501,7 +3501,7 @@
           "feels_like": 26.19,
           "description": "few clouds",
           "icon": "02n",
-          "humidity": 76,
+          "humidity": 75,
           "wind_speed": 2.93,
           "wind_direction": 291,
           "pressure": 1011,
@@ -3556,23 +3556,23 @@
     {
       "city": "טירה",
       "current": {
-        "temperature": 27.16,
-        "feels_like": 29.7,
+        "temperature": 26.26,
+        "feels_like": 26.26,
         "description": "few clouds",
         "icon": "02n",
         "humidity": 76,
-        "wind_speed": 2.6,
-        "wind_direction": 303,
+        "wind_speed": 2.68,
+        "wind_direction": 296,
         "pressure": 1011,
         "visibility": 10000,
-        "cloudiness": 18,
-        "sunrise": "09:14",
-        "sunset": "22:07"
+        "cloudiness": 23,
+        "sunrise": "06:14",
+        "sunset": "19:07"
       },
       "forecast": {
         "2024-08-30": {
-          "temp": 26.76,
-          "feels_like": 28.68,
+          "temp": 26.16,
+          "feels_like": 26.16,
           "description": "few clouds",
           "icon": "02n",
           "humidity": 73,
@@ -3630,18 +3630,18 @@
     {
       "city": "אופקים",
       "current": {
-        "temperature": 26.27,
-        "feels_like": 26.27,
+        "temperature": 25.97,
+        "feels_like": 25.97,
         "description": "clear sky",
         "icon": "01n",
-        "humidity": 72,
-        "wind_speed": 3.03,
-        "wind_direction": 327,
+        "humidity": 73,
+        "wind_speed": 2.37,
+        "wind_direction": 325,
         "pressure": 1011,
         "visibility": 10000,
-        "cloudiness": 7,
-        "sunrise": "09:16",
-        "sunset": "22:08"
+        "cloudiness": 5,
+        "sunrise": "06:16",
+        "sunset": "19:08"
       },
       "forecast": {
         "2024-08-30": {
@@ -3705,17 +3705,17 @@
       "city": "טמרה",
       "current": {
         "temperature": 27.04,
-        "feels_like": 29.64,
+        "feels_like": 29.45,
         "description": "few clouds",
         "icon": "02n",
-        "humidity": 78,
-        "wind_speed": 3.3,
-        "wind_direction": 304,
+        "humidity": 76,
+        "wind_speed": 3.15,
+        "wind_direction": 299,
         "pressure": 1011,
         "visibility": 10000,
-        "cloudiness": 19,
-        "sunrise": "09:12",
-        "sunset": "22:07"
+        "cloudiness": 17,
+        "sunrise": "06:12",
+        "sunset": "19:07"
       },
       "forecast": {
         "2024-08-30": {
@@ -3723,7 +3723,7 @@
           "feels_like": 26.37,
           "description": "few clouds",
           "icon": "02n",
-          "humidity": 78,
+          "humidity": 77,
           "wind_speed": 2.78,
           "wind_direction": 295,
           "pressure": 1011,
@@ -3783,13 +3783,13 @@
         "description": "clear sky",
         "icon": "01n",
         "humidity": 77,
-        "wind_speed": 3.21,
-        "wind_direction": 287,
+        "wind_speed": 3.09,
+        "wind_direction": 281,
         "pressure": 1011,
         "visibility": 10000,
-        "cloudiness": 1,
-        "sunrise": "09:12",
-        "sunset": "22:06"
+        "cloudiness": 0,
+        "sunrise": "06:12",
+        "sunset": "19:06"
       },
       "forecast": {
         "2024-08-30": {
@@ -3852,23 +3852,23 @@
     {
       "city": "טייבה",
       "current": {
-        "temperature": 27.09,
-        "feels_like": 29.55,
+        "temperature": 26.17,
+        "feels_like": 26.17,
         "description": "few clouds",
         "icon": "02n",
         "humidity": 76,
-        "wind_speed": 2.48,
-        "wind_direction": 300,
+        "wind_speed": 2.57,
+        "wind_direction": 294,
         "pressure": 1011,
         "visibility": 10000,
-        "cloudiness": 20,
-        "sunrise": "09:14",
-        "sunset": "22:07"
+        "cloudiness": 24,
+        "sunrise": "06:14",
+        "sunset": "19:07"
       },
       "forecast": {
         "2024-08-30": {
-          "temp": 26.7,
-          "feels_like": 28.64,
+          "temp": 26.08,
+          "feels_like": 26.08,
           "description": "few clouds",
           "icon": "02n",
           "humidity": 74,
@@ -3930,14 +3930,14 @@
         "feels_like": 26.5,
         "description": "few clouds",
         "icon": "02n",
-        "humidity": 90,
-        "wind_speed": 3.46,
-        "wind_direction": 315,
+        "humidity": 92,
+        "wind_speed": 3.42,
+        "wind_direction": 310,
         "pressure": 1012,
         "visibility": 10000,
         "cloudiness": 15,
-        "sunrise": "09:10",
-        "sunset": "22:06"
+        "sunrise": "06:10",
+        "sunset": "19:06"
       },
       "forecast": {
         "2024-08-30": {
@@ -4001,25 +4001,25 @@
       "city": "נשר",
       "current": {
         "temperature": 27.78,
-        "feels_like": 30.75,
+        "feels_like": 30.49,
         "description": "few clouds",
         "icon": "02n",
-        "humidity": 74,
-        "wind_speed": 0.45,
-        "wind_direction": 268,
+        "humidity": 72,
+        "wind_speed": 0.89,
+        "wind_direction": 287,
         "pressure": 1011,
         "visibility": 10000,
-        "cloudiness": 20,
-        "sunrise": "09:13",
-        "sunset": "22:07"
+        "cloudiness": 19,
+        "sunrise": "06:13",
+        "sunset": "19:07"
       },
       "forecast": {
         "2024-08-30": {
           "temp": 26.7,
-          "feels_like": 28.5,
+          "feels_like": 28.43,
           "description": "few clouds",
           "icon": "02n",
-          "humidity": 72,
+          "humidity": 71,
           "wind_speed": 3.76,
           "wind_direction": 283,
           "pressure": 1011,
@@ -4074,23 +4074,23 @@
     {
       "city": "קלנסווה",
       "current": {
-        "temperature": 27.37,
-        "feels_like": 30.13,
+        "temperature": 26.45,
+        "feels_like": 26.45,
         "description": "few clouds",
         "icon": "02n",
         "humidity": 76,
-        "wind_speed": 2.48,
-        "wind_direction": 300,
+        "wind_speed": 2.57,
+        "wind_direction": 294,
         "pressure": 1011,
         "visibility": 10000,
-        "cloudiness": 20,
-        "sunrise": "09:14",
-        "sunset": "22:07"
+        "cloudiness": 24,
+        "sunrise": "06:14",
+        "sunset": "19:07"
       },
       "forecast": {
         "2024-08-30": {
-          "temp": 26.88,
-          "feels_like": 28.97,
+          "temp": 26.27,
+          "feels_like": 26.27,
           "description": "few clouds",
           "icon": "02n",
           "humidity": 74,
@@ -4148,30 +4148,30 @@
     {
       "city": "כפר קאסם",
       "current": {
-        "temperature": 26.88,
-        "feels_like": 28.73,
-        "description": "broken clouds",
-        "icon": "04n",
-        "humidity": 71,
-        "wind_speed": 2.06,
-        "wind_direction": 240,
+        "temperature": 25.64,
+        "feels_like": 26.24,
+        "description": "scattered clouds",
+        "icon": "03n",
+        "humidity": 76,
+        "wind_speed": 2.88,
+        "wind_direction": 299,
         "pressure": 1011,
         "visibility": 10000,
-        "cloudiness": 75,
-        "sunrise": "09:14",
-        "sunset": "22:07"
+        "cloudiness": 31,
+        "sunrise": "06:14",
+        "sunset": "19:07"
       },
       "forecast": {
         "2024-08-30": {
-          "temp": 26.49,
-          "feels_like": 26.49,
-          "description": "broken clouds",
-          "icon": "04n",
-          "humidity": 70,
+          "temp": 25.66,
+          "feels_like": 26.19,
+          "description": "scattered clouds",
+          "icon": "03n",
+          "humidity": 73,
           "wind_speed": 3.07,
           "wind_direction": 290,
           "pressure": 1011,
-          "cloudiness": 64
+          "cloudiness": 29
         },
         "2024-08-31": {
           "temp": 26.15,
@@ -4222,23 +4222,23 @@
     {
       "city": "אריאל",
       "current": {
-        "temperature": 24.01,
-        "feels_like": 24.45,
+        "temperature": 22.79,
+        "feels_like": 23.11,
         "description": "scattered clouds",
         "icon": "03n",
         "humidity": 76,
-        "wind_speed": 4.27,
-        "wind_direction": 292,
+        "wind_speed": 4.23,
+        "wind_direction": 288,
         "pressure": 1012,
         "visibility": 10000,
-        "cloudiness": 41,
-        "sunrise": "09:13",
-        "sunset": "22:06"
+        "cloudiness": 43,
+        "sunrise": "06:13",
+        "sunset": "19:06"
       },
       "forecast": {
         "2024-08-30": {
-          "temp": 23.51,
-          "feels_like": 23.98,
+          "temp": 22.7,
+          "feels_like": 23.09,
           "description": "scattered clouds",
           "icon": "03n",
           "humidity": 79,
@@ -4297,25 +4297,25 @@
       "city": "טירת כרמל",
       "current": {
         "temperature": 27.75,
-        "feels_like": 30.68,
+        "feels_like": 30.43,
         "description": "few clouds",
         "icon": "02n",
-        "humidity": 74,
-        "wind_speed": 4.03,
-        "wind_direction": 295,
-        "pressure": 1011,
+        "humidity": 72,
+        "wind_speed": 4.24,
+        "wind_direction": 290,
+        "pressure": 1010,
         "visibility": 10000,
-        "cloudiness": 18,
-        "sunrise": "09:13",
-        "sunset": "22:08"
+        "cloudiness": 17,
+        "sunrise": "06:13",
+        "sunset": "19:08"
       },
       "forecast": {
         "2024-08-30": {
           "temp": 27.49,
-          "feels_like": 29.93,
+          "feels_like": 29.71,
           "description": "few clouds",
           "icon": "02n",
-          "humidity": 72,
+          "humidity": 70,
           "wind_speed": 4.11,
           "wind_direction": 282,
           "pressure": 1011,
@@ -4375,13 +4375,13 @@
         "description": "clear sky",
         "icon": "01n",
         "humidity": 72,
-        "wind_speed": 3.35,
-        "wind_direction": 296,
+        "wind_speed": 3.31,
+        "wind_direction": 288,
         "pressure": 1011,
         "visibility": 10000,
-        "cloudiness": 3,
-        "sunrise": "09:14",
-        "sunset": "22:07"
+        "cloudiness": 8,
+        "sunrise": "06:14",
+        "sunset": "19:07"
       },
       "forecast": {
         "2024-08-30": {
@@ -4445,17 +4445,17 @@
       "city": "בית שאן",
       "current": {
         "temperature": 28.18,
-        "feels_like": 30.74,
+        "feels_like": 31.02,
         "description": "clear sky",
         "icon": "01n",
-        "humidity": 68,
-        "wind_speed": 1.63,
-        "wind_direction": 254,
+        "humidity": 70,
+        "wind_speed": 1.64,
+        "wind_direction": 240,
         "pressure": 1010,
         "visibility": 10000,
         "cloudiness": 0,
-        "sunrise": "09:11",
-        "sunset": "22:05"
+        "sunrise": "06:11",
+        "sunset": "19:05"
       },
       "forecast": {
         "2024-08-30": {
@@ -4519,25 +4519,25 @@
       "city": "עראבה",
       "current": {
         "temperature": 25.82,
-        "feels_like": 26.6,
+        "feels_like": 26.55,
         "description": "few clouds",
         "icon": "02n",
-        "humidity": 82,
-        "wind_speed": 1.34,
-        "wind_direction": 305,
+        "humidity": 80,
+        "wind_speed": 0.89,
+        "wind_direction": 283,
         "pressure": 1011,
         "visibility": 10000,
-        "cloudiness": 14,
-        "sunrise": "09:12",
-        "sunset": "22:06"
+        "cloudiness": 12,
+        "sunrise": "06:12",
+        "sunset": "19:06"
       },
       "forecast": {
         "2024-08-30": {
           "temp": 24.91,
-          "feels_like": 25.62,
+          "feels_like": 25.57,
           "description": "few clouds",
           "icon": "02n",
-          "humidity": 83,
+          "humidity": 81,
           "wind_speed": 2.34,
           "wind_direction": 301,
           "pressure": 1011,
@@ -4592,23 +4592,23 @@
     {
       "city": "שדרות",
       "current": {
-        "temperature": 26.29,
-        "feels_like": 26.29,
+        "temperature": 25.18,
+        "feels_like": 25.63,
         "description": "clear sky",
         "icon": "01n",
-        "humidity": 71,
-        "wind_speed": 2.55,
-        "wind_direction": 326,
+        "humidity": 72,
+        "wind_speed": 2.31,
+        "wind_direction": 325,
         "pressure": 1011,
         "visibility": 10000,
-        "cloudiness": 4,
-        "sunrise": "09:16",
-        "sunset": "22:08"
+        "cloudiness": 1,
+        "sunrise": "06:16",
+        "sunset": "19:08"
       },
       "forecast": {
         "2024-08-30": {
-          "temp": 26.01,
-          "feels_like": 26.01,
+          "temp": 25.27,
+          "feels_like": 25.73,
           "description": "clear sky",
           "icon": "01n",
           "humidity": 72,
@@ -4666,18 +4666,18 @@
     {
       "city": "ערד",
       "current": {
-        "temperature": 23.2,
-        "feels_like": 23.33,
+        "temperature": 22.91,
+        "feels_like": 23.08,
         "description": "clear sky",
         "icon": "01n",
-        "humidity": 67,
-        "wind_speed": 1.99,
-        "wind_direction": 310,
+        "humidity": 70,
+        "wind_speed": 2.26,
+        "wind_direction": 295,
         "pressure": 1012,
         "visibility": 10000,
         "cloudiness": 0,
-        "sunrise": "09:14",
-        "sunset": "22:05"
+        "sunrise": "06:14",
+        "sunset": "19:05"
       },
       "forecast": {
         "2024-08-30": {
@@ -4740,23 +4740,23 @@
     {
       "city": "כפר יונה",
       "current": {
-        "temperature": 27.23,
-        "feels_like": 29.44,
+        "temperature": 26.34,
+        "feels_like": 26.34,
         "description": "few clouds",
         "icon": "02n",
         "humidity": 72,
-        "wind_speed": 2.63,
-        "wind_direction": 301,
+        "wind_speed": 2.65,
+        "wind_direction": 294,
         "pressure": 1011,
         "visibility": 10000,
-        "cloudiness": 15,
-        "sunrise": "09:14",
-        "sunset": "22:07"
+        "cloudiness": 20,
+        "sunrise": "06:14",
+        "sunset": "19:07"
       },
       "forecast": {
         "2024-08-30": {
-          "temp": 26.82,
-          "feels_like": 28.63,
+          "temp": 26.23,
+          "feels_like": 26.23,
           "description": "few clouds",
           "icon": "02n",
           "humidity": 71,
@@ -4814,30 +4814,30 @@
     {
       "city": "גבעת שמואל",
       "current": {
-        "temperature": 27.39,
-        "feels_like": 29.53,
-        "description": "broken clouds",
-        "icon": "04n",
-        "humidity": 70,
-        "wind_speed": 2.06,
-        "wind_direction": 240,
+        "temperature": 26.16,
+        "feels_like": 26.16,
+        "description": "clear sky",
+        "icon": "01n",
+        "humidity": 73,
+        "wind_speed": 3.11,
+        "wind_direction": 299,
         "pressure": 1011,
         "visibility": 10000,
-        "cloudiness": 75,
-        "sunrise": "09:14",
-        "sunset": "22:07"
+        "cloudiness": 9,
+        "sunrise": "06:14",
+        "sunset": "19:07"
       },
       "forecast": {
         "2024-08-30": {
-          "temp": 27.19,
-          "feels_like": 29.09,
-          "description": "broken clouds",
-          "icon": "04n",
-          "humidity": 69,
+          "temp": 26.37,
+          "feels_like": 26.37,
+          "description": "clear sky",
+          "icon": "01n",
+          "humidity": 71,
           "wind_speed": 3.08,
           "wind_direction": 292,
           "pressure": 1011,
-          "cloudiness": 55
+          "cloudiness": 9
         },
         "2024-08-31": {
           "temp": 27.44,
@@ -4889,25 +4889,25 @@
       "city": "כפר כנא",
       "current": {
         "temperature": 25.84,
-        "feels_like": 26.62,
+        "feels_like": 26.57,
         "description": "clear sky",
         "icon": "01n",
-        "humidity": 82,
-        "wind_speed": 3.13,
-        "wind_direction": 292,
-        "pressure": 1011,
+        "humidity": 80,
+        "wind_speed": 2.97,
+        "wind_direction": 287,
+        "pressure": 1010,
         "visibility": 10000,
-        "cloudiness": 4,
-        "sunrise": "09:12",
-        "sunset": "22:06"
+        "cloudiness": 2,
+        "sunrise": "06:12",
+        "sunset": "19:06"
       },
       "forecast": {
         "2024-08-30": {
           "temp": 25.05,
-          "feels_like": 25.73,
+          "feels_like": 25.67,
           "description": "clear sky",
           "icon": "01n",
-          "humidity": 81,
+          "humidity": 79,
           "wind_speed": 2.25,
           "wind_direction": 287,
           "pressure": 1011,
@@ -4967,13 +4967,13 @@
         "description": "scattered clouds",
         "icon": "03n",
         "humidity": 72,
-        "wind_speed": 1.34,
-        "wind_direction": 305,
+        "wind_speed": 0.89,
+        "wind_direction": 283,
         "pressure": 1011,
         "visibility": 10000,
-        "cloudiness": 27,
-        "sunrise": "09:12",
-        "sunset": "22:07"
+        "cloudiness": 25,
+        "sunrise": "06:12",
+        "sunset": "19:07"
       },
       "forecast": {
         "2024-08-30": {
@@ -5037,25 +5037,25 @@
       "city": "רכסים",
       "current": {
         "temperature": 27.53,
-        "feels_like": 30.23,
+        "feels_like": 30.01,
         "description": "few clouds",
         "icon": "02n",
-        "humidity": 74,
-        "wind_speed": 0.45,
-        "wind_direction": 268,
+        "humidity": 72,
+        "wind_speed": 0.89,
+        "wind_direction": 287,
         "pressure": 1011,
         "visibility": 10000,
-        "cloudiness": 18,
-        "sunrise": "09:13",
-        "sunset": "22:07"
+        "cloudiness": 16,
+        "sunrise": "06:13",
+        "sunset": "19:07"
       },
       "forecast": {
         "2024-08-30": {
           "temp": 26.93,
-          "feels_like": 29.06,
+          "feels_like": 28.98,
           "description": "few clouds",
           "icon": "02n",
-          "humidity": 74,
+          "humidity": 73,
           "wind_speed": 3.27,
           "wind_direction": 287,
           "pressure": 1011,
@@ -5115,13 +5115,13 @@
         "description": "few clouds",
         "icon": "02n",
         "humidity": 68,
-        "wind_speed": 2.98,
-        "wind_direction": 307,
+        "wind_speed": 2.81,
+        "wind_direction": 301,
         "pressure": 1011,
         "visibility": 10000,
-        "cloudiness": 24,
-        "sunrise": "09:12",
-        "sunset": "22:07"
+        "cloudiness": 22,
+        "sunrise": "06:12",
+        "sunset": "19:07"
       },
       "forecast": {
         "2024-08-30": {
@@ -5185,25 +5185,25 @@
       "city": "טורעאן",
       "current": {
         "temperature": 25.73,
-        "feels_like": 26.5,
+        "feels_like": 26.45,
         "description": "clear sky",
         "icon": "01n",
-        "humidity": 82,
-        "wind_speed": 3.09,
-        "wind_direction": 289,
+        "humidity": 80,
+        "wind_speed": 2.95,
+        "wind_direction": 285,
         "pressure": 1010,
         "visibility": 10000,
-        "cloudiness": 3,
-        "sunrise": "09:12",
-        "sunset": "22:06"
+        "cloudiness": 2,
+        "sunrise": "06:12",
+        "sunset": "19:06"
       },
       "forecast": {
         "2024-08-30": {
           "temp": 24.94,
-          "feels_like": 25.6,
+          "feels_like": 25.55,
           "description": "clear sky",
           "icon": "01n",
-          "humidity": 81,
+          "humidity": 79,
           "wind_speed": 2.15,
           "wind_direction": 284,
           "pressure": 1010,
@@ -5258,30 +5258,30 @@
     {
       "city": "באר יעקב",
       "current": {
-        "temperature": 27.18,
-        "feels_like": 29.07,
-        "description": "broken clouds",
-        "icon": "04n",
-        "humidity": 69,
-        "wind_speed": 2.06,
-        "wind_direction": 240,
+        "temperature": 26.1,
+        "feels_like": 26.1,
+        "description": "few clouds",
+        "icon": "02n",
+        "humidity": 71,
+        "wind_speed": 0.89,
+        "wind_direction": 201,
         "pressure": 1011,
         "visibility": 10000,
-        "cloudiness": 75,
-        "sunrise": "09:15",
-        "sunset": "22:07"
+        "cloudiness": 12,
+        "sunrise": "06:15",
+        "sunset": "19:07"
       },
       "forecast": {
         "2024-08-30": {
-          "temp": 26.83,
-          "feels_like": 28.5,
-          "description": "broken clouds",
-          "icon": "04n",
-          "humidity": 69,
+          "temp": 26.11,
+          "feels_like": 26.11,
+          "description": "few clouds",
+          "icon": "02n",
+          "humidity": 70,
           "wind_speed": 2.46,
           "wind_direction": 291,
           "pressure": 1011,
-          "cloudiness": 56
+          "cloudiness": 12
         },
         "2024-08-31": {
           "temp": 26.91,
@@ -5333,17 +5333,17 @@
       "city": "בית גן",
       "current": {
         "temperature": 27.45,
-        "feels_like": 29.75,
+        "feels_like": 29.85,
         "description": "clear sky",
         "icon": "01n",
-        "humidity": 71,
-        "wind_speed": 2.91,
-        "wind_direction": 267,
+        "humidity": 72,
+        "wind_speed": 2.82,
+        "wind_direction": 261,
         "pressure": 1010,
         "visibility": 10000,
         "cloudiness": 0,
-        "sunrise": "09:11",
-        "sunset": "22:05"
+        "sunrise": "06:11",
+        "sunset": "19:05"
       },
       "forecast": {
         "2024-08-30": {
@@ -5406,23 +5406,23 @@
     {
       "city": "גת",
       "current": {
-        "temperature": 26.5,
-        "feels_like": 26.5,
+        "temperature": 25.67,
+        "feels_like": 26.33,
         "description": "few clouds",
         "icon": "02n",
         "humidity": 78,
-        "wind_speed": 2.27,
+        "wind_speed": 2.05,
         "wind_direction": 320,
-        "pressure": 1012,
+        "pressure": 1011,
         "visibility": 10000,
-        "cloudiness": 12,
-        "sunrise": "09:15",
-        "sunset": "22:07"
+        "cloudiness": 13,
+        "sunrise": "06:15",
+        "sunset": "19:07"
       },
       "forecast": {
         "2024-08-30": {
-          "temp": 25.78,
-          "feels_like": 26.48,
+          "temp": 25.22,
+          "feels_like": 25.86,
           "description": "few clouds",
           "icon": "02n",
           "humidity": 79,
@@ -5485,13 +5485,13 @@
         "description": "clear sky",
         "icon": "01n",
         "humidity": 75,
-        "wind_speed": 2.87,
-        "wind_direction": 282,
+        "wind_speed": 2.73,
+        "wind_direction": 276,
         "pressure": 1010,
         "visibility": 10000,
         "cloudiness": 0,
-        "sunrise": "09:12",
-        "sunset": "22:06"
+        "sunrise": "06:12",
+        "sunset": "19:06"
       },
       "forecast": {
         "2024-08-30": {
@@ -5556,16 +5556,16 @@
       "current": {
         "temperature": 26.82,
         "feels_like": 28.71,
-        "description": "clear sky",
-        "icon": "01n",
+        "description": "few clouds",
+        "icon": "02n",
         "humidity": 72,
-        "wind_speed": 3.35,
-        "wind_direction": 294,
+        "wind_speed": 3.33,
+        "wind_direction": 287,
         "pressure": 1011,
         "visibility": 10000,
-        "cloudiness": 6,
-        "sunrise": "09:14",
-        "sunset": "22:07"
+        "cloudiness": 11,
+        "sunrise": "06:14",
+        "sunset": "19:07"
       },
       "forecast": {
         "2024-08-30": {
@@ -5633,13 +5633,13 @@
         "description": "clear sky",
         "icon": "01n",
         "humidity": 77,
-        "wind_speed": 3.18,
-        "wind_direction": 289,
+        "wind_speed": 3.04,
+        "wind_direction": 283,
         "pressure": 1011,
         "visibility": 10000,
-        "cloudiness": 1,
-        "sunrise": "09:12",
-        "sunset": "22:06"
+        "cloudiness": 0,
+        "sunrise": "06:12",
+        "sunset": "19:06"
       },
       "forecast": {
         "2024-08-30": {
@@ -5702,18 +5702,18 @@
     {
       "city": "ירוחם",
       "current": {
-        "temperature": 22.61,
-        "feels_like": 23.07,
+        "temperature": 22.3,
+        "feels_like": 22.81,
         "description": "clear sky",
         "icon": "01n",
-        "humidity": 82,
-        "wind_speed": 5.97,
-        "wind_direction": 320,
+        "humidity": 85,
+        "wind_speed": 3.83,
+        "wind_direction": 328,
         "pressure": 1012,
         "visibility": 10000,
         "cloudiness": 0,
-        "sunrise": "09:15",
-        "sunset": "22:06"
+        "sunrise": "06:15",
+        "sunset": "19:06"
       },
       "forecast": {
         "2024-08-30": {
@@ -5776,18 +5776,18 @@
     {
       "city": "כסיפה",
       "current": {
-        "temperature": 23.16,
-        "feels_like": 23.52,
+        "temperature": 22.87,
+        "feels_like": 23.28,
         "description": "clear sky",
         "icon": "01n",
-        "humidity": 76,
-        "wind_speed": 3.19,
-        "wind_direction": 317,
+        "humidity": 79,
+        "wind_speed": 2.7,
+        "wind_direction": 302,
         "pressure": 1012,
         "visibility": 10000,
-        "cloudiness": 0,
-        "sunrise": "09:14",
-        "sunset": "22:06"
+        "cloudiness": 1,
+        "sunrise": "06:14",
+        "sunset": "19:06"
       },
       "forecast": {
         "2024-08-30": {
@@ -5850,30 +5850,30 @@
     {
       "city": "כפר ברא",
       "current": {
-        "temperature": 27.08,
-        "feels_like": 29.08,
-        "description": "broken clouds",
-        "icon": "04n",
-        "humidity": 71,
-        "wind_speed": 2.06,
-        "wind_direction": 240,
+        "temperature": 25.82,
+        "feels_like": 26.44,
+        "description": "scattered clouds",
+        "icon": "03n",
+        "humidity": 76,
+        "wind_speed": 2.8,
+        "wind_direction": 299,
         "pressure": 1011,
         "visibility": 10000,
-        "cloudiness": 75,
-        "sunrise": "09:14",
-        "sunset": "22:07"
+        "cloudiness": 26,
+        "sunrise": "06:14",
+        "sunset": "19:07"
       },
       "forecast": {
         "2024-08-30": {
-          "temp": 26.88,
-          "feels_like": 28.66,
-          "description": "broken clouds",
-          "icon": "04n",
-          "humidity": 70,
+          "temp": 26.04,
+          "feels_like": 26.04,
+          "description": "scattered clouds",
+          "icon": "03n",
+          "humidity": 73,
           "wind_speed": 2.97,
           "wind_direction": 291,
           "pressure": 1011,
-          "cloudiness": 62
+          "cloudiness": 25
         },
         "2024-08-31": {
           "temp": 26.96,
@@ -5928,22 +5928,22 @@
         "feels_like": 26.37,
         "description": "clear sky",
         "icon": "01n",
-        "humidity": 79,
-        "wind_speed": 3.23,
-        "wind_direction": 299,
+        "humidity": 77,
+        "wind_speed": 3.04,
+        "wind_direction": 294,
         "pressure": 1011,
         "visibility": 10000,
-        "cloudiness": 10,
-        "sunrise": "09:12",
-        "sunset": "22:06"
+        "cloudiness": 8,
+        "sunrise": "06:12",
+        "sunset": "19:06"
       },
       "forecast": {
         "2024-08-30": {
           "temp": 25.47,
-          "feels_like": 26.16,
+          "feels_like": 26.11,
           "description": "clear sky",
           "icon": "01n",
-          "humidity": 80,
+          "humidity": 78,
           "wind_speed": 2.5,
           "wind_direction": 294,
           "pressure": 1011,
@@ -5998,23 +5998,23 @@
     {
       "city": "כפר קרע",
       "current": {
-        "temperature": 27.03,
-        "feels_like": 29.43,
+        "temperature": 26.71,
+        "feels_like": 28.88,
         "description": "clear sky",
         "icon": "01n",
-        "humidity": 76,
-        "wind_speed": 2.76,
-        "wind_direction": 287,
+        "humidity": 77,
+        "wind_speed": 2.7,
+        "wind_direction": 278,
         "pressure": 1011,
         "visibility": 10000,
-        "cloudiness": 4,
-        "sunrise": "09:13",
-        "sunset": "22:07"
+        "cloudiness": 9,
+        "sunrise": "06:13",
+        "sunset": "19:07"
       },
       "forecast": {
         "2024-08-30": {
-          "temp": 26.1,
-          "feels_like": 26.1,
+          "temp": 25.89,
+          "feels_like": 26.52,
           "description": "clear sky",
           "icon": "01n",
           "humidity": 76,
@@ -6072,18 +6072,18 @@
     {
       "city": "להבים",
       "current": {
-        "temperature": 24.71,
-        "feels_like": 25.27,
+        "temperature": 24.43,
+        "feels_like": 24.99,
         "description": "clear sky",
         "icon": "01n",
-        "humidity": 78,
-        "wind_speed": 3.59,
-        "wind_direction": 326,
+        "humidity": 79,
+        "wind_speed": 2.63,
+        "wind_direction": 324,
         "pressure": 1012,
         "visibility": 10000,
-        "cloudiness": 5,
-        "sunrise": "09:15",
-        "sunset": "22:07"
+        "cloudiness": 7,
+        "sunrise": "06:15",
+        "sunset": "19:07"
       },
       "forecast": {
         "2024-08-30": {
@@ -6146,30 +6146,30 @@
     {
       "city": "מזכרת בתיה",
       "current": {
-        "temperature": 27.16,
-        "feels_like": 29.04,
-        "description": "broken clouds",
-        "icon": "04n",
-        "humidity": 69,
-        "wind_speed": 2.06,
-        "wind_direction": 240,
+        "temperature": 26.15,
+        "feels_like": 26.15,
+        "description": "few clouds",
+        "icon": "02n",
+        "humidity": 71,
+        "wind_speed": 0.89,
+        "wind_direction": 201,
         "pressure": 1011,
         "visibility": 10000,
-        "cloudiness": 75,
-        "sunrise": "09:15",
-        "sunset": "22:07"
+        "cloudiness": 15,
+        "sunrise": "06:15",
+        "sunset": "19:07"
       },
       "forecast": {
         "2024-08-30": {
-          "temp": 26.61,
-          "feels_like": 26.61,
-          "description": "broken clouds",
-          "icon": "04n",
-          "humidity": 71,
+          "temp": 25.94,
+          "feels_like": 26.47,
+          "description": "few clouds",
+          "icon": "02n",
+          "humidity": 72,
           "wind_speed": 1.84,
           "wind_direction": 290,
           "pressure": 1011,
-          "cloudiness": 57
+          "cloudiness": 16
         },
         "2024-08-31": {
           "temp": 26.42,
@@ -6225,13 +6225,13 @@
         "description": "scattered clouds",
         "icon": "03n",
         "humidity": 73,
-        "wind_speed": 2.63,
-        "wind_direction": 310,
+        "wind_speed": 2.43,
+        "wind_direction": 304,
         "pressure": 1011,
         "visibility": 10000,
-        "cloudiness": 32,
-        "sunrise": "09:12",
-        "sunset": "22:07"
+        "cloudiness": 29,
+        "sunrise": "06:12",
+        "sunset": "19:07"
       },
       "forecast": {
         "2024-08-30": {
@@ -6294,18 +6294,18 @@
     {
       "city": "מצפה רמון",
       "current": {
-        "temperature": 20.72,
-        "feels_like": 20.81,
+        "temperature": 20.22,
+        "feels_like": 20.36,
         "description": "clear sky",
         "icon": "01n",
-        "humidity": 75,
-        "wind_speed": 3.4,
-        "wind_direction": 310,
+        "humidity": 79,
+        "wind_speed": 1.76,
+        "wind_direction": 305,
         "pressure": 1013,
         "visibility": 10000,
         "cloudiness": 0,
-        "sunrise": "09:16",
-        "sunset": "22:06"
+        "sunrise": "06:16",
+        "sunset": "19:06"
       },
       "forecast": {
         "2024-08-30": {
@@ -6369,25 +6369,25 @@
       "city": "משהד",
       "current": {
         "temperature": 25.29,
-        "feels_like": 26.02,
+        "feels_like": 25.96,
         "description": "clear sky",
         "icon": "01n",
-        "humidity": 82,
-        "wind_speed": 3.06,
-        "wind_direction": 288,
+        "humidity": 80,
+        "wind_speed": 2.91,
+        "wind_direction": 284,
         "pressure": 1010,
         "visibility": 10000,
-        "cloudiness": 1,
-        "sunrise": "09:12",
-        "sunset": "22:06"
+        "cloudiness": 0,
+        "sunrise": "06:12",
+        "sunset": "19:06"
       },
       "forecast": {
         "2024-08-30": {
           "temp": 24.4,
-          "feels_like": 24.98,
+          "feels_like": 24.96,
           "description": "clear sky",
           "icon": "01n",
-          "humidity": 80,
+          "humidity": 79,
           "wind_speed": 2.17,
           "wind_direction": 281,
           "pressure": 1010,
@@ -6443,25 +6443,25 @@
       "city": "נחף",
       "current": {
         "temperature": 25.42,
-        "feels_like": 26.16,
+        "feels_like": 26.11,
         "description": "few clouds",
         "icon": "02n",
-        "humidity": 82,
-        "wind_speed": 1.34,
-        "wind_direction": 305,
+        "humidity": 80,
+        "wind_speed": 0.89,
+        "wind_direction": 283,
         "pressure": 1011,
         "visibility": 10000,
-        "cloudiness": 22,
-        "sunrise": "09:12",
-        "sunset": "22:06"
+        "cloudiness": 20,
+        "sunrise": "06:12",
+        "sunset": "19:06"
       },
       "forecast": {
         "2024-08-30": {
           "temp": 24.47,
-          "feels_like": 25.14,
+          "feels_like": 25.11,
           "description": "few clouds",
           "icon": "02n",
-          "humidity": 83,
+          "humidity": 82,
           "wind_speed": 2.21,
           "wind_direction": 307,
           "pressure": 1011,
@@ -6516,18 +6516,18 @@
     {
       "city": "עומר",
       "current": {
-        "temperature": 24.22,
-        "feels_like": 24.73,
+        "temperature": 23.93,
+        "feels_like": 24.47,
         "description": "clear sky",
         "icon": "01n",
-        "humidity": 78,
-        "wind_speed": 4.18,
-        "wind_direction": 326,
+        "humidity": 80,
+        "wind_speed": 2.85,
+        "wind_direction": 324,
         "pressure": 1012,
         "visibility": 10000,
-        "cloudiness": 0,
-        "sunrise": "09:15",
-        "sunset": "22:07"
+        "cloudiness": 3,
+        "sunrise": "06:15",
+        "sunset": "19:07"
       },
       "forecast": {
         "2024-08-30": {
@@ -6591,17 +6591,17 @@
       "city": "עין מאהל",
       "current": {
         "temperature": 24.26,
-        "feels_like": 24.73,
+        "feels_like": 24.75,
         "description": "clear sky",
         "icon": "01n",
-        "humidity": 76,
-        "wind_speed": 3.06,
-        "wind_direction": 288,
+        "humidity": 77,
+        "wind_speed": 2.91,
+        "wind_direction": 284,
         "pressure": 1010,
         "visibility": 10000,
-        "cloudiness": 1,
-        "sunrise": "09:12",
-        "sunset": "22:06"
+        "cloudiness": 0,
+        "sunrise": "06:12",
+        "sunset": "19:06"
       },
       "forecast": {
         "2024-08-30": {
@@ -6665,17 +6665,17 @@
       "city": "עספיא",
       "current": {
         "temperature": 24.66,
-        "feels_like": 25.11,
+        "feels_like": 25.06,
         "description": "few clouds",
         "icon": "02n",
-        "humidity": 74,
-        "wind_speed": 3.52,
-        "wind_direction": 295,
+        "humidity": 72,
+        "wind_speed": 3.5,
+        "wind_direction": 288,
         "pressure": 1011,
         "visibility": 10000,
-        "cloudiness": 15,
-        "sunrise": "09:13",
-        "sunset": "22:07"
+        "cloudiness": 16,
+        "sunrise": "06:13",
+        "sunset": "19:07"
       },
       "forecast": {
         "2024-08-30": {
@@ -6738,23 +6738,23 @@
     {
       "city": "ערערה",
       "current": {
-        "temperature": 25.97,
-        "feels_like": 25.97,
+        "temperature": 25.6,
+        "feels_like": 26.25,
         "description": "clear sky",
         "icon": "01n",
-        "humidity": 77,
-        "wind_speed": 2.8,
-        "wind_direction": 283,
+        "humidity": 78,
+        "wind_speed": 2.76,
+        "wind_direction": 275,
         "pressure": 1011,
         "visibility": 10000,
-        "cloudiness": 4,
-        "sunrise": "09:13",
-        "sunset": "22:07"
+        "cloudiness": 9,
+        "sunrise": "06:13",
+        "sunset": "19:07"
       },
       "forecast": {
         "2024-08-30": {
-          "temp": 25.33,
-          "feels_like": 25.93,
+          "temp": 25.09,
+          "feels_like": 25.67,
           "description": "clear sky",
           "icon": "01n",
           "humidity": 77,
@@ -6814,16 +6814,16 @@
       "current": {
         "temperature": 27.37,
         "feels_like": 29.7,
-        "description": "clear sky",
-        "icon": "01n",
+        "description": "few clouds",
+        "icon": "02n",
         "humidity": 72,
         "wind_speed": 3.49,
-        "wind_direction": 294,
+        "wind_direction": 287,
         "pressure": 1011,
         "visibility": 10000,
-        "cloudiness": 9,
-        "sunrise": "09:14",
-        "sunset": "22:07"
+        "cloudiness": 12,
+        "sunrise": "06:14",
+        "sunset": "19:07"
       },
       "forecast": {
         "2024-08-30": {
@@ -6887,25 +6887,25 @@
       "city": "פסוטה",
       "current": {
         "temperature": 23.67,
-        "feels_like": 24.23,
+        "feels_like": 24.18,
         "description": "scattered clouds",
         "icon": "03n",
-        "humidity": 82,
-        "wind_speed": 2.67,
-        "wind_direction": 309,
+        "humidity": 80,
+        "wind_speed": 2.51,
+        "wind_direction": 302,
         "pressure": 1011,
         "visibility": 10000,
-        "cloudiness": 32,
-        "sunrise": "09:12",
-        "sunset": "22:06"
+        "cloudiness": 28,
+        "sunrise": "06:12",
+        "sunset": "19:06"
       },
       "forecast": {
         "2024-08-30": {
           "temp": 22.59,
-          "feels_like": 23.1,
+          "feels_like": 23.05,
           "description": "scattered clouds",
           "icon": "03n",
-          "humidity": 84,
+          "humidity": 82,
           "wind_speed": 1.98,
           "wind_direction": 303,
           "pressure": 1011,
@@ -6960,23 +6960,23 @@
     {
       "city": "פרדס חנה-כרכור",
       "current": {
-        "temperature": 27.07,
-        "feels_like": 29.33,
+        "temperature": 25.96,
+        "feels_like": 25.96,
         "description": "clear sky",
         "icon": "01n",
         "humidity": 74,
-        "wind_speed": 2.82,
-        "wind_direction": 294,
+        "wind_speed": 2.74,
+        "wind_direction": 286,
         "pressure": 1011,
         "visibility": 10000,
-        "cloudiness": 4,
-        "sunrise": "09:14",
-        "sunset": "22:07"
+        "cloudiness": 10,
+        "sunrise": "06:14",
+        "sunset": "19:07"
       },
       "forecast": {
         "2024-08-30": {
-          "temp": 26.48,
-          "feels_like": 26.48,
+          "temp": 25.74,
+          "feels_like": 26.28,
           "description": "clear sky",
           "icon": "01n",
           "humidity": 73,
@@ -7034,23 +7034,23 @@
     {
       "city": "פרדסיה",
       "current": {
-        "temperature": 27.28,
-        "feels_like": 29.43,
+        "temperature": 26.4,
+        "feels_like": 26.4,
         "description": "few clouds",
         "icon": "02n",
         "humidity": 71,
-        "wind_speed": 2.85,
-        "wind_direction": 301,
+        "wind_speed": 2.83,
+        "wind_direction": 294,
         "pressure": 1011,
         "visibility": 10000,
-        "cloudiness": 12,
-        "sunrise": "09:14",
-        "sunset": "22:07"
+        "cloudiness": 17,
+        "sunrise": "06:14",
+        "sunset": "19:07"
       },
       "forecast": {
         "2024-08-30": {
-          "temp": 26.91,
-          "feels_like": 28.7,
+          "temp": 26.32,
+          "feels_like": 26.32,
           "description": "few clouds",
           "icon": "02n",
           "humidity": 70,
@@ -7108,23 +7108,23 @@
     {
       "city": "צור הדסה",
       "current": {
-        "temperature": 21.93,
-        "feels_like": 22.5,
+        "temperature": 21.47,
+        "feels_like": 22.02,
         "description": "scattered clouds",
         "icon": "03n",
-        "humidity": 89,
-        "wind_speed": 4.11,
-        "wind_direction": 298,
+        "humidity": 90,
+        "wind_speed": 4.05,
+        "wind_direction": 299,
         "pressure": 1012,
         "visibility": 10000,
-        "cloudiness": 34,
-        "sunrise": "09:14",
-        "sunset": "22:06"
+        "cloudiness": 42,
+        "sunrise": "06:14",
+        "sunset": "19:06"
       },
       "forecast": {
         "2024-08-30": {
-          "temp": 21.51,
-          "feels_like": 21.99,
+          "temp": 21.2,
+          "feels_like": 21.65,
           "description": "scattered clouds",
           "icon": "03n",
           "humidity": 87,
@@ -7183,17 +7183,17 @@
       "city": "קצרין",
       "current": {
         "temperature": 25.37,
-        "feels_like": 26.13,
+        "feels_like": 26.18,
         "description": "clear sky",
         "icon": "01n",
-        "humidity": 83,
-        "wind_speed": 2.23,
-        "wind_direction": 293,
+        "humidity": 85,
+        "wind_speed": 2.12,
+        "wind_direction": 287,
         "pressure": 1011,
         "visibility": 10000,
         "cloudiness": 0,
-        "sunrise": "09:10",
-        "sunset": "22:05"
+        "sunrise": "06:10",
+        "sunset": "19:05"
       },
       "forecast": {
         "2024-08-30": {
@@ -7257,17 +7257,17 @@
       "city": "קריית טבעון",
       "current": {
         "temperature": 26.8,
-        "feels_like": 28.82,
+        "feels_like": 28.67,
         "description": "few clouds",
         "icon": "02n",
-        "humidity": 74,
-        "wind_speed": 3.48,
-        "wind_direction": 294,
+        "humidity": 72,
+        "wind_speed": 3.42,
+        "wind_direction": 288,
         "pressure": 1011,
         "visibility": 10000,
-        "cloudiness": 14,
-        "sunrise": "09:13",
-        "sunset": "22:07"
+        "cloudiness": 13,
+        "sunrise": "06:13",
+        "sunset": "19:07"
       },
       "forecast": {
         "2024-08-30": {
@@ -7275,7 +7275,7 @@
           "feels_like": 26.33,
           "description": "few clouds",
           "icon": "02n",
-          "humidity": 74,
+          "humidity": 73,
           "wind_speed": 3.11,
           "wind_direction": 283,
           "pressure": 1011,
@@ -7331,25 +7331,25 @@
       "city": "ראמה",
       "current": {
         "temperature": 24.75,
-        "feels_like": 25.42,
+        "feels_like": 25.37,
         "description": "few clouds",
         "icon": "02n",
-        "humidity": 82,
-        "wind_speed": 1.34,
-        "wind_direction": 305,
+        "humidity": 80,
+        "wind_speed": 0.45,
+        "wind_direction": 284,
         "pressure": 1011,
         "visibility": 10000,
-        "cloudiness": 17,
-        "sunrise": "09:12",
-        "sunset": "22:06"
+        "cloudiness": 16,
+        "sunrise": "06:12",
+        "sunset": "19:06"
       },
       "forecast": {
         "2024-08-30": {
           "temp": 23.74,
-          "feels_like": 24.36,
+          "feels_like": 24.31,
           "description": "few clouds",
           "icon": "02n",
-          "humidity": 84,
+          "humidity": 82,
           "wind_speed": 2.42,
           "wind_direction": 306,
           "pressure": 1011,
@@ -7405,17 +7405,17 @@
       "city": "ריינה",
       "current": {
         "temperature": 25.21,
-        "feels_like": 25.8,
+        "feels_like": 25.82,
         "description": "clear sky",
         "icon": "01n",
-        "humidity": 77,
-        "wind_speed": 3.14,
-        "wind_direction": 291,
-        "pressure": 1011,
+        "humidity": 78,
+        "wind_speed": 2.99,
+        "wind_direction": 286,
+        "pressure": 1010,
         "visibility": 10000,
-        "cloudiness": 2,
-        "sunrise": "09:12",
-        "sunset": "22:06"
+        "cloudiness": 1,
+        "sunrise": "06:12",
+        "sunset": "19:06"
       },
       "forecast": {
         "2024-08-30": {
@@ -7479,17 +7479,17 @@
       "city": "רמת ישי",
       "current": {
         "temperature": 27.26,
-        "feels_like": 29.7,
+        "feels_like": 29.5,
         "description": "clear sky",
         "icon": "01n",
-        "humidity": 74,
-        "wind_speed": 3.4,
-        "wind_direction": 293,
+        "humidity": 72,
+        "wind_speed": 3.29,
+        "wind_direction": 287,
         "pressure": 1011,
         "visibility": 10000,
-        "cloudiness": 9,
-        "sunrise": "09:13",
-        "sunset": "22:07"
+        "cloudiness": 8,
+        "sunrise": "06:13",
+        "sunset": "19:07"
       },
       "forecast": {
         "2024-08-30": {
@@ -7497,7 +7497,7 @@
           "feels_like": 26.38,
           "description": "clear sky",
           "icon": "01n",
-          "humidity": 75,
+          "humidity": 74,
           "wind_speed": 2.88,
           "wind_direction": 283,
           "pressure": 1011,
@@ -7552,30 +7552,30 @@
     {
       "city": "שוהם",
       "current": {
-        "temperature": 27.23,
-        "feels_like": 29.25,
-        "description": "broken clouds",
-        "icon": "04n",
-        "humidity": 70,
-        "wind_speed": 2.06,
-        "wind_direction": 240,
+        "temperature": 25.99,
+        "feels_like": 25.99,
+        "description": "scattered clouds",
+        "icon": "03n",
+        "humidity": 73,
+        "wind_speed": 2.72,
+        "wind_direction": 301,
         "pressure": 1011,
         "visibility": 10000,
-        "cloudiness": 75,
-        "sunrise": "09:14",
-        "sunset": "22:07"
+        "cloudiness": 30,
+        "sunrise": "06:14",
+        "sunset": "19:07"
       },
       "forecast": {
         "2024-08-30": {
-          "temp": 26.87,
-          "feels_like": 28.56,
-          "description": "broken clouds",
-          "icon": "04n",
-          "humidity": 69,
+          "temp": 26.04,
+          "feels_like": 26.04,
+          "description": "scattered clouds",
+          "icon": "03n",
+          "humidity": 71,
           "wind_speed": 2.75,
           "wind_direction": 290,
           "pressure": 1011,
-          "cloudiness": 65
+          "cloudiness": 29
         },
         "2024-08-31": {
           "temp": 26.62,
@@ -7627,17 +7627,17 @@
       "city": "שלומי",
       "current": {
         "temperature": 28.31,
-        "feels_like": 30.17,
-        "description": "scattered clouds",
-        "icon": "03n",
-        "humidity": 62,
-        "wind_speed": 2.98,
-        "wind_direction": 301,
+        "feels_like": 30.3,
+        "description": "few clouds",
+        "icon": "02n",
+        "humidity": 63,
+        "wind_speed": 2.96,
+        "wind_direction": 292,
         "pressure": 1011,
         "visibility": 10000,
-        "cloudiness": 25,
-        "sunrise": "09:12",
-        "sunset": "22:07"
+        "cloudiness": 21,
+        "sunrise": "06:12",
+        "sunset": "19:07"
       },
       "forecast": {
         "2024-08-30": {
@@ -7701,17 +7701,17 @@
       "city": "שעב",
       "current": {
         "temperature": 27.06,
-        "feels_like": 29.78,
+        "feels_like": 29.59,
         "description": "few clouds",
         "icon": "02n",
-        "humidity": 79,
-        "wind_speed": 1.34,
-        "wind_direction": 305,
+        "humidity": 77,
+        "wind_speed": 0.45,
+        "wind_direction": 284,
         "pressure": 1011,
         "visibility": 10000,
-        "cloudiness": 21,
-        "sunrise": "09:12",
-        "sunset": "22:07"
+        "cloudiness": 19,
+        "sunrise": "06:12",
+        "sunset": "19:07"
       },
       "forecast": {
         "2024-08-30": {
@@ -7719,7 +7719,7 @@
           "feels_like": 26.19,
           "description": "few clouds",
           "icon": "02n",
-          "humidity": 81,
+          "humidity": 79,
           "wind_speed": 2.35,
           "wind_direction": 302,
           "pressure": 1011,
@@ -7774,23 +7774,23 @@
     {
       "city": "תל מונד",
       "current": {
-        "temperature": 27.23,
-        "feels_like": 29.84,
+        "temperature": 26.36,
+        "feels_like": 26.36,
         "description": "few clouds",
         "icon": "02n",
         "humidity": 76,
-        "wind_speed": 2.77,
-        "wind_direction": 303,
+        "wind_speed": 2.81,
+        "wind_direction": 296,
         "pressure": 1011,
         "visibility": 10000,
-        "cloudiness": 15,
-        "sunrise": "09:14",
-        "sunset": "22:07"
+        "cloudiness": 19,
+        "sunrise": "06:14",
+        "sunset": "19:07"
       },
       "forecast": {
         "2024-08-30": {
-          "temp": 26.91,
-          "feels_like": 28.95,
+          "temp": 26.33,
+          "feels_like": 26.33,
           "description": "few clouds",
           "icon": "02n",
           "humidity": 73,
@@ -7842,6 +7842,80 @@
           "wind_direction": 7,
           "pressure": 1013,
           "cloudiness": 0
+        }
+      }
+    },
+    {
+      "city": "מעלות תרשיחא",
+      "current": {
+        "temperature": 24.78,
+        "feels_like": 25.22,
+        "description": "scattered clouds",
+        "icon": "03n",
+        "humidity": 73,
+        "wind_speed": 2.43,
+        "wind_direction": 304,
+        "pressure": 1011,
+        "visibility": 10000,
+        "cloudiness": 29,
+        "sunrise": "06:12",
+        "sunset": "19:07"
+      },
+      "forecast": {
+        "2024-08-30": {
+          "temp": 23.53,
+          "feels_like": 23.95,
+          "description": "scattered clouds",
+          "icon": "03n",
+          "humidity": 77,
+          "wind_speed": 1.94,
+          "wind_direction": 304,
+          "pressure": 1011,
+          "cloudiness": 29
+        },
+        "2024-08-31": {
+          "temp": 21.87,
+          "feels_like": 22.31,
+          "description": "scattered clouds",
+          "icon": "03n",
+          "humidity": 84,
+          "wind_speed": 2.39,
+          "wind_direction": 301,
+          "pressure": 1011,
+          "cloudiness": 48
+        },
+        "2024-09-01": {
+          "temp": 21.69,
+          "feels_like": 22.11,
+          "description": "few clouds",
+          "icon": "02n",
+          "humidity": 84,
+          "wind_speed": 1.46,
+          "wind_direction": 321,
+          "pressure": 1011,
+          "cloudiness": 22
+        },
+        "2024-09-02": {
+          "temp": 20.93,
+          "feels_like": 21.25,
+          "description": "clear sky",
+          "icon": "01n",
+          "humidity": 83,
+          "wind_speed": 1.06,
+          "wind_direction": 360,
+          "pressure": 1012,
+          "cloudiness": 0
+        },
+        "2024-09-03": {
+          "temp": 21.02,
+          "feels_like": 21.4,
+          "description": "clear sky",
+          "icon": "01n",
+          "humidity": 85,
+          "wind_speed": 2.23,
+          "wind_direction": 10,
+          "pressure": 1014,
+          "cloudiness": 2
         }
       }
     }
