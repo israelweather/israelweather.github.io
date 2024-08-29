@@ -1,6 +1,3 @@
-Certainly! Here's the improved README in a format that you can easily copy and paste into your project:
-
-```markdown
 # 🌦️ Israel Weather App
 
 A comprehensive weather application providing real-time weather conditions and 5-day forecasts for cities across Israel.
