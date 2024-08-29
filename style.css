@@ -147,11 +147,6 @@ input[type="text"]:focus {
     transition: all 0.3s ease;
 }
 
-.weather-details:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 36px rgba(31, 38, 135, 0.3);
-}
-
 .main-info {
     display: flex;
     align-items: center;
@@ -205,12 +200,6 @@ input[type="text"]:focus {
     transition: all 0.3s ease;
 }
 
-.detail-item:hover {
-    background-color: rgba(255, 255, 255, 0.5);
-    transform: translateY(-3px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-}
-
 .detail-item i {
     margin-right: 15px;
     font-size: 1.4em;
@@ -236,11 +225,6 @@ input[type="text"]:focus {
     text-align: center;
     transition: all 0.3s ease;
     backdrop-filter: blur(5px);
-}
-
-.daily-forecast-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
 .daily-forecast-item h3 {
@@ -354,7 +338,6 @@ footer {
     display: flex;
 }
 
-
 /* Dark Mode Toggle */
 .dark-mode-toggle {
     position: fixed;
@@ -402,10 +385,6 @@ body.dark-mode .detail-item,
 body.dark-mode .popular-cities a {
     background-color: rgba(255, 255, 255, 0.05);
     color: #f0f0f0;
-}
-
-body.dark-mode .popular-cities a:hover {
-    background-color: rgba(255, 255, 255, 0.1);
 }
 
 body.dark-mode .temp {
@@ -458,6 +437,7 @@ body.dark-mode .popular-cities i {
         font-size: 2rem;
     }
 }
+
 .intro, .features, .why-us {
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
@@ -481,8 +461,6 @@ body.dark-mode .popular-cities i {
     color: #2193b0;
 }
 
-/* Add these to your existing style.css file */
-
 .weather-explanation, .features, .why-us {
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 15px;
@@ -491,11 +469,6 @@ body.dark-mode .popular-cities i {
     backdrop-filter: blur(10px);
     box-shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
     transition: all 0.3s ease;
-}
-
-.weather-explanation:hover, .features:hover, .why-us:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 48px rgba(31, 38, 135, 0.2);
 }
 
 .explanation-grid {
@@ -510,11 +483,6 @@ body.dark-mode .popular-cities i {
     border-radius: 10px;
     padding: 15px;
     transition: all 0.3s ease;
-}
-
-.explanation-item:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-    transform: translateY(-3px);
 }
 
 .explanation-item h3 {
@@ -554,11 +522,6 @@ body.dark-mode .popular-cities i {
     transition: all 0.3s ease;
 }
 
-.city-item:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-    transform: translateY(-5px);
-}
-
 .city-item i {
     font-size: 2em;
     margin-bottom: 10px;
@@ -575,10 +538,11 @@ body.dark-mode .popular-cities i {
         grid-template-columns: 1fr;
     }
 
-    .city-grid {
+        .city-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 }
+
 .popular-cities {
     margin: 30px 0;
     padding: 20px;
@@ -587,11 +551,6 @@ body.dark-mode .popular-cities i {
     backdrop-filter: blur(10px);
     box-shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
     transition: all 0.3s ease;
-}
-
-.popular-cities:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 48px rgba(31, 38, 135, 0.2);
 }
 
 /* Improve icon alignment in headings */
@@ -624,6 +583,7 @@ h1 i, h2 i, h3 i {
     margin-left: 8px;
     color: #2193b0;
 }
+
 .search-container {
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 15px;
@@ -669,7 +629,7 @@ h1 i, h2 i, h3 i {
     border: none;
     background-color: #2193b0;
     color: white;
-    border-radius:  25px 0 0 25px ;
+    border-radius: 25px 0 0 25px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
@@ -696,10 +656,6 @@ h1 i, h2 i, h3 i {
 .btn i {
     margin-left: 8px;
 }
-
-
-
-
 
 /* Dark Mode Styles for weather-info.html */
 body.dark-mode {
@@ -731,10 +687,6 @@ body.dark-mode .weather-info-page h3 {
 
 body.dark-mode .climate-zone {
     background-color: rgba(255, 255, 255, 0.05);
-}
-
-body.dark-mode .climate-zone:hover {
-    background-color: rgba(255, 255, 255, 0.1);
 }
 
 body.dark-mode .weather-icon {
@@ -776,66 +728,156 @@ body.dark-mode #climate-map {
     filter: invert(1) hue-rotate(180deg);
 }
 
-
-/* Existing styles remain unchanged */
-
 /* Media query for mobile devices */
 @media only screen and (max-width: 767px) {
-  html, body {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-  }
+    html, body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
 
-  body {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-  }
+    body {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
 
-  .container {
-    width: 100%;
-    height: 100%;
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
-  }
+    .container {
+        width: 100%;
+        height: 100%;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+    }
 
-  /* Adjust other elements for better fit on mobile */
-  header {
-    padding: 10px;
-  }
+    /* Adjust other elements for better fit on mobile */
+    header {
+        padding: 10px;
+    }
 
-  h1 {
-    font-size: 1.5rem;
-  }
+    h1 {
+        font-size: 1.5rem;
+    }
 
-  .search-container {
-    flex-direction: column;
-  }
+    .search-container {
+        flex-direction: column;
+    }
 
-  .search-box, #cityInput, .search-btn, .location-btn {
-    width: 100%;
-    margin: 5px 0;
-  }
+    .search-box, #cityInput, .search-btn, .location-btn {
+        width: 100%;
+        margin: 5px 0;
+    }
 
-  .city-grid {
-    grid-template-columns: 1fr 1fr;
-  }
+    .city-grid {
+        grid-template-columns: 1fr 1fr;
+    }
 
-  .weather-details, .daily-forecast-item {
-    padding: 10px;
-  }
+    .weather-details, .daily-forecast-item {
+        padding: 10px;
+    }
 
-  .main-info {
+    .main-info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .details-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* Update the popular-cities styles */
+.popular-cities {
+    margin: 30px 0;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
+}
+
+.popular-cities h2 {
+    margin-bottom: 20px;
+    color: #2193b0;
+    text-align: center;
+}
+
+.city-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+}
+
+.city-item {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
     flex-direction: column;
     align-items: center;
-  }
+    justify-content: center;
+}
 
-  .details-grid {
-    grid-template-columns: 1fr 1fr;
-  }
+.city-item:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.city-item i {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #2193b0;
+}
+
+.city-item span {
+    display: block;
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+/* Responsive design for mobile */
+@media only screen and (max-width: 767px) {
+    .city-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .city-item {
+        padding: 10px;
+    }
+
+    .city-item i {
+        font-size: 1.5em;
+    }
+
+    .city-item span {
+        font-size: 0.8em;
+    }
+}
+
+/* For very small screens */
+@media only screen and (max-width: 350px) {
+    .city-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Dark mode styles */
+body.dark-mode .city-item {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #f0f0f0;
+}
+
+body.dark-mode .city-item:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+body.dark-mode .city-item i {
+    color: #6dd5ed;
 }
