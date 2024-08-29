@@ -125,7 +125,7 @@ weatherApp.fetchWeatherData = async function(city) {
     }
 };
 
-    function displayWeatherData(data, cityHebrew) {  // קבל את שם העיר בעברית כפרמטר
+ function displayWeatherData(data, cityHebrew) {
     const weatherInfo = document.getElementById('weather-info');
     weatherInfo.innerHTML = ''; // Clear previous content
 
@@ -135,61 +135,150 @@ weatherApp.fetchWeatherData = async function(city) {
     // Display current weather information
     const currentWeatherContainer = document.createElement('article');
     currentWeatherContainer.classList.add('current-weather', 'fade-in');
-    currentWeatherContainer.innerHTML = `
-        <h2><i class="fas fa-map-marker-alt"></i> מזג האוויר הנוכחי ב${cityHebrew}</h2>
-            <div class="weather-details">
-                <div class="main-info">
-                    <img src="http://openweathermap.org/img/wn/${currentWeather.icon}@2x.png" alt="סמל מזג אוויר" class="weather-icon">
-                        <div class="temperature">
-                        <span class="temp">${formatTemperature(currentWeather.temperature)}</span>
-                        <span class="feels-like">מרגיש כמו: ${formatTemperature(currentWeather.feels_like)}</span>
-                    </div>
-                </div>
-                <p class="description">${translateWeatherDescription(currentWeather.description)}</p>
-                <div class="details-grid">
-                    <div class="detail-item"><i class="fas fa-tint"></i> לחות: ${currentWeather.humidity}%</div>
-                    <div class="detail-item"><i class="fas fa-wind"></i> רוח: ${currentWeather.wind_speed} מ'/ש'</div>
-                    <div class="detail-item"><i class="fas fa-compass"></i> כיוון רוח: ${currentWeather.wind_direction}°</div>
-                    <div class="detail-item"><i class="fas fa-compress-arrows-alt"></i> לחץ: ${currentWeather.pressure} hPa</div>
-                    <div class="detail-item"><i class="fas fa-eye"></i> ראות: ${currentWeather.visibility} מטר</div>
-                    <div class="detail-item"><i class="fas fa-cloud"></i> עננות: ${currentWeather.cloudiness}%</div>
-                    <div class="detail-item"><i class="fas fa-sun"></i> זריחה: ${currentWeather.sunrise}</div>
-                    <div class="detail-item"><i class="fas fa-moon"></i> שקיעה: ${currentWeather.sunset}</div>
-                </div>
-            </div>
-        `;
-        weatherInfo.appendChild(currentWeatherContainer);
 
-        // Display forecast
-        const weeklyForecastContainer = document.createElement('section');
-        weeklyForecastContainer.classList.add('next-5-days', 'fade-in');
-        weeklyForecastContainer.innerHTML = `
-            <h2><i class="fas fa-calendar-alt"></i> תחזית ל-5 ימים הקרובים</h2>
-            <div class="daily-forecast"></div>
-        `;
-        weatherInfo.appendChild(weeklyForecastContainer);
+    const title = document.createElement('h2');
+    const icon = document.createElement('i');
+    icon.classList.add('fas', 'fa-map-marker-alt');
+    title.appendChild(icon);
+    title.appendChild(document.createTextNode(` מזג האוויר הנוכחי ב${cityHebrew}`));
+    currentWeatherContainer.appendChild(title);
 
-        const dailyForecastContainer = weeklyForecastContainer.querySelector('.daily-forecast');
-        Object.entries(forecast).forEach(([date, forecastData]) => {
-            const dailyForecast = document.createElement('div');
-            dailyForecast.classList.add('daily-forecast-item');
-            dailyForecast.innerHTML = `
-                <h3>${formatDate(date)}</h3>
-                <img src="http://openweathermap.org/img/wn/${forecastData.icon}@2x.png" alt="סמל מזג אוויר" class="weather-icon">
-                <p class="temp">${formatTemperature(forecastData.temp)}</p>
-                <p class="feels-like">מרגיש כמו: ${formatTemperature(forecastData.feels_like)}</p>
-                <p class="description">${translateWeatherDescription(forecastData.description)}</p>
-                <p><i class="fas fa-tint"></i> ${forecastData.humidity}%</p>
-                <p><i class="fas fa-wind"></i> ${forecastData.wind_speed} מ'/ש'</p>
-                <p><i class="fas fa-compass"></i> ${forecastData.wind_direction}°</p>
-                <p><i class="fas fa-compress-arrows-alt"></i> ${forecastData.pressure} hPa</p>
-                <p><i class="fas fa-cloud"></i> ${forecastData.cloudiness}%</p>
-            `;
-            dailyForecastContainer.appendChild(dailyForecast);
+    const weatherDetails = document.createElement('div');
+    weatherDetails.classList.add('weather-details');
+
+    const mainInfo = document.createElement('div');
+    mainInfo.classList.add('main-info');
+
+    const weatherIcon = document.createElement('img');
+    weatherIcon.src = `http://openweathermap.org/img/wn/${currentWeather.icon}@2x.png`;
+    weatherIcon.alt = 'סמל מזג אוויר';
+    weatherIcon.classList.add('weather-icon');
+    mainInfo.appendChild(weatherIcon);
+
+    const temperatureDiv = document.createElement('div');
+    temperatureDiv.classList.add('temperature');
+
+    const temp = document.createElement('span');
+    temp.classList.add('temp');
+    temp.textContent = formatTemperature(currentWeather.temperature);
+    temperatureDiv.appendChild(temp);
+
+    const feelsLike = document.createElement('span');
+    feelsLike.classList.add('feels-like');
+    feelsLike.textContent = `מרגיש כמו: ${formatTemperature(currentWeather.feels_like)}`;
+    temperatureDiv.appendChild(feelsLike);
+
+    mainInfo.appendChild(temperatureDiv);
+    weatherDetails.appendChild(mainInfo);
+
+    const description = document.createElement('p');
+    description.classList.add('description');
+    description.textContent = translateWeatherDescription(currentWeather.description);
+    weatherDetails.appendChild(description);
+
+    const detailsGrid = document.createElement('div');
+    detailsGrid.classList.add('details-grid');
+
+    const detailItems = [
+        { icon: 'fa-tint', text: `לחות: ${currentWeather.humidity}%` },
+        { icon: 'fa-wind', text: `רוח: ${currentWeather.wind_speed} מ'/ש'` },
+        { icon: 'fa-compass', text: `כיוון רוח: ${currentWeather.wind_direction}°` },
+        { icon: 'fa-compress-arrows-alt', text: `לחץ: ${currentWeather.pressure} hPa` },
+        { icon: 'fa-eye', text: `ראות: ${currentWeather.visibility} מטר` },
+        { icon: 'fa-cloud', text: `עננות: ${currentWeather.cloudiness}%` },
+        { icon: 'fa-sun', text: `זריחה: ${currentWeather.sunrise}` },
+        { icon: 'fa-moon', text: `שקיעה: ${currentWeather.sunset}` }
+    ];
+
+    detailItems.forEach(item => {
+        const detailItem = document.createElement('div');
+        detailItem.classList.add('detail-item');
+        const itemIcon = document.createElement('i');
+        itemIcon.classList.add('fas', item.icon);
+        detailItem.appendChild(itemIcon);
+        detailItem.appendChild(document.createTextNode(` ${item.text}`));
+        detailsGrid.appendChild(detailItem);
+    });
+
+    weatherDetails.appendChild(detailsGrid);
+    currentWeatherContainer.appendChild(weatherDetails);
+    weatherInfo.appendChild(currentWeatherContainer);
+
+    // Display forecast
+    const weeklyForecastContainer = document.createElement('section');
+    weeklyForecastContainer.classList.add('next-5-days', 'fade-in');
+
+    const forecastTitle = document.createElement('h2');
+    const calendarIcon = document.createElement('i');
+    calendarIcon.classList.add('fas', 'fa-calendar-alt');
+    forecastTitle.appendChild(calendarIcon);
+    forecastTitle.appendChild(document.createTextNode(' תחזית ל-5 ימים הקרובים'));
+    weeklyForecastContainer.appendChild(forecastTitle);
+
+    const dailyForecastContainer = document.createElement('div');
+    dailyForecastContainer.classList.add('daily-forecast');
+
+    Object.entries(forecast).forEach(([date, forecastData]) => {
+        const dailyForecast = document.createElement('div');
+        dailyForecast.classList.add('daily-forecast-item');
+
+        const dateHeading = document.createElement('h3');
+        dateHeading.textContent = formatDate(date);
+        dailyForecast.appendChild(dateHeading);
+
+        const forecastIcon = document.createElement('img');
+        forecastIcon.src = `http://openweathermap.org/img/wn/${forecastData.icon}@2x.png`;
+        forecastIcon.alt = 'סמל מזג אוויר';
+        forecastIcon.classList.add('weather-icon');
+        dailyForecast.appendChild(forecastIcon);
+
+        const forecastTemps = document.createElement('div');
+        forecastTemps.classList.add('forecast-temps');
+
+        const forecastTemp = document.createElement('span');
+        forecastTemp.classList.add('temp');
+        forecastTemp.textContent = formatTemperature(forecastData.temp);
+        forecastTemps.appendChild(forecastTemp);
+
+        const forecastFeelsLike = document.createElement('span');
+        forecastFeelsLike.classList.add('feels-like');
+        forecastFeelsLike.textContent = `מרגיש כמו: ${formatTemperature(forecastData.feels_like)}`;
+        forecastTemps.appendChild(forecastFeelsLike);
+
+        dailyForecast.appendChild(forecastTemps);
+
+        const forecastDescription = document.createElement('p');
+        forecastDescription.classList.add('description');
+        forecastDescription.textContent = translateWeatherDescription(forecastData.description);
+        dailyForecast.appendChild(forecastDescription);
+
+        const forecastDetails = document.createElement('div');
+        forecastDetails.classList.add('forecast-details');
+
+        const forecastDetailItems = [
+            { icon: 'fa-tint', text: `${forecastData.humidity}%` },
+            { icon: 'fa-wind', text: `${forecastData.wind_speed} מ'/ש'` },
+            { icon: 'fa-compass', text: `${forecastData.wind_direction}°` },
+            { icon: 'fa-compress-arrows-alt', text: `${forecastData.pressure} hPa` },
+            { icon: 'fa-cloud', text: `${forecastData.cloudiness}%` }
+        ];
+
+        forecastDetailItems.forEach(item => {
+            const detailSpan = document.createElement('span');
+            const itemIcon = document.createElement('i');
+            itemIcon.classList.add('fas', item.icon);
+            detailSpan.appendChild(itemIcon);
+            detailSpan.appendChild(document.createTextNode(` ${item.text}`));
+            forecastDetails.appendChild(detailSpan);
         });
 
-        updateLastUpdated();
-    }
+        dailyForecast.appendChild(forecastDetails);
+        dailyForecastContainer.appendChild(dailyForecast);
+    });
+
+    weeklyForecastContainer.appendChild(dailyForecastContainer);
+    weatherInfo.appendChild(weeklyForecastContainer);
+}
 
     function formatDate(dateString) {
         const date = new Date(dateString);
@@ -202,63 +291,63 @@ weatherApp.fetchWeatherData = async function(city) {
     }
 
     function translateWeatherDescription(description) {
-        const translations = {
-        'clear sky': 'שמיים בהירים',
-        'few clouds': 'מעט עננים',
-        'scattered clouds': 'עננים מפוזרים',
-        'broken clouds': 'עננים שבורים',
-        'overcast clouds': 'עננות מלאה',
-        'light rain': 'גשם קל',
-        'moderate rain': 'גשם מתון',
-        'heavy intensity rain': 'גשם כבד',
-        'very heavy rain': 'גשם כבד מאוד',
-        'extreme rain': 'גשם קיצוני',
-        'freezing rain': 'גשם קפוא',
-        'light intensity shower rain': 'מקלחת גשם קלה',
-        'shower rain': 'מקלחת גשם',
-        'heavy intensity shower rain': 'מקלחת גשם כבדה',
-        'ragged shower rain': 'מקלחת גשם לא סדירה',
-        'thunderstorm': 'סופת רעמים',
-        'thunderstorm with light rain': 'סופת רעמים עם גשם קל',
-        'thunderstorm with rain': 'סופת רעמים עם גשם',
-        'thunderstorm with heavy rain': 'סופת רעמים עם גשם כבד',
-        'light thunderstorm': 'סופת רעמים קלה',
-        'heavy thunderstorm': 'סופת רעמים כבדה',
-        'ragged thunderstorm': 'סופת רעמים לא סדירה',
-        'thunderstorm with light drizzle': 'סופת רעמים עם טפטוף קל',
-        'thunderstorm with drizzle': 'סופת רעמים עם טפטוף',
-        'thunderstorm with heavy drizzle': 'סופת רעמים עם טפטוף כבד',
-        'light intensity drizzle': 'טפטוף קל',
-        'drizzle': 'טפטוף',
-        'heavy intensity drizzle': 'טפטוף כבד',
-        'light intensity drizzle rain': 'טפטוף גשם קל',
-        'drizzle rain': 'טפטוף גשם',
-        'heavy intensity drizzle rain': 'טפטוף גשם כבד',
-        'shower rain and drizzle': 'מקלחת גשם וטפטוף',
-        'heavy shower rain and drizzle': 'מקלחת גשם כבדה וטפטוף',
-        'shower drizzle': 'טפטוף מקלחת',
-        'light snow': 'שלג קל',
-        'snow': 'שלג',
-        'heavy snow': 'שלג כבד',
-        'sleet': 'ברד מעורב בגשם',
-        'light shower sleet': 'ברד קל מעורב בגשם',
-        'shower sleet': 'ברד מעורב בגשם',
-        'light rain and snow': 'גשם קל ושלג',
-        'rain and snow': 'גשם ושלג',
-        'light shower snow': 'מקלחת שלג קלה',
-        'shower snow': 'מקלחת שלג',
-        'heavy shower snow': 'מקלחת שלג כבדה',
-        'mist': 'ערפל קל',
-        'smoke': 'עשן',
-        'haze': 'אובך',
-        'sand/dust whirls': 'מערבולות חול/אבק',
-        'fog': 'ערפל',
-        'sand': 'חול',
-        'dust': 'אבק',
-        'volcanic ash': 'אפר וולקני',
-        'squalls': 'משבי רוח',
-        'tornado': 'טורנדו'
-    };
+       const translations = {
+    'clear sky': 'שמיים בהירים',
+    'few clouds': 'מעט עננים',
+    'scattered clouds': 'עננים מפוזרים',
+    'broken clouds': 'עננים שבורים',
+    'overcast clouds': 'עננות מלאה',
+    'light rain': 'גשם קל',
+    'moderate rain': 'גשם מתון',
+    'heavy intensity rain': 'גשם כבד',
+    'very heavy rain': 'גשם כבד מאוד',
+    'extreme rain': 'גשם קיצוני',
+    'freezing rain': 'גשם קפוא',
+    'light intensity shower rain': 'מקלחת גשם קלה',
+    'shower rain': 'מקלחת גשם',
+    'heavy intensity shower rain': 'מקלחת גשם כבדה',
+    'ragged shower rain': 'מקלחת גשם לא סדירה',
+    'thunderstorm': 'סופת רעמים',
+    'thunderstorm with light rain': 'סופת רעמים עם גשם קל',
+    'thunderstorm with rain': 'סופת רעמים עם גשם',
+    'thunderstorm with heavy rain': 'סופת רעמים עם גשם כבד',
+    'light thunderstorm': 'סופת רעמים קלה',
+    'heavy thunderstorm': 'סופת רעמים כבדה',
+    'ragged thunderstorm': 'סופת רעמים לא סדירה',
+    'thunderstorm with light drizzle': 'סופת רעמים עם טפטוף קל',
+    'thunderstorm with drizzle': 'סופת רעמים עם טפטוף',
+    'thunderstorm with heavy drizzle': 'סופת רעמים עם טפטוף כבד',
+    'light intensity drizzle': 'טפטוף קל',
+    'drizzle': 'טפטוף',
+    'heavy intensity drizzle': 'טפטוף כבד',
+    'light intensity drizzle rain': 'טפטוף גשם קל',
+    'drizzle rain': 'טפטוף גשם',
+    'heavy intensity drizzle rain': 'טפטוף גשם כבד',
+    'shower rain and drizzle': 'מקלחת גשם וטפטוף',
+    'heavy shower rain and drizzle': 'מקלחת גשם כבדה וטפטוף',
+    'shower drizzle': 'טפטוף מקלחת',
+    'light snow': 'שלג קל',
+    'snow': 'שלג',
+    'heavy snow': 'שלג כבד',
+    'sleet': 'ברד מעורב בגשם',
+    'light shower sleet': 'ברד קל מעורב בגשם',
+    'shower sleet': 'ברד מעורב בגשם',
+    'light rain and snow': 'גשם קל ושלג',
+    'rain and snow': 'גשם ושלג',
+    'light shower snow': 'מקלחת שלג קלה',
+    'shower snow': 'מקלחת שלג',
+    'heavy shower snow': 'מקלחת שלג כבדה',
+    'mist': 'ערפל קל',
+    'smoke': 'עשן',
+    'haze': 'אובך',
+    'sand/dust whirls': 'מערבולות חול/אבק',
+    'fog': 'ערפל',
+    'sand': 'חול',
+    'dust': 'אבק',
+    'volcanic ash': 'אפר וולקני',
+    'squalls': 'משבי רוח',
+    'tornado': 'טורנדו'
+};
         return translations[description.toLowerCase()] || description;
     }
 
