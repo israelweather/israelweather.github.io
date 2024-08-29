@@ -57,10 +57,6 @@ Weather data is automatically updated daily using GitHub Actions. The workflow i
 
 An OpenWeatherMap API key is required. Store it as a secret in your GitHub repository settings.
 
-## 🤝 Contributing
-
-Contributions are welcome! Please check our [Contributing Guidelines](CONTRIBUTING.md) and [Code of Conduct](CODE_OF_CONDUCT.md).
-
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
 ## 📄 License
