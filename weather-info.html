@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
 <head>
-    <link rel="stylesheet" href="style.css">
-    <script src="shared.js" defer></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>מידע מקיף על מזג האוויר בישראל - אקלים, עונות, ותופעות מיוחדות</title>
@@ -13,134 +11,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-    <style>
-        body {
-            font-family: 'Heebo', sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
-            margin: 0;
-            padding: 0;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        header {
-            background-color: #2193b0;
-            color: white;
-            text-align: center;
-            padding: 20px 0;
-            margin-bottom: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        header h1 {
-            margin: 0;
-            font-size: 2.5em;
-        }
-        .weather-info-page {
-            background-color: rgba(255, 255, 255, 0.9);
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            padding: 30px;
-            margin-bottom: 30px;
-        }
-        .weather-info-page h2 {
-            color: #2193b0;
-            border-bottom: 2px solid #2193b0;
-            padding-bottom: 10px;
-            margin-top: 40px;
-        }
-        .weather-info-page h3 {
-            color: #1c7a94;
-        }
-        .weather-info-page p, .weather-info-page ul, .weather-info-page ol {
-            margin-bottom: 20px;
-        }
-        #climate-map {
-            width: 100%;
-            height: 500px;
-            border-radius: 10px;
-            margin-bottom: 30px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        .climate-zones {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            gap: 20px;
-        }
-        .climate-zone {
-            flex-basis: calc(50% - 10px);
-            background-color: #f0f8ff;
-            border-radius: 8px;
-            padding: 20px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-        }
-        .climate-zone:hover {
-            transform: translateY(-5px);
-        }
-        .weather-icon {
-            font-size: 2.5em;
-            margin-bottom: 15px;
-            color: #2193b0;
-        }
-        .interesting-facts, .weather-phenomena {
-            background-color: #e6f7ff;
-            padding: 20px;
-            border-radius: 8px;
-            margin-top: 30px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        .back-to-home {
-            display: inline-block;
-            margin-top: 30px;
-            padding: 12px 24px;
-            background-color: #2193b0;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-            font-weight: bold;
-        }
-        .back-to-home:hover {
-            background-color: #1c7a94;
-        }
-        .data-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 30px;
-        }
-        .data-table th, .data-table td {
-            border: 1px solid #ddd;
-            padding: 12px;
-            text-align: right;
-        }
-        .data-table th {
-            background-color: #2193b0;
-            color: white;
-        }
-        .data-table tr:nth-child(even) {
-            background-color: #f2f2f2;
-        }
-        footer {
-            text-align: center;
-            padding: 20px 0;
-            background-color: #2193b0;
-            color: white;
-            border-radius: 10px;
-            margin-top: 30px;
-        }
-        @media (max-width: 768px) {
-            .climate-zone {
-                flex-basis: 100%;
-            }
-        }
-
-    </style>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="shared.js" defer></script>
 </head>
 <body>
 <button id="darkModeToggle" class="dark-mode-toggle" aria-label="החלף למצב לילה">
@@ -151,20 +23,23 @@
 </button>
 <div class="container">
     <header>
-        <h1>מידע מקיף על מזג האוויר בישראל</h1>
+        <h1><i class="fas fa-sun"></i> מידע מקיף על מזג האוויר בישראל</h1>
     </header>
     <main class="weather-info-page">
         <article>
-            <h2>אקלים ישראל</h2>
+            <h2><i class="fas fa-cloud"></i> אקלים ישראל</h2>
             <p>ישראל מתאפיינת במגוון אקלימי עשיר, הנע מאקלים ים תיכוני בצפון ובמרכז ועד לאקלים מדברי בדרום. המיקום
                 הגיאוגרפי הייחודי של ישראל, בין הים התיכון למדבר, יוצר תנאי מזג אוויר מגוונים ומעניינים. האקלים בישראל
                 מושפע מגורמים רבים, כולל הטופוגרפיה המגוונת, הקרבה לים התיכון, ומערכות לחץ אוויר אזוריות.</p>
         </article>
 
-        <div id="climate-map"></div>
+        <section class="climate-map">
+            <h2><i class="fas fa-map-marked-alt"></i> מפת אזורי אקלים בישראל</h2>
+            <div id="climateMap" style="height: 400px;"></div>
+        </section>
 
         <article>
-            <h2>אזורי אקלים בישראל</h2>
+            <h2><i class="fas fa-temperature-high"></i> אזורי אקלים בישראל</h2>
             <div class="climate-zones">
                 <div class="climate-zone">
                     <i class="fas fa-sun weather-icon"></i>
@@ -194,7 +69,7 @@
         </article>
 
         <article>
-            <h2>עונות השנה</h2>
+            <h2><i class="fas fa-calendar-alt"></i> עונות השנה</h2>
             <p>בישראל מבחינים בארבע עונות עיקריות, אם כי המעבר ביניהן הדרגתי יותר מאשר באזורים צפוניים:</p>
             <ul>
                 <li><strong>אביב (מרץ-מאי):</strong> תקופה נעימה עם פריחה מרהיבה ומזג אוויר מתון. טמפרטורות ממוצעות נעות
@@ -212,8 +87,69 @@
             </ul>
         </article>
 
+        <section class="temperature-chart">
+            <h2><i class="fas fa-chart-line"></i> טמפרטורות ממוצעות לאורך השנה</h2>
+            <canvas id="temperatureChart"></canvas>
+        </section>
+
+        <section class="rainfall-chart">
+            <h2><i class="fas fa-cloud-rain"></i> כמות משקעים ממוצעת לאורך השנה</h2>
+            <canvas id="rainfallChart"></canvas>
+        </section>
+
+        <section class="interesting-facts">
+            <h2><i class="fas fa-lightbulb"></i> עובדות מעניינות על מזג האוויר בישראל</h2>
+            <ul>
+                <li>ישראל חווה בממוצע כ-300 ימי שמש בשנה.</li>
+                <li>הטמפרטורה הגבוהה ביותר שנמדדה אי פעם בישראל הייתה 54°C בטירת צבי ב-1942.</li>
+                <li>הטמפרטורה הנמוכה ביותר שנמדדה הייתה -13.7°C בברם בגולן ב-1950.</li>
+                <li>ים המלח הוא המקום הנמוך ביותר בעולם, כ-430 מטר מתחת לפני הים.</li>
+                <li>בירושלים יורד שלג בממוצע פעם בשנה או שנתיים.</li>
+                <li>אילת היא העיר היבשה ביותר בישראל, עם ממוצע של פחות מ-25 מ"מ גשם בשנה.</li>
+                <li>הר החרמון הוא המקום היחיד בישראל עם שלג קבוע בחורף.</li>
+            </ul>
+        </section>
+
+        <section class="unique-phenomena">
+            <h2><i class="fas fa-wind"></i> תופעות מזג אוויר ייחודיות לישראל</h2>
+            <div class="phenomena-grid">
+                <div class="phenomenon">
+                    <i class="fas fa-temperature-high"></i>
+                    <h3>שרב</h3>
+                    <p>תקופות של חום קיצוני ויובש, הנגרמות על ידי רוחות מדבריות חמות. שרבים יכולים להעלות את הטמפרטורות ב-10°C מעל הממוצע.</p>
+                </div>
+                <div class="phenomenon">
+                    <i class="fas fa-smog"></i>
+                    <h3>סופות אבק</h3>
+                    <p>נפוצות בעיקר באביב ובסתיו, מפחיתות את הראות ומשפיעות על איכות האוויר. יכולות להביא לריכוזי אבק של עד 1000 מיקרוגרם למ"ק.</p>
+                </div>
+                <div class="phenomenon">
+                    <i class="fas fa-water"></i>
+                    <h3>שיטפונות בנחלים</h3>
+                    <p>מתרחשים בעיקר בנגב ובמדבר יהודה בעקבות גשמים עזים. יכולים להיווצר תוך דקות ולהוביל לזרימות של מאות מ"ק בשנייה.</p>
+                </div>
+                <div class="phenomenon">
+                    <i class="fas fa-cloud"></i>
+                    <h3>ערפל חוף</h3>
+                    <p>נוצר כאשר אוויר חם ולח נע מעל מי הים הקרים יחסית, נפוץ בחודשי הקיץ. יכול להפחית את הראות לפחות מ-1 ק"מ.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="weather-records">
+            <h2><i class="fas fa-trophy"></i> שיאי מזג אוויר בישראל</h2>
+            <ul>
+                <li>הטמפרטורה הגבוהה ביותר: 54°C (טירת צבי, 21 ביוני 1942)</li>
+                <li>הטמפרטורה הנמוכה ביותר: -13.7°C (ברם בגולן, 7 בפברואר 1950)</li>
+                <li>כמות הגשם הגבוהה ביותר ביממה: 290 מ"מ (עין חצבה, 17 באוקטובר 1965)</li>
+                <li>מהירות הרוח הגבוהה ביותר: 176 קמ"ש (הר כנען, 11 בפברואר 1974)</li>
+                <li>הלחות הנמוכה ביותר: 0% (סדום, מספר פעמים)</li>
+                <li>השלג הכבד ביותר בירושלים: 1 מטר (1920)</li>
+            </ul>
+        </section>
+
         <article>
-            <h2>טיפים להבנת תחזית מזג האוויר</h2>
+            <h2><i class="fas fa-list-ul"></i> טיפים להבנת תחזית מזג האוויר</h2>
             <ol>
                 <li>שימו לב לטמפרטורות המקסימום והמינימום היומיות.</li>
                 <li>בדקו את אחוזי הלחות, במיוחד בקיץ - לחות גבוהה עשויה להרגיש חמה יותר.</li>
@@ -225,8 +161,8 @@
             </ol>
         </article>
 
-        <article>
-            <h2>נתוני אקלים לערים מרכזיות</h2>
+               <article>
+            <h2><i class="fas fa-table"></i> נתוני אקלים לערים מרכזיות</h2>
             <table class="data-table">
                 <tr>
                     <th>עיר</th>
@@ -267,53 +203,34 @@
             </table>
         </article>
 
-        <div class="interesting-facts">
-            <h2>עובדות מעניינות על מזג האוויר בישראל</h2>
-            <ul>
-                <li>הטמפרטורה הגבוהה ביותר שנמדדה אי פעם בישראל הייתה 54°C בטירת צבי שבעמק בית-שאן ב-21 ביוני 1942.</li>
-                <li>ירושלים מקבלת בממוצע שלג פעם בשנה או שנתיים.</li>
-                <li>אילת היא העיר היבשה ביותר בישראל, עם ממוצע של פחות מ-25 מ"מ גשם בשנה.</li>
-                <li>הר החרמון מקבל את כמות השלג הגדולה ביותר בישראל, עם ממוצע של כ-150 ס"מ בשנה.</li>
-                <li>ים המלח הוא המקום הנמוך ביותר בעולם, כ-430 מטר מתחת לפני הים, ומתאפיין באקלים ייחודי.</li>
-                <li>בישראל יש בממוצע כ-300 ימי שמש בשנה.</li>
-            </ul>
-        </div>
-
-        <article>
-            <h2>תופעות מזג אוויר מיוחדות בישראל</h2>
-            <div class="weather-phenomena">
-                <h3>שרב</h3>
-                <p>תופעה של חום קיצוני ויובש, הנגרמת על ידי רוחות מדבריות חמות. השרב יכול להעלות את הטמפרטורות ב-10°C
-                    מעל הממוצע העונתי.</p>
-
-                <h3>סופות אבק</h3>
-                <p>נפוצות בעיקר באביב ובסתיו, כאשר רוחות חזקות מעלות אבק מהמדבר. סופות אלו יכולות להפחית את הראות
-                    ולהשפיע על איכות האוויר.</p>
-
-                <h3>שיטפונות בנחלים</h3>
-                <p>מתרחשים בעיקר בנגב ובמדבר יהודה בעקבות גשמים עזים. המים זורמים במהירות באפיקים היבשים ויכולים להיות
-                    מסוכנים מאוד.</p>
-
-                <h3>ערפל חוף</h3>
-                <p>נוצר כאשר אוויר חם ולח נע מעל מי הים הקרים יחסית. תופעה זו נפוצה בעיקר בחודשי הקיץ לאורך חופי הים
-                    התיכון.</p>
-            </div>
-        </article>
-
-        <article>
-            <h2>השפעת שינויי האקלים על ישראל</h2>
+        <section class="climate-change">
+            <h2><i class="fas fa-temperature-high"></i> השפעות שינויי האקלים על ישראל</h2>
             <p>שינויי האקלים העולמיים משפיעים גם על ישראל. מחקרים מצביעים על מגמות של:</p>
             <ul>
-                <li>עלייה בטמפרטורות הממוצעות.</li>
-                <li>הפחתה בכמות המשקעים השנתית.</li>
-                <li>עלייה בתדירות ובעוצמה של אירועי מזג אוויר קיצוניים.</li>
-                <li>עלייה במפלס הים, המאיימת על אזורי החוף.</li>
+                <li>עלייה בטמפרטורות הממוצעות של כ-1.5°C מאז שנות ה-50</li>
+                <li>ירידה של כ-10% בכמות המשקעים השנתית בצפון הארץ</li>
+                <li>עלייה בתדירות ובעוצמה של אירועי מזג אוויר קיצוניים</li>
+                <li>עלייה במפלס הים התיכון בקצב של כ-6 מ"מ בשנה</li>
+                <li>התארכות עונת הקיץ והתקצרות עונת החורף</li>
+                <li>הגברת תהליכי המדבור בדרום הארץ</li>
             </ul>
             <p>מדינת ישראל נוקטת צעדים להתמודדות עם שינויים אלה, כולל פיתוח טכנולוגיות להתפלת מים, שיפור יעילות השימוש
                 במים, ופיתוח אנרגיות מתחדשות.</p>
-        </article>
+        </section>
 
-        <a href="index.html" class="back-to-home">חזרה לעמוד הראשי</a>
+        <section class="weather-monitoring">
+            <h2><i class="fas fa-satellite"></i> ניטור מזג האוויר בישראל</h2>
+            <p>השירות המטאורולוגי הישראלי מפעיל רשת מקיפה של תחנות מדידה ברחבי הארץ:</p>
+            <ul>
+                <li>מעל 100 תחנות מטאורולוגיות אוטומטיות</li>
+                <li>5 מכ"מי גשם לניטור משקעים בזמן אמת</li>
+                <li>2 מערכות לאיתור ברקים</li>
+                <li>תחנת רדיוסונדה בבית דגן לביצוע מדידות באטמוספירה העליונה</li>
+                <li>לוויינים מטאורולוגיים לניטור תנועת עננים ומערכות מזג אוויר</li>
+            </ul>
+        </section>
+
+        <a href="index.html" class="back-to-home"><i class="fas fa-home"></i> חזרה לעמוד הראשי</a>
     </main>
     <footer>
         <p>&copy; 2024 אפליקציית מזג האוויר של ישראל | כל הזכויות שמורות</p>
@@ -321,34 +238,68 @@
 </div>
 
 <script>
-        function initMap() {
-            var map = L.map('climate-map').setView([31.0461, 34.8516], 7);
+    // קוד JavaScript ליצירת הגרפים והמפה
+    document.addEventListener('DOMContentLoaded', () => {
+        // גרף טמפרטורות
+        const ctx = document.getElementById('temperatureChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['ינואר', 'פברואר', 'מרץ', 'אפריל', 'מאי', 'יוני', 'יולי', 'אוגוסט', 'ספטמבר', 'אוקטובר', 'נובמבר', 'דצמבר'],
+                datasets: [{
+                    label: 'טמפרטורה ממוצעת (°C)',
+                    data: [12, 13, 15, 19, 23, 26, 28, 28, 27, 23, 19, 14],
+                    borderColor: 'rgb(75, 192, 192)',
+                    tension: 0.1
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'טמפרטורות ממוצעות בישראל לאורך השנה'
+                    }
+                }
+            }
+        });
 
-            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-            }).addTo(map);
+        // גרף משקעים
+        const rainfallCtx = document.getElementById('rainfallChart').getContext('2d');
+        new Chart(rainfallCtx, {
+            type: 'bar',
+            data: {
+                labels: ['ינואר', 'פברואר', 'מרץ', 'אפריל', 'מאי', 'יוני', 'יולי', 'אוגוסט', 'ספטמבר', 'אוקטובר', 'נובמבר', 'דצמבר'],
+                datasets: [{
+                    label: 'כמות משקעים ממוצעת (מ"מ)',
+                    data: [120, 90, 60, 20, 5, 0, 0, 0, 5, 30, 70, 100],
+                    backgroundColor: 'rgba(54, 162, 235, 0.5)',
+                    borderColor: 'rgb(54, 162, 235)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'כמות משקעים ממוצעת בישראל לאורך השנה'
+                    }
+                }
+            }
+        });
 
-            // Add markers for different climate zones
-            L.marker([32.0853, 34.7818]).addTo(map)
-                .bindPopup('אקלים ים תיכוני - תל אביב')
-                .openPopup();
+        // מפת אזורי אקלים
+        const map = L.map('climateMap').setView([31.5, 34.8], 7);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; OpenStreetMap contributors'
+        }).addTo(map);
 
-            L.marker([31.7683, 35.2137]).addTo(map)
-                .bindPopup('אקלים הררי - ירושלים');
-
-            L.marker([32.7940, 34.9896]).addTo(map)
-                .bindPopup('אקלים חוף ים תיכון - חיפה');
-
-            L.marker([29.5581, 34.9482]).addTo(map)
-                .bindPopup('אקלים מדברי - אילת');
-
-            L.marker([31.2530, 34.7915]).addTo(map)
-                .bindPopup('אקלים צחיח למחצה - באר שבע');
-        }
-
-        // Call the initMap function when the page loads
-        window.onload = initMap;
-
+        // הוספת אזורי אקלים למפה (פשוט לצורך הדגמה)
+        L.circle([32.0853, 34.7818], {radius: 50000, color: 'red', fillColor: '#f03', fillOpacity: 0.5}).addTo(map).bindPopup('אקלים ים תיכוני');
+        L.circle([31.7683, 35.2137], {radius: 50000, color: 'blue', fillColor: '#30f', fillOpacity: 0.5}).addTo(map).bindPopup('אקלים הררי');
+        L.circle([29.5581, 34.9482], {radius: 50000, color: 'yellow', fillColor: '#ff0', fillOpacity: 0.5}).addTo(map).bindPopup('אקלים מדברי');
+    });
 </script>
 </body>
 </html>
