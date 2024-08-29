@@ -3,8 +3,8 @@
 A comprehensive weather application providing real-time weather conditions and 5-day forecasts for cities across Israel.
 
 [![Live Demo](https://img.shields.io/badge/demo-live-brightgreen.svg)](https://israelweather.github.io/)
-[![GitHub license](https://img.shields.io/github/license/israelweather/IsraelWeatherApp.svg)](https://github.com/israelweather/IsraelWeatherApp/blob/main/LICENSE)
-[![GitHub stars](https://img.shields.io/github/stars/israelweather/IsraelWeatherApp.svg)](https://github.com/israelweather/IsraelWeatherApp/stargazers)
+[![GitHub license](https://img.shields.io/github/license/israelweather/israelweather.github.io.svg)](https://github.com/israelweather/israelweather.github.io/blob/main/LICENSE)
+[![GitHub stars](https://img.shields.io/github/stars/israelweather/israelweather.github.io.svg)](https://github.com/israelweather/israelweather.github.io/stargazers)
 
 ## 🚀 Features
 
