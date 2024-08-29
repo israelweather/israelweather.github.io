@@ -180,24 +180,25 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     weatherApp.getUserLocation = function() {
-        if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(
-                (position) => {
-                    const latitude = position.coords.latitude;
-                    const longitude = position.coords.longitude;
-                    fetchCityNameByCoords(latitude, longitude);
-                },
-                (error) => {
-                    console.error('שגיאה בקבלת מיקום המשתמש:', error);
-                    displayError('לא ניתן לקבל את המיקום שלך. ברירת מחדל לירושלים.');
-                    weatherApp.fetchWeatherData('ירושלים');
-                }
-            );
-        } else {
-            console.error('גיאולוקציה אינה נתמכת.');
-            displayError('גיאולוקציה אינה נתמכת בדפדפן שלך.');
-        }
+    showLoading(); // Show loading indicator immediately when the button is clicked
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+            (position) => {
+                const latitude = position.coords.latitude;
+                const longitude = position.coords.longitude;
+                fetchCityNameByCoords(latitude, longitude);
+            },
+            (error) => {
+                console.error('שגיאה בקבלת מיקום המשתמש:', error);
+                displayError('לא ניתן לקבל את המיקום שלך. ברירת מחדל לירושלים.');
+                weatherApp.fetchWeatherData('ירושלים');
+            }
+        );
+    } else {
+        console.error('גיאולוקציה אינה נתמכת.');
+        displayError('גיאולוקציה אינה נתמכת בדפדפן שלך.');
     }
+}
 
     function fetchCityNameByCoords(latitude, longitude) {
         fetch(`https://nominatim.openstreetmap.org/reverse?format=json&lat=${latitude}&lon=${longitude}`)
