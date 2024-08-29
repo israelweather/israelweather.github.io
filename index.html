@@ -3,78 +3,153 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>מזג אוויר בישראל - תחזית מדויקת ועדכנית | אפליקציית מזג האוויר</title>
-    <meta name="description"
-          content="קבל תחזית מזג אוויר מדויקת ועדכנית לכל עיר בישראל. מידע על טמפרטורות, משקעים ותנאי מזג אוויר לחמשת הימים הקרובים.">
-    <meta name="keywords" content="מזג אוויר, תחזית, ישראל, טמפרטורה, גשם, שמש, ירושלים, תל אביב, חיפה">
+    <title>מזג אוויר בישראל - תחזית מדויקת ועדכנית | אפליקציית מזג האוויר המתקדמת</title>
+    <meta name="description" content="קבל תחזית מזג אוויר מדויקת ועדכנית לכל עיר בישראל. מידע מפורט על טמפרטורות, משקעים, רוחות ותנאי מזג אוויר לחמשת הימים הקרובים.">
+    <meta name="keywords" content="מזג אוויר, תחזית, ישראל, טמפרטורה, גשם, שמש, רוח, לחות, לחץ אטמוספרי, ירושלים, תל אביב, חיפה">
     <meta name="author" content="Yehuda Heller">
-    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3031120931689931" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
-<button id="darkModeToggle" class="dark-mode-toggle" aria-label="Toggle dark mode">
-    <i class="fas fa-moon"></i>
+
+<button id="scrollToTopBtn" class="scroll-to-top" aria-label="גלול למעלה">
+    <i class="fas fa-chevron-up" aria-hidden="true"></i>
 </button>
-<div class="container">
-    <header>
-        <h1>אפליקציית מזג האוויר של ישראל</h1>
-    </header>
-    <main>
-        <p class="intro-text">
-            ברוכים הבאים לאפליקציית מזג האוויר של ישראל. כאן תוכלו למצוא תחזית מדויקת ועדכנית לכל עיר בישראל, כולל
-            טמפרטורות, משקעים ותנאי מזג אוויר לחמשת הימים הקרובים. השתמשו במיקום הנוכחי שלכם או חפשו עיר ספציפית לקבלת
-            המידע העדכני ביותר.
-        </p>
-        <section class="search-container">
-            <button id="getLocationBtn" class="btn" aria-label="השתמש במיקום שלי">
-                <i class="fas fa-map-marker-alt" aria-hidden="true"></i> השתמש במיקום שלי
-            </button>
-            <div class="input-group">
-                <input type="text" id="cityInput" placeholder="הזן שם עיר" aria-label="הזן שם עיר">
-                <button id="getWeatherByCityBtn" class="btn" aria-label="חפש מזג אוויר">
-                    <i class="fas fa-search" aria-hidden="true"></i>
-                </button>
-            </div>
-        </section>
-        <section id="weather-info" class="weather-info" aria-live="polite"></section>
 
-        <section id="ad-container" class="ad-container">
-    <!-- Google AdSense Ad will be inserted here -->
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3031120931689931"
-     crossorigin="anonymous"></script>
+    <button id="darkModeToggle" class="dark-mode-toggle" aria-label="החלף למצב לילה">
+        <i class="fas fa-moon" aria-hidden="true"></i>
+    </button>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-cloud-sun"></i> אפליקציית מזג האוויר המתקדמת של ישראל</h1>
+        </header>
+        <main>
+            <section class="intro">
+                <p class="intro-text">
+                    <i class="fas fa-info-circle"></i> ברוכים הבאים לאפליקציית מזג האוויר המתקדמת של ישראל. כאן תמצאו תחזית מדויקת ועדכנית לכל עיר בישראל, כולל
+                    מידע מקיף על טמפרטורות, משקעים, רוחות ותנאי מזג אוויר לחמשת הימים הקרובים.
+                </p>
+                <p class="info-link">
+                    <a href="weather-info.html"><i class="fas fa-book-open"></i> למידע מקיף על אקלים ותופעות מזג אוויר בישראל</a>
+                </p>
+            </section>
 
-        </section>
-
-        <section class="popular-cities">
-            <h2>מזג אוויר בערים מרכזיות</h2>
-            <ul>
-                <li><a href="#" onclick="weatherApp.fetchWeatherData('ירושלים'); return false;">ירושלים</a></li>
-                <li><a href="#" onclick="weatherApp.fetchWeatherData('תל אביב'); return false;">תל אביב</a></li>
-                <li><a href="#" onclick="weatherApp.fetchWeatherData('חיפה'); return false;">חיפה</a></li>
-                <li><a href="#" onclick="weatherApp.fetchWeatherData('באר שבע'); return false;">באר שבע</a></li>
-            </ul>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2024 אפליקציית מזג האוויר על ידי Yehuda Heller</p>
-    </footer>
+            <section class="search-container">
+                <div id="initial-message" class="initial-message">
+    <i class="fas fa-search"></i> אנא הזן שם עיר או השתמש במיקום הנוכחי שלך כדי לקבל נתוני מזג אוויר.
 </div>
-<script src="app.js"></script>
-<script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "name": "אפליקציית מזג האוויר של ישראל",
-        "url": "https://www.yourdomain.com",
-        "description": "תחזית מזג אוויר מדויקת ועדכנית לערי ישראל",
-        "potentialAction": {
-            "@type": "SearchAction",
-            "target": "https://www.yourdomain.com?city={city}",
-            "query-input": "required name=city"
-        }
-    }
-</script>
-</body>
+                <div class="search-box">
+
+                    <input type="text" id="cityInput" placeholder="הזן שם עיר" aria-label="הזן שם עיר">
+                    <button id="getWeatherByCityBtn" class="btn search-btn" aria-label="חפש מזג אוויר">
+                        <i class="fas fa-search" aria-hidden="true"></i>
+                    </button>
+                </div>
+                <button id="getLocationBtn" class="btn location-btn" aria-label="השתמש במיקום שלי">
+                    <i class="fas fa-map-marker-alt" aria-hidden="true"></i> השתמש במיקום שלי
+                </button>
+            </section>
+
+            <section id="weather-info" class="weather-info">
+                <!-- Weather information will be inserted here by JavaScript -->
+            </section>
+
+            <section class="popular-cities">
+                <h2><i class="fas fa-city"></i> מזג אוויר בערים מרכזיות</h2>
+                <div class="city-grid">
+                    <div class="city-item" onclick="weatherApp.fetchWeatherData('ירושלים')">
+                        <i class="fas fa-landmark"></i>
+                        <span>ירושלים</span>
+                    </div>
+                    <div class="city-item" onclick="weatherApp.fetchWeatherData('תל אביב')">
+                        <i class="fas fa-building"></i>
+                        <span>תל אביב</span>
+                    </div>
+                    <div class="city-item" onclick="weatherApp.fetchWeatherData('חיפה')">
+                        <i class="fas fa-ship"></i>
+                        <span>חיפה</span>
+                    </div>
+                    <div class="city-item" onclick="weatherApp.fetchWeatherData('באר שבע')">
+                        <i class="fas fa-tree"></i>
+                        <span>באר שבע</span>
+                    </div>
+                    <div class="city-item" onclick="weatherApp.fetchWeatherData('אילת')">
+                        <i class="fas fa-umbrella-beach"></i>
+                        <span>אילת</span>
+                    </div>
+                    <div class="city-item" onclick="weatherApp.fetchWeatherData('נצרת')">
+                        <i class="fas fa-leaf"></i>
+                        <span>נצרת</span>
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="weather-explanation">
+                <h2><i class="fas fa-graduation-cap"></i> הבנת נתוני מזג האוויר</h2>
+                <div class="explanation-grid">
+                    <div class="explanation-item">
+                        <h3><i class="fas fa-thermometer-half"></i> טמפרטורה</h3>
+                        <p>מציגה את מידת החום או הקור באוויר, נמדדת במעלות צלזיוס. "מרגיש כמו" מתייחס לטמפרטורה המורגשת בפועל, בהתחשב בגורמים כמו רוח ולחות.</p>
+                    </div>
+                    <div class="explanation-item">
+                        <h3><i class="fas fa-tint"></i> לחות</h3>
+                        <p>אחוז אדי המים באוויר. לחות גבוהה יכולה לגרום לתחושת חום גבוהה יותר בקיץ ותחושת קור בחורף.</p>
+                    </div>
+                    <div class="explanation-item">
+                        <h3><i class="fas fa-wind"></i> רוח</h3>
+                        <p>מהירות הרוח נמדדת במטרים לשנייה. כיוון הרוח מצוין במעלות, כאשר 0° או 360° מציין רוח צפונית.</p>
+                    </div>
+                    <div class="explanation-item">
+                        <h3><i class="fas fa-compress-arrows-alt"></i> לחץ אטמוספרי</h3>
+                        <p>נמדד ביחידות של הקטופסקל (hPa). לחץ גבוה מ-1013 hPa מעיד בדרך כלל על מזג אוויר יציב, בעוד לחץ נמוך יותר עשוי להצביע על סיכוי לגשם.</p>
+                    </div>
+                    <div class="explanation-item">
+                        <h3><i class="fas fa-cloud"></i> עננות</h3>
+                        <p>אחוז השמיים המכוסה בעננים. 0% מציין שמיים בהירים לחלוטין, בעוד 100% מציין שמיים מעוננים לגמרי.</p>
+                    </div>
+                    <div class="explanation-item">
+                        <h3><i class="fas fa-eye"></i> ראות</h3>
+                        <p>המרחק המקסימלי שניתן לראות בבירור, נמדד במטרים. ראות נמוכה יכולה להיות בשל ערפל, גשם או זיהום אוויר.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="features">
+                <h2><i class="fas fa-star"></i> תכונות מרכזיות</h2>
+                <ul>
+                    <li><i class="fas fa-map-marked-alt"></i> תחזית מדויקת לכל עיר בישראל</li>
+                    <li><i class="fas fa-calendar-alt"></i> תחזית מפורטת ל-5 ימים קדימה</li>
+                    <li><i class="fas fa-chart-line"></i> גרפים ויזואליים של מגמות מזג האוויר</li>
+                    <li><i class="fas fa-bell"></i> התראות על תנאי מזג אוויר קיצוניים</li>
+                    <li><i class="fas fa-history"></i> היסטוריית מזג אוויר ונתונים סטטיסטיים</li>
+                    <li><i class="fas fa-mobile-alt"></i> ממשק ידידותי למשתמש ומותאם למובייל</li>
+                </ul>
+            </section>
+
+            <section class="why-us">
+                <h2><i class="fas fa-question-circle"></i> למה לבחור באפליקציה שלנו?</h2>
+                <p>
+                    אפליקציית מזג האוויר שלנו מציעה יותר מסתם תחזית. אנו משלבים נתונים ממקורות מהימנים, טכנולוגיה מתקדמת וממשק ידידותי למשתמש כדי לספק לכם:
+                </p>
+                <ul>
+                    <li><i class="fas fa-check-circle"></i> תחזיות מדויקות ואמינות</li>
+                    <li><i class="fas fa-check-circle"></i> עדכונים בזמן אמת</li>
+                    <li><i class="fas fa-check-circle"></i> מידע מפורט ומקיף</li>
+                    <li><i class="fas fa-check-circle"></i> התאמה אישית לצרכים שלכם</li>
+                    <li><i class="fas fa-check-circle"></i> תמיכה בכל המכשירים</li>
+                </ul>
+                <p>
+                    עם האפליקציה שלנו, תוכלו לתכנן את יומכם בביטחון, בין אם אתם מתכננים טיול, אירוע בחוץ או פשוט רוצים לדעת מה ללבוש מחר.
+                </p>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; 2024 אפליקציית מזג האוויר המתקדמת של ישראל | פותח על ידי Yehuda Heller <i class="fas fa-code"></i></p>
+        </footer>
+    </div>
+ <script src="shared.js" defer></script>
+    <script src="app.js" defer></script></body>
 </html>

@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <script src="shared.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>מידע מקיף על מזג האוויר בישראל - אקלים, עונות, ותופעות מיוחדות</title>
+    <meta name="description"
+          content="מדריך מקיף על אקלים ישראל, כולל מידע מפורט על אזורי אקלים, עונות השנה, תופעות מזג אוויר מיוחדות, וטיפים להבנת תחזית מזג האוויר.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <style>
+        body {
+            font-family: 'Heebo', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            background-color: #2193b0;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        .weather-info-page {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+        .weather-info-page h2 {
+            color: #2193b0;
+            border-bottom: 2px solid #2193b0;
+            padding-bottom: 10px;
+            margin-top: 40px;
+        }
+        .weather-info-page h3 {
+            color: #1c7a94;
+        }
+        .weather-info-page p, .weather-info-page ul, .weather-info-page ol {
+            margin-bottom: 20px;
+        }
+        #climate-map {
+            width: 100%;
+            height: 500px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .climate-zones {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
+        }
+        .climate-zone {
+            flex-basis: calc(50% - 10px);
+            background-color: #f0f8ff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .climate-zone:hover {
+            transform: translateY(-5px);
+        }
+        .weather-icon {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            color: #2193b0;
+        }
+        .interesting-facts, .weather-phenomena {
+            background-color: #e6f7ff;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 30px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .back-to-home {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 24px;
+            background-color: #2193b0;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            font-weight: bold;
+        }
+        .back-to-home:hover {
+            background-color: #1c7a94;
+        }
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+        }
+        .data-table th, .data-table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: right;
+        }
+        .data-table th {
+            background-color: #2193b0;
+            color: white;
+        }
+        .data-table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #2193b0;
+            color: white;
+            border-radius: 10px;
+            margin-top: 30px;
+        }
+        @media (max-width: 768px) {
+            .climate-zone {
+                flex-basis: 100%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+<button id="darkModeToggle" class="dark-mode-toggle" aria-label="החלף למצב לילה">
+    <i class="fas fa-moon" aria-hidden="true"></i>
+</button>
+<button id="scrollToTopBtn" class="scroll-to-top" aria-label="גלול למעלה">
+    <i class="fas fa-chevron-up" aria-hidden="true"></i>
+</button>
+<div class="container">
+    <header>
+        <h1>מידע מקיף על מזג האוויר בישראל</h1>
+    </header>
+    <main class="weather-info-page">
+        <article>
+            <h2>אקלים ישראל</h2>
+            <p>ישראל מתאפיינת במגוון אקלימי עשיר, הנע מאקלים ים תיכוני בצפון ובמרכז ועד לאקלים מדברי בדרום. המיקום
+                הגיאוגרפי הייחודי של ישראל, בין הים התיכון למדבר, יוצר תנאי מזג אוויר מגוונים ומעניינים. האקלים בישראל
+                מושפע מגורמים רבים, כולל הטופוגרפיה המגוונת, הקרבה לים התיכון, ומערכות לחץ אוויר אזוריות.</p>
+        </article>
+
+        <div id="climate-map"></div>
+
+        <article>
+            <h2>אזורי אקלים בישראל</h2>
+            <div class="climate-zones">
+                <div class="climate-zone">
+                    <i class="fas fa-sun weather-icon"></i>
+                    <h3>אקלים ים תיכוני</h3>
+                    <p>שולט ברוב אזורי המדינה, עם קיץ חם ויבש וחורף קריר וגשום. טמפרטורות ממוצעות נעות בין 10°C בחורף
+                        ל-30°C בקיץ. כמות המשקעים השנתית נעה בין 400 ל-800 מ"מ.</p>
+                </div>
+                <div class="climate-zone">
+                    <i class="fas fa-mountain weather-icon"></i>
+                    <h3>אקלים הררי</h3>
+                    <p>באזורי ההר הגבוהים, עם חורפים קרים יותר וסיכוי לשלג. טמפרטורות יכולות לרדת מתחת ל-0°C בלילות
+                        החורף. הר החרמון מקבל בממוצע כ-150 ס"מ שלג בשנה.</p>
+                </div>
+                <div class="climate-zone">
+                    <i class="fas fa-umbrella-beach weather-icon"></i>
+                    <h3>אקלים חוף ים תיכון</h3>
+                    <p>לאורך החוף, עם לחות גבוהה וטמפרטורות מתונות יותר. הלחות הממוצעת נעה בין 60% ל-75%. הטמפרטורות
+                        נעות בין 12°C בחורף ל-28°C בקיץ.</p>
+                </div>
+                <div class="climate-zone">
+                    <i class="fas fa-fire weather-icon"></i>
+                    <h3>אקלים מדברי</h3>
+                    <p>בדרום הארץ, עם טמפרטורות קיצוניות ומיעוט משקעים. כמות המשקעים השנתית באילת היא פחות מ-25 מ"מ.
+                        טמפרטורות יכולות להגיע ל-40°C ומעלה בקיץ.</p>
+                </div>
+            </div>
+        </article>
+
+        <article>
+            <h2>עונות השנה</h2>
+            <p>בישראל מבחינים בארבע עונות עיקריות, אם כי המעבר ביניהן הדרגתי יותר מאשר באזורים צפוניים:</p>
+            <ul>
+                <li><strong>אביב (מרץ-מאי):</strong> תקופה נעימה עם פריחה מרהיבה ומזג אוויר מתון. טמפרטורות ממוצעות נעות
+                    בין 15°C ל-25°C.
+                </li>
+                <li><strong>קיץ (יוני-אוגוסט):</strong> חם ויבש, עם טמפרטורות גבוהות ושמיים בהירים. טמפרטורות יכולות
+                    להגיע ל-35°C ומעלה.
+                </li>
+                <li><strong>סתיו (ספטמבר-נובמבר):</strong> התקררות הדרגתית עם אפשרות לגשמים ראשונים. טמפרטורות נעות בין
+                    20°C ל-30°C.
+                </li>
+                <li><strong>חורף (דצמבר-פברואר):</strong> עונת הגשמים העיקרית, עם טמפרטורות נמוכות יותר. טמפרטורות
+                    ממוצעות נעות בין 10°C ל-20°C.
+                </li>
+            </ul>
+        </article>
+
+        <article>
+            <h2>טיפים להבנת תחזית מזג האוויר</h2>
+            <ol>
+                <li>שימו לב לטמפרטורות המקסימום והמינימום היומיות.</li>
+                <li>בדקו את אחוזי הלחות, במיוחד בקיץ - לחות גבוהה עשויה להרגיש חמה יותר.</li>
+                <li>התעדכנו לגבי מהירות הרוח וכיוונה, במיוחד באזורי החוף.</li>
+                <li>בחורף, בדקו את כמות המשקעים הצפויה ואת הסיכוי לגשם.</li>
+                <li>היו מודעים לתנאי מזג אוויר קיצוניים כמו שרב או סופות חול בדרום.</li>
+                <li>בדקו את מדד קרינת UV, במיוחד בחודשי הקיץ.</li>
+                <li>שימו לב לאזהרות מזג אוויר מיוחדות כמו שיטפונות בנחלים או סערות חורף.</li>
+            </ol>
+        </article>
+
+        <article>
+            <h2>נתוני אקלים לערים מרכזיות</h2>
+            <table class="data-table">
+                <tr>
+                    <th>עיר</th>
+                    <th>טמפ' ממוצעת (קיץ)</th>
+                    <th>טמפ' ממוצעת (חורף)</th>
+                    <th>משקעים שנתיים</th>
+                </tr>
+                <tr>
+                    <td>תל אביב</td>
+                    <td>29°C</td>
+                    <td>14°C</td>
+                    <td>530 מ"מ</td>
+                </tr>
+                <tr>
+                    <td>ירושלים</td>
+                    <td>28°C</td>
+                    <td>9°C</td>
+                    <td>550 מ"מ</td>
+                </tr>
+                <tr>
+                    <td>חיפה</td>
+                    <td>28°C</td>
+                    <td>13°C</td>
+                    <td>600 מ"מ</td>
+                </tr>
+                <tr>
+                    <td>אילת</td>
+                    <td>36°C</td>
+                    <td>15°C</td>
+                    <td>25 מ"מ</td>
+                </tr>
+                <tr>
+                    <td>באר שבע</td>
+                    <td>32°C</td>
+                    <td>11°C</td>
+                    <td>200 מ"מ</td>
+                </tr>
+            </table>
+        </article>
+
+        <div class="interesting-facts">
+            <h2>עובדות מעניינות על מזג האוויר בישראל</h2>
+            <ul>
+                <li>הטמפרטורה הגבוהה ביותר שנמדדה אי פעם בישראל הייתה 54°C בטירת צבי שבעמק בית-שאן ב-21 ביוני 1942.</li>
+                <li>ירושלים מקבלת בממוצע שלג פעם בשנה או שנתיים.</li>
+                <li>אילת היא העיר היבשה ביותר בישראל, עם ממוצע של פחות מ-25 מ"מ גשם בשנה.</li>
+                <li>הר החרמון מקבל את כמות השלג הגדולה ביותר בישראל, עם ממוצע של כ-150 ס"מ בשנה.</li>
+                <li>ים המלח הוא המקום הנמוך ביותר בעולם, כ-430 מטר מתחת לפני הים, ומתאפיין באקלים ייחודי.</li>
+                <li>בישראל יש בממוצע כ-300 ימי שמש בשנה.</li>
+            </ul>
+        </div>
+
+        <article>
+            <h2>תופעות מזג אוויר מיוחדות בישראל</h2>
+            <div class="weather-phenomena">
+                <h3>שרב</h3>
+                <p>תופעה של חום קיצוני ויובש, הנגרמת על ידי רוחות מדבריות חמות. השרב יכול להעלות את הטמפרטורות ב-10°C
+                    מעל הממוצע העונתי.</p>
+
+                <h3>סופות אבק</h3>
+                <p>נפוצות בעיקר באביב ובסתיו, כאשר רוחות חזקות מעלות אבק מהמדבר. סופות אלו יכולות להפחית את הראות
+                    ולהשפיע על איכות האוויר.</p>
+
+                <h3>שיטפונות בנחלים</h3>
+                <p>מתרחשים בעיקר בנגב ובמדבר יהודה בעקבות גשמים עזים. המים זורמים במהירות באפיקים היבשים ויכולים להיות
+                    מסוכנים מאוד.</p>
+
+                <h3>ערפל חוף</h3>
+                <p>נוצר כאשר אוויר חם ולח נע מעל מי הים הקרים יחסית. תופעה זו נפוצה בעיקר בחודשי הקיץ לאורך חופי הים
+                    התיכון.</p>
+            </div>
+        </article>
+
+        <article>
+            <h2>השפעת שינויי האקלים על ישראל</h2>
+            <p>שינויי האקלים העולמיים משפיעים גם על ישראל. מחקרים מצביעים על מגמות של:</p>
+            <ul>
+                <li>עלייה בטמפרטורות הממוצעות.</li>
+                <li>הפחתה בכמות המשקעים השנתית.</li>
+                <li>עלייה בתדירות ובעוצמה של אירועי מזג אוויר קיצוניים.</li>
+                <li>עלייה במפלס הים, המאיימת על אזורי החוף.</li>
+            </ul>
+            <p>מדינת ישראל נוקטת צעדים להתמודדות עם שינויים אלה, כולל פיתוח טכנולוגיות להתפלת מים, שיפור יעילות השימוש
+                במים, ופיתוח אנרגיות מתחדשות.</p>
+        </article>
+
+        <a href="index.html" class="back-to-home">חזרה לעמוד הראשי</a>
+    </main>
+    <footer>
+        <p>&copy; 2024 אפליקציית מזג האוויר של ישראל | כל הזכויות שמורות</p>
+    </footer>
+</div>
+
+<script>
+        function initMap() {
+            var map = L.map('climate-map').setView([31.0461, 34.8516], 7);
+
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(map);
+
+            // Add markers for different climate zones
+            L.marker([32.0853, 34.7818]).addTo(map)
+                .bindPopup('אקלים ים תיכוני - תל אביב')
+                .openPopup();
+
+            L.marker([31.7683, 35.2137]).addTo(map)
+                .bindPopup('אקלים הררי - ירושלים');
+
+            L.marker([32.7940, 34.9896]).addTo(map)
+                .bindPopup('אקלים חוף ים תיכון - חיפה');
+
+            L.marker([29.5581, 34.9482]).addTo(map)
+                .bindPopup('אקלים מדברי - אילת');
+
+            L.marker([31.2530, 34.7915]).addTo(map)
+                .bindPopup('אקלים צחיח למחצה - באר שבע');
+        }
+
+        // Call the initMap function when the page loads
+        window.onload = initMap;
+
+</script>
+</body>
+</html>
