@@ -1,152 +1,27 @@
-const cityMap = {
-    'תל אביב-יפו': 'Tel Aviv',
-    'ירושלים': 'Jerusalem',
-    'חיפה': 'Haifa',
-    'ראשון לציון': 'Rishon LeZion',
-    'פתח תקווה': 'Petah Tikva',
-    'אשדוד': 'Ashdod',
-    'נתניה': 'Netanya',
-    'באר שבע': 'Beer Sheva',
-    'חולון': 'Holon',
-    'בני ברק': 'Bnei Brak',
-    'רמת גן': 'Ramat Gan',
-    'אשקלון': 'Ashkelon',
-    'רחובות': 'Rehovot',
-    'בת ים': 'Bat Yam',
-    'בית שמש': 'Beit Shemesh',
-    'כפר סבא': 'Kfar Saba',
-    'הרצליה': 'Herzliya',
-    'חדרה': 'Hadera',
-    'מודיעין-מכבים-רעות': 'Modiin',
-    'נצרת': 'Nazareth',
-    'לוד': 'Lod',
-    'רמלה': 'Ramla',
-    'רעננה': 'Raanana',
-    'גבעתיים': 'Givatayim',
-    'הוד השרון': 'Hod HaSharon',
-    'קריית אתא': 'Kiryat Ata',
-    'קריית גת': 'Kiryat Gat',
-    'נהריה': 'Nahariya',
-    'קריית מוצקין': 'Kiryat Motzkin',
-    'אילת': 'Eilat',
-    'אום אל-פחם': 'Umm al-Fahm',
-    'ראש העין': 'Rosh HaAyin',
-    'עפולה': 'Afula',
-    'עכו': 'Acre',
-    'אלעד': 'Elad',
-    'כרמיאל': 'Karmiel',
-    'טבריה': 'Tiberias',
-    'נוף הגליל': 'Nof HaGalil',
-    'נס ציונה': 'Nes Ziona',
-    'יבנה': 'Yavne',
-    'רהט': 'Rahat',
-    'מודיעין עילית': 'Modiin Illit',
-    'דימונה': 'Dimona',
-    'קריית ביאליק': 'Kiryat Bialik',
-    'קריית ים': 'Kiryat Yam',
-    'מעלה אדומים': 'Maale Adumim',
-    'קריית אונו': 'Kiryat Ono',
-    'צפת': 'Safed',
-    'אור יהודה': 'Or Yehuda',
-    'נתיבות': 'Netivot',
-    'ביתר עילית': 'Beitar Illit',
-    'שפרעם': 'Shfaram',
-    'טירה': 'Tira',
-    'אופקים': 'Ofakim',
-    'יהוד-מונוסון': 'Yehud',
-    'באקה אל-גרביה': 'Baqa al-Gharbiyye',
-    'טמרה': 'Tamra',
-    'סחנין': 'Sakhnin',
-    'מגדל העמק': 'Migdal HaEmek',
-    'טייבה': 'Tayibe',
-    'קריית שמונה': 'Kiryat Shmona',
-    'יקנעם עילית': 'Yokneam',
-    'נשר': 'Nesher',
-    'קלנסווה': 'Qalansawe',
-    'כפר קאסם': 'Kafr Qasim',
-    'מעלות-תרשיחא': 'Maalot-Tarshiha',
-    'אריאל': 'Ariel',
-    'טירת כרמל': 'Tirat Carmel',
-    'אור עקיבא': 'Or Akiva',
-    'בית שאן': 'Beit Shean',
-    'עראבה': 'Arraba',
-    'דאלית אל-כרמל': 'Daliyat al-Karmel',
-    'שדרות': 'Sderot',
-    'מגאר': 'Maghar',
-    'ערד': 'Arad',
-    'כפר יונה': 'Kfar Yona',
-    'קריית מלאכי': 'Kiryat Malakhi',
-    'גבעת שמואל': 'Givat Shmuel',
-    'כפר כנא': 'Kafr Kanna',
-    'ירכא': 'Yarka',
-    'רכסים': 'Rekhasim',
-    'קריית עקרון': 'Kiryat Ekron',
-    'אבו סנאן': 'Abu Sinan',
-    'טורעאן': 'Turan',
-    'אכסאל': 'Iksal',
-    'אעבלין': 'Ibillin',
-    'באר יעקב': 'Beer Yaakov',
-    'בית גן': 'Beit Jann',
-    'בנימינה-גבעת עדה': 'Binyamina',
-    'גדיידה-מכר': 'Jadeidi-Makr',
-    'גלגוליה': 'Jaljulia',
-    'גסר א-זרקא': 'Jisr az-Zarqa',
-    'גת': 'Jatt',
-    'דבוריה': 'Daburiyya',
-    'דייר אל-אסד': 'Deir al-Asad',
-    'דייר חנא': 'Deir Hanna',
-    'זכרון יעקב': 'Zikhron Yaakov',
-    'זמר': 'Zemer',
-    'טובא-זנגריה': 'Tuba-Zangariyye',
-    'יפיע': 'Yafia',
-    'ירוחם': 'Yeruham',
-    'כאבול': 'Kabul',
-    'כאוכב אבו אל-היגא': 'Kaokab Abu al-Hija',
-    'כסיפה': 'Kuseife',
-    'כפר ברא': 'Kafr Bara',
-    'כפר מנדא': 'Kafr Manda',
-    'כפר קרע': 'Kafr Qara',
-    'להבים': 'Lehavim',
-    'מבשרת ציון': 'Mevaseret Zion',
-    'מגד אל-כרום': 'Majd al-Krum',
-    'מגדל שמס': 'Majdal Shams',
-    'מזכרת בתיה': 'Mazkeret Batya',
-    'מעיליא': 'Miilya',
-    'מצפה רמון': 'Mitzpe Ramon',
-    'משהד': 'Mashhad',
-    'נחף': 'Nahef',
-    'סאגור': 'Sajur',
-    'עומר': 'Omer',
-    'עיילבון': 'Eilabun',
-    'עילוט': 'Ilut',
-    'עין מאהל': 'Ein Mahil',
-    'עספיא': 'Isfiya',
-    'ערערה': 'Arara',
-    'ערערה-בנגב': 'Ararat an-Naqab',
-    'פוריידיס': 'Fureidis',
-    'פסוטה': 'Fassuta',
-    'פקיעין (בוקייעה)': 'Pekiin',
-    'פרדס חנה-כרכור': 'Pardes Hanna-Karkur',
-    'פרדסיה': 'Pardesiya',
-    'צור הדסה': 'Tzur Hadassah',
-    'קדימה-צורן': 'Kadima-Zoran',
-    'קצרין': 'Katzrin',
-    'קריית ארבע': 'Kiryat Arba',
-    'קריית טבעון': 'Kiryat Tivon',
-    'קריית יערים': 'Kiryat Yearim',
-    'קרני שומרון': 'Karnei Shomron',
-    'ראמה': 'Rameh',
-    'ריינה': 'Reineh',
-    'רמת ישי': 'Ramat Yishai',
-    'שבלי - אום אל-גנם': 'Shibli-Umm al-Ghanam',
-    'שגב-שלום': 'Shaqib al-Salam',
-    'שוהם': 'Shoham',
-    'שלומי': 'Shlomi',
-    'שעב': 'Shaab',
-    'תל מונד': 'Tel Mond',
-    'תל שבע': 'Tel as-Sabi'
-};
-
+const CITIES = [
+    'ירושלים', 'תל אביב-יפו', 'חיפה', 'ראשון לציון', 'פתח תקווה',
+    'אשדוד', 'נתניה', 'באר שבע', 'חולון', 'בני ברק',
+    'רמת גן', 'אשקלון', 'רחובות', 'בת ים', 'בית שמש',
+    'כפר סבא', 'הרצליה', 'חדרה', 'נצרת', 'לוד',
+    'רמלה', 'רעננה', 'גבעתיים', 'הוד השרון', 'קריית אתא',
+    'קריית גת', 'נהריה', 'קריית מוצקין', 'אילת', 'אום אל-פחם',
+    'ראש העין', 'עפולה', 'עכו', 'אלעד', 'כרמיאל',
+    'טבריה', 'נס ציונה', 'יבנה', 'מודיעין עילית', 'דימונה',
+    'קריית ביאליק', 'קריית ים', 'קריית אונו', 'צפת', 'אור יהודה',
+    'נתיבות', 'ביתר עילית', 'שפרעם', 'טירה', 'אופקים',
+    'טמרה', 'מגדל העמק', 'טייבה', 'קריית שמונה', 'נשר',
+    'קלנסווה', 'כפר קאסם', 'אריאל', 'טירת כרמל', 'אור עקיבא',
+    'בית שאן', 'עראבה', 'שדרות', 'ערד', 'כפר יונה',
+    'גבעת שמואל', 'כפר כנא', 'ירכא', 'רכסים', 'אבו סנאן',
+    'טורעאן', 'באר יעקב', 'בית גן', 'גת', 'דבוריה',
+    'זכרון יעקב', 'יפיע', 'ירוחם', 'כסיפה', 'כפר ברא',
+    'כפר מנדא', 'כפר קרע', 'להבים', 'מזכרת בתיה', 'מעיליא',
+    'מצפה רמון', 'משהד', 'נחף', 'עומר', 'עין מאהל',
+    'עספיא', 'ערערה', 'פוריידיס', 'פסוטה', 'פרדס חנה-כרכור',
+    'פרדסיה', 'צור הדסה', 'קצרין', 'קריית טבעון', 'ראמה',
+    'ריינה', 'רמת ישי', 'שוהם', 'שלומי', 'שעב',
+    'תל מונד'
+];
 // יצירת אובייקט גלובלי לאפליקציה
 const weatherApp = {};
 
@@ -172,12 +47,12 @@ document.addEventListener('DOMContentLoaded', () => {
         return `${Math.round(temp)}°C`;
     }
 
-    function autocompleteCity(input) {
-        const val = input.toLowerCase();
-        return Object.keys(cityMap).filter(city =>
-            city.toLowerCase().startsWith(val)
-        ).slice(0, 5); // מחזיר עד 5 תוצאות
-    }
+function autocompleteCity(input) {
+    const val = input.toLowerCase();
+    return CITIES.filter(city =>
+        city.toLowerCase().startsWith(val)
+    ).slice(0, 5); // מחזיר עד 5 תוצאות
+}
 
     weatherApp.getUserLocation = function() {
     showLoading(); // Show loading indicator immediately when the button is clicked
@@ -215,55 +90,53 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     weatherApp.getWeatherByCity = function() {
-        const cityInput = document.getElementById('cityInput');
-        const cityName = cityInput.value.trim();
-        if (cityName !== '') {
-            const suggestions = autocompleteCity(cityName);
-            if (suggestions.length > 0) {
-                showLoading();
-                weatherApp.fetchWeatherData(suggestions[0]);
-            } else {
-                displayError('עיר לא נמצאה. אנא בדוק את האיות ונסה שוב.');
-            }
+    const cityInput = document.getElementById('cityInput');
+    const cityName = cityInput.value.trim();
+    if (cityName !== '') {
+        const suggestions = autocompleteCity(cityName);
+        if (suggestions.length > 0) {
+            showLoading();
+            weatherApp.fetchWeatherData(suggestions[0]);
         } else {
-            displayError('אנא הזן שם עיר.');
+            displayError('עיר לא נמצאה. אנא בדוק את האיות ונסה שוב.');
         }
+    } else {
+        displayError('אנא הזן שם עיר.');
     }
+}
 
-    weatherApp.fetchWeatherData = async function(city) {
-        showLoading();
+weatherApp.fetchWeatherData = async function(city) {
+    showLoading();
 
-        const cityEnglish = cityMap[city] || city;
+    try {
+        const response = await fetch('weather_data.json');
+        const data = await response.json();
+        const cityData = data.cities.find(c => c.city === city);
 
-        try {
-            const response = await fetch('weather_data.json');
-            const data = await response.json();
-            const cityData = data.cities.find(c => c.city.toLowerCase() === cityEnglish.toLowerCase());
-
-            if (cityData) {
-                console.log(`Data for ${city} was retrieved from the local JSON file.`);
-                displayWeatherData(cityData, city);
-            } else {
-                throw new Error(`City ${city} not found in local data.`);
-            }
-        } catch (error) {
-            console.error(`Error fetching weather data: ${error.message}`);
-            displayError('לא ניתן לקבל את נתוני מזג האוויר. אנא נסה שוב.');
+        if (cityData) {
+            console.log(`Data for ${city} was retrieved from the local JSON file.`);
+            displayWeatherData(cityData, city);  // שים לב שאנו מעבירים את 'city' כפרמטר שני
+        } else {
+            throw new Error(`City ${city} not found in local data.`);
         }
-    };
+    } catch (error) {
+        console.error(`Error fetching weather data: ${error.message}`);
+        displayError('לא ניתן לקבל את נתוני מזג האוויר. אנא נסה שוב.');
+    }
+};
 
-    function displayWeatherData(data, city) {
-        const weatherInfo = document.getElementById('weather-info');
-        weatherInfo.innerHTML = ''; // Clear previous content
+    function displayWeatherData(data, cityHebrew) {  // קבל את שם העיר בעברית כפרמטר
+    const weatherInfo = document.getElementById('weather-info');
+    weatherInfo.innerHTML = ''; // Clear previous content
 
-        const currentWeather = data.current;
-        const forecast = data.forecast;
+    const currentWeather = data.current;
+    const forecast = data.forecast;
 
-        // Display current weather information
-        const currentWeatherContainer = document.createElement('article');
-        currentWeatherContainer.classList.add('current-weather', 'fade-in');
-        currentWeatherContainer.innerHTML = `
-            <h2><i class="fas fa-map-marker-alt"></i> מזג האוויר הנוכחי ב${data.city_hebrew}</h2>
+    // Display current weather information
+    const currentWeatherContainer = document.createElement('article');
+    currentWeatherContainer.classList.add('current-weather', 'fade-in');
+    currentWeatherContainer.innerHTML = `
+        <h2><i class="fas fa-map-marker-alt"></i> מזג האוויר הנוכחי ב${cityHebrew}</h2>
             <div class="weather-details">
                 <div class="main-info">
                     <img src="http://openweathermap.org/img/wn/${currentWeather.icon}@2x.png" alt="סמל מזג אוויר" class="weather-icon">
@@ -358,22 +231,22 @@ document.addEventListener('DOMContentLoaded', () => {
     const cityInput = document.getElementById('cityInput');
     const suggestionsList = document.getElementById('suggestions');
 
-    cityInput.addEventListener('input', function(e) {
-        debounce(() => {
-            const suggestions = autocompleteCity(e.target.value);
-            suggestionsList.innerHTML = '';
-            suggestions.forEach(city => {
-                const li = document.createElement('li');
-                li.textContent = city;
-                li.addEventListener('click', function() {
-                    cityInput.value = city;
-                    suggestionsList.innerHTML = '';
-                    weatherApp.getWeatherByCity();
-                });
-                suggestionsList.appendChild(li);
+   cityInput.addEventListener('input', function(e) {
+    debounce(() => {
+        const suggestions = autocompleteCity(e.target.value);
+        suggestionsList.innerHTML = '';
+        suggestions.forEach(city => {
+            const li = document.createElement('li');
+            li.textContent = city;
+            li.addEventListener('click', function() {
+                cityInput.value = city;
+                suggestionsList.innerHTML = '';
+                weatherApp.getWeatherByCity();
             });
-        }, 300);
-    });
+            suggestionsList.appendChild(li);
+        });
+    }, 300);
+});
 
     // סגור את רשימת ההצעות כאשר לוחצים מחוץ לה
     document.addEventListener('click', function(e) {
