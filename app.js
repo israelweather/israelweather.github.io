@@ -186,8 +186,8 @@ weatherApp.fetchWeatherData = async function(city) {
         { icon: 'fa-compress-arrows-alt', text: `לחץ: ${currentWeather.pressure} hPa` },
         { icon: 'fa-eye', text: `ראות: ${currentWeather.visibility} מטר` },
         { icon: 'fa-cloud', text: `עננות: ${currentWeather.cloudiness}%` },
-        { icon: 'fa-sun', text: `זריחה: ${currentWeather.sunrise}` },
-        { icon: 'fa-moon', text: `שקיעה: ${currentWeather.sunset}` }
+        { icon: 'fa-sun', text: `זריחה: ${currentWeather.sunrise}+3` },
+        { icon: 'fa-moon', text: `שקיעה: ${currentWeather.sunset}+3` }
     ];
 
     detailItems.forEach(item => {
