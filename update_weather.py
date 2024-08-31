@@ -7,7 +7,7 @@ from datetime import datetime, timedelta
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
-API_KEY = '2480e87306578aee0e2b4063641d2414'
+API_KEY = os.environ['OPENWEATHERMAP_API_KEY']
 
 CITIES = [
     'ירושלים', 'תל אביב-יפו', 'חיפה', 'ראשון לציון', 'פתח תקווה', 'אשדוד', 'נתניה', 'באר שבע', 'חולון', 'בני ברק',
