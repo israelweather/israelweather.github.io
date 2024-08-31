@@ -564,7 +564,7 @@ function createAirQualityForecastChart(forecast) {
             plugins: {
                 title: {
                     display: true,
-                    text: 'תחזית זיהום אוויר ל-5 שעות הקרובות',
+                    text: 'דגימת זיהום אוויר - 5 שעות',
                     font: {
                         size: 16
                     }
