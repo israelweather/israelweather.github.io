@@ -564,7 +564,7 @@ function createAirQualityForecastChart(forecast) {
             plugins: {
                 title: {
                     display: true,
-                    text: 'דגימת זיהום אוויר - 5 שעות',
+                    text: 'תחזית זיהום אוויר ל-5 שעות הקרובות',
                     font: {
                         size: 16
                     }
@@ -671,3 +671,4 @@ function getPollutantName(pollutant) {
             return pollutant;
     }
 }
+

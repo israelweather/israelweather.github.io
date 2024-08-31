@@ -1887,3 +1887,95 @@ canvas {
         max-width: none;
     }
 }
+.menu-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #0077be;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 1001;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.menu-toggle:hover {
+    background-color: #005fa3;
+}
+
+.menu-icon {
+    width: 30px;
+    height: 20px;
+    position: relative;
+}
+
+.menu-icon span {
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+.menu-icon span:nth-child(1) { top: 0; }
+.menu-icon span:nth-child(2) { top: 8px; }
+.menu-icon span:nth-child(3) { top: 16px; }
+
+.menu-toggle.active .menu-icon span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle.active .menu-icon span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active .menu-icon span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
+.side-menu {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 300px;
+    height: 100%;
+    background-color: #f8f8f8;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+    transition: right 0.3s ease;
+    z-index: 1000;
+}
+
+.side-menu.active {
+    right: 0;
+}
+
+.side-menu ul {
+    list-style: none;
+    padding: 50px 0 0 0;
+    margin: 0;
+}
+
+.side-menu ul li {
+    padding: 15px 30px;
+}
+
+.side-menu ul li a {
+    color: #333;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    transition: color 0.3s ease;
+}
+
+.side-menu ul li a:hover {
+    color: #0077be;
+}
+
+body {
+    padding-top: 20px;
+}

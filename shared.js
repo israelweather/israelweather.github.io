@@ -46,3 +46,41 @@ window.addEventListener('scroll', () => {
     }
     updateDarkModeIcon();
 });
+
+
+
+// shared.js
+
+// פונקציה להוספת התפריט
+function loadNavMenu() {
+    fetch('nav.html')
+        .then(response => response.text())
+        .then(data => {
+            document.body.insertAdjacentHTML('afterbegin', data);
+            initializeNavMenu();
+        });
+}
+
+// פונקציה לאתחול התפריט
+function initializeNavMenu() {
+    const menuToggle = document.getElementById('menuToggle');
+    const sideMenu = document.getElementById('sideMenu');
+
+    if (menuToggle && sideMenu) {
+        menuToggle.addEventListener('click', function() {
+            this.classList.toggle('active');
+            sideMenu.classList.toggle('active');
+        });
+
+        // סגירת התפריט בלחיצה מחוץ לאזור התפריט
+        document.addEventListener('click', function(event) {
+            if (!sideMenu.contains(event.target) && !menuToggle.contains(event.target)) {
+                menuToggle.classList.remove('active');
+                sideMenu.classList.remove('active');
+            }
+        });
+    }
+}
+
+// הפעלת הפונקציה כשהמסמך נטען
+document.addEventListener('DOMContentLoaded', loadNavMenu);

@@ -1,193 +1,216 @@
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
 <head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="shared.js" defer></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>מזג אוויר בישראל - תחזית מדויקת ועדכנית | אפליקציית מזג האוויר המתקדמת</title>
-    <meta name="description" content="קבל תחזית מזג אוויר מדויקת ועדכנית לכל עיר בישראל. מידע מפורט על טמפרטורות, משקעים, רוחות ותנאי מזג אוויר לחמשת הימים הקרובים.">
-    <meta name="keywords" content="מזג אוויר, תחזית, ישראל, טמפרטורה, גשם, שמש, רוח, לחות, לחץ אטמוספרי, ירושלים, תל אביב, חיפה">
+    <meta name="description"
+          content="קבל תחזית מזג אוויר מדויקת ועדכנית לכל עיר בישראל. מידע מפורט על טמפרטורות, משקעים, רוחות ותנאי מזג אוויר לחמשת הימים הקרובים.">
+    <meta name="keywords"
+          content="מזג אוויר, תחזית, ישראל, טמפרטורה, גשם, שמש, רוח, לחות, לחץ אטמוספרי, ירושלים, תל אביב, חיפה">
     <meta name="author" content="Yehuda Heller">
     <link rel="canonical" href="https://israelweather.github.io/">
     <meta property="og:title" content="מזג אוויר בישראל - תחזית מדויקת ועדכנית | אפליקציית מזג האוויר המתקדמת">
-    <meta property="og:description" content="קבל תחזית מזג אוויר מדויקת ועדכנית לכל עיר בישראל. מידע מפורט על טמפרטורות, משקעים, רוחות ותנאי מזג אוויר לחמשת הימים הקרובים.">
+    <meta property="og:description"
+          content="קבל תחזית מזג אוויר מדויקת ועדכנית לכל עיר בישראל. מידע מפורט על טמפרטורות, משקעים, רוחות ותנאי מזג אוויר לחמשת הימים הקרובים.">
     <meta property="og:image" content="https://israelweather.github.io/weather-icon.png">
     <meta property="og:url" content="https://israelweather.github.io/">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="מזג אוויר בישראל - תחזית מדויקת ועדכנית">
-    <meta name="twitter:description" content="קבל תחזית מזג אוויר מדויקת ועדכנית לכל עיר בישראל. מידע מפורט על טמפרטורות, משקעים, רוחות ותנאי מזג אוויר לחמשת הימים הקרובים.">
+    <meta name="twitter:description"
+          content="קבל תחזית מזג אוויר מדויקת ועדכנית לכל עיר בישראל. מידע מפורט על טמפרטורות, משקעים, רוחות ותנאי מזג אוויר לחמשת הימים הקרובים.">
     <meta name="twitter:image" content="https://israelweather.github.io/weather-icon.png">
     <link rel="shortcut icon" href="x-icon.ico" type="image/x-icon">
     <link rel="apple-touch-icon" href="x-icon.ico">
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3031120931689931" crossorigin="anonymous"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3031120931689931"
+            crossorigin="anonymous"></script>
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "אפליקציית מזג האוויר המתקדמת של ישראל",
-      "url": "https://israelweather.github.io/",
-      "description": "קבל תחזית מזג אוויר מדויקת ועדכנית לכל עיר בישראל. מידע מפורט על טמפרטורות, משקעים, רוחות ותנאי מזג אוויר לחמשת הימים הקרובים.",
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": "https://israelweather.github.io/?city={search_term_string}",
-        "query-input": "required name=search_term_string"
-      }
-    }
+        {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "אפליקציית מזג האוויר המתקדמת של ישראל",
+            "url": "https://israelweather.github.io/",
+            "description": "קבל תחזית מזג אוויר מדויקת ועדכנית לכל עיר בישראל. מידע מפורט על טמפרטורות, משקעים, רוחות ותנאי מזג אוויר לחמשת הימים הקרובים.",
+            "potentialAction": {
+                "@type": "SearchAction",
+                "target": "https://israelweather.github.io/?city={search_term_string}",
+                "query-input": "required name=search_term_string"
+            }
+        }
     </script>
 </head>
 <body>
-    <button id="scrollToTopBtn" class="scroll-to-top" aria-label="גלול למעלה">
-        <i class="fas fa-chevron-up" aria-hidden="true"></i>
-    </button>
-    <button id="darkModeToggle" class="dark-mode-toggle" aria-label="החלף למצב לילה">
-        <i class="fas fa-moon" aria-hidden="true"></i>
-    </button>
-    <div class="container">
-        <header>
-            <h1><i class="fas fa-cloud-sun"></i> אפליקציית מזג האוויר המתקדמת של ישראל</h1>
-        </header>
-        <main>
-            <section class="intro">
-                <p class="intro-text">
-                    <i class="fas fa-info-circle"></i> ברוכים הבאים לאפליקציית מזג האוויר המתקדמת של ישראל. כאן תמצאו תחזית מדויקת ועדכנית לכל עיר בישראל, כולל
-                    מידע מקיף על טמפרטורות, משקעים, רוחות ותנאי מזג אוויר לחמשת הימים הקרובים.
-                </p>
-                <p class="info-link">
-                    <a href="weather-info.html"><i class="fas fa-book-open"></i> למידע מקיף על אקלים ותופעות מזג אוויר בישראל</a>
-                </p>
-            </section>
 
-            <section class="search-container">
-                <div id="initial-message" class="initial-message">
-    <i class="fas fa-search"></i> אנא הזן שם עיר או השתמש במיקום הנוכחי שלך כדי לקבל נתוני מזג אוויר.
-</div>
-                <div class="search-box">
-                    <input type="text" id="cityInput" placeholder="הזן שם עיר" aria-label="הזן שם עיר">
-                    <ul id="suggestions" class="suggestions"></ul>
-                    <button id="getWeatherByCityBtn" class="btn search-btn" aria-label="חפש מזג אוויר">
-                        <i class="fas fa-search" aria-hidden="true"></i>
-                    </button>
-                </div>
-                <button id="getLocationBtn" class="btn location-btn" aria-label="השתמש במיקום שלי">
-                    <i class="fas fa-map-marker-alt" aria-hidden="true"></i> השתמש במיקום שלי
+<button id="scrollToTopBtn" class="scroll-to-top" aria-label="גלול למעלה">
+    <i class="fas fa-chevron-up" aria-hidden="true"></i>
+</button>
+<button id="darkModeToggle" class="dark-mode-toggle" aria-label="החלף למצב לילה">
+    <i class="fas fa-moon" aria-hidden="true"></i>
+</button>
+<div class="container">
+    <header>
+        <h1><i class="fas fa-cloud-sun"></i> אפליקציית מזג האוויר המתקדמת של ישראל</h1>
+    </header>
+    <main>
+        <section class="intro">
+            <p class="intro-text">
+                <i class="fas fa-info-circle"></i> ברוכים הבאים לאפליקציית מזג האוויר המתקדמת של ישראל. כאן תמצאו תחזית
+                מדויקת ועדכנית לכל עיר בישראל, כולל
+                מידע מקיף על טמפרטורות, משקעים, רוחות ותנאי מזג אוויר לחמשת הימים הקרובים.
+            </p>
+            <p class="info-link">
+                <a href="weather-info.html"><i class="fas fa-book-open"></i> למידע מקיף על אקלים ותופעות מזג אוויר
+                    בישראל</a>
+            </p>
+        </section>
+
+        <section class="search-container">
+            <div id="initial-message" class="initial-message">
+                <i class="fas fa-search"></i> אנא הזן שם עיר או השתמש במיקום הנוכחי שלך כדי לקבל נתוני מזג אוויר.
+            </div>
+            <div class="search-box">
+                <input type="text" id="cityInput" placeholder="הזן שם עיר" aria-label="הזן שם עיר">
+                <ul id="suggestions" class="suggestions"></ul>
+                <button id="getWeatherByCityBtn" class="btn search-btn" aria-label="חפש מזג אוויר">
+                    <i class="fas fa-search" aria-hidden="true"></i>
                 </button>
-            </section>
+            </div>
+            <button id="getLocationBtn" class="btn location-btn" aria-label="השתמש במיקום שלי">
+                <i class="fas fa-map-marker-alt" aria-hidden="true"></i> השתמש במיקום שלי
+            </button>
+        </section>
 
-            <section id="weather-info" class="weather-info">
-                <!-- Weather information will be inserted here by JavaScript -->
-            </section>
+        <section id="weather-info" class="weather-info">
+            <!-- Weather information will be inserted here by JavaScript -->
+        </section>
 
-            <section class="popular-cities">
-                <h2><i class="fas fa-city"></i> מזג אוויר בערים מרכזיות</h2>
-                <div class="city-grid">
-                    <div class="city-item" onclick="weatherApp.fetchWeatherData('ירושלים')">
-                        <i class="fas fa-landmark"></i>
-                        <span>ירושלים</span>
-                    </div>
-                    <div class="city-item" onclick="weatherApp.fetchWeatherData('תל אביב-יפו')">
-                        <i class="fas fa-building"></i>
-                        <span>תל אביב</span>
-                    </div>
-                    <div class="city-item" onclick="weatherApp.fetchWeatherData('חיפה')">
-                        <i class="fas fa-ship"></i>
-                        <span>חיפה</span>
-                    </div>
-                    <div class="city-item" onclick="weatherApp.fetchWeatherData('באר שבע')">
-                        <i class="fas fa-tree"></i>
-                        <span>באר שבע</span>
-                    </div>
-                    <div class="city-item" onclick="weatherApp.fetchWeatherData('אילת')">
-                        <i class="fas fa-umbrella-beach"></i>
-                        <span>אילת</span>
-                    </div>
-                    <div class="city-item" onclick="weatherApp.fetchWeatherData('נצרת')">
-                        <i class="fas fa-leaf"></i>
-                        <span>נצרת</span>
-                    </div>
+        <section class="popular-cities">
+            <h2><i class="fas fa-city"></i> מזג אוויר בערים מרכזיות</h2>
+            <div class="city-grid">
+                <div class="city-item" onclick="weatherApp.fetchWeatherData('ירושלים')">
+                    <i class="fas fa-landmark"></i>
+                    <span>ירושלים</span>
                 </div>
-            </section>
-
-            <section class="weather-explanation">
-                <h2><i class="fas fa-graduation-cap"></i> הבנת נתוני מזג האוויר</h2>
-                <div class="explanation-grid">
-                    <div class="explanation-item">
-                        <h3><i class="fas fa-thermometer-half"></i> טמפרטורה</h3>
-                        <p>מציגה את מידת החום או הקור באוויר, נמדדת במעלות צלזיוס. "מרגיש כמו" מתייחס לטמפרטורה המורגשת בפועל, בהתחשב בגורמים כמו רוח ולחות.</p>
-                    </div>
-                    <div class="explanation-item">
-                        <h3><i class="fas fa-tint"></i> לחות</h3>
-                        <p>אחוז אדי המים באוויר. לחות גבוהה יכולה לגרום לתחושת חום גבוהה יותר בקיץ ותחושת קור בחורף.</p>
-                    </div>
-                    <div class="explanation-item">
-                        <h3><i class="fas fa-wind"></i> רוח</h3>
-                        <p>מהירות הרוח נמדדת במטרים לשנייה. כיוון הרוח מצוין במעלות, כאשר 0° או 360° מציין רוח צפונית.</p>
-                    </div>
-                    <div class="explanation-item">
-                        <h3><i class="fas fa-compress-arrows-alt"></i> לחץ אטמוספרי</h3>
-                        <p>נמדד ביחידות של הקטופסקל (hPa). לחץ גבוה מ-1013 hPa מעיד בדרך כלל על מזג אוויר יציב, בעוד לחץ נמוך יותר עשוי להצביע על סיכוי לגשם.</p>
-                    </div>
-                    <div class="explanation-item">
-                        <h3><i class="fas fa-cloud"></i> עננות</h3>
-                        <p>אחוז השמיים המכוסה בעננים. 0% מציין שמיים בהירים לחלוטין, בעוד 100% מציין שמיים מעוננים לגמרי.</p>
-                    </div>
-                    <div class="explanation-item">
-                        <h3><i class="fas fa-eye"></i> ראות</h3>
-                        <p>המרחק המקסימלי שניתן לראות בבירור, נמדד במטרים. ראות נמוכה יכולה להיות בשל ערפל, גשם או זיהום אוויר.</p>
-                    </div>
+                <div class="city-item" onclick="weatherApp.fetchWeatherData('תל אביב-יפו')">
+                    <i class="fas fa-building"></i>
+                    <span>תל אביב</span>
                 </div>
-            </section>
+                <div class="city-item" onclick="weatherApp.fetchWeatherData('חיפה')">
+                    <i class="fas fa-ship"></i>
+                    <span>חיפה</span>
+                </div>
+                <div class="city-item" onclick="weatherApp.fetchWeatherData('באר שבע')">
+                    <i class="fas fa-tree"></i>
+                    <span>באר שבע</span>
+                </div>
+                <div class="city-item" onclick="weatherApp.fetchWeatherData('אילת')">
+                    <i class="fas fa-umbrella-beach"></i>
+                    <span>אילת</span>
+                </div>
+                <div class="city-item" onclick="weatherApp.fetchWeatherData('נצרת')">
+                    <i class="fas fa-leaf"></i>
+                    <span>נצרת</span>
+                </div>
+            </div>
+        </section>
 
-<section class="air-quality-explanation">
-    <h2><i class="fas fa-wind"></i> הבנת מדד איכות האוויר</h2>
-    <p>מדד איכות האוויר (AQI) הוא מדד המשמש להערכת איכות האוויר ורמת הזיהום. המדד נע בין 1 ל-5, כאשר:</p>
-    <ul>
-        <li><span class="aqi-good">1 - טובה</span><span class="description">איכות אוויר משביעת רצון, זיהום אוויר מועט או ללא זיהום.</span></li>
-        <li><span class="aqi-moderate">2 - סבירה</span><span class="description">איכות אוויר קבילה. עם זאת, עבור חלק קטן מהאנשים יתכנו חששות בריאותיים.</span></li>
-        <li><span class="aqi-unhealthy-sensitive">3 - בינונית</span><span class="description">חברי קבוצות רגישות עלולים לחוות השפעות בריאותיות. הציבור הרחב פחות מושפע.</span></li>
-        <li><span class="aqi-unhealthy">4 - ירודה</span><span class="description">כל אחד עלול להתחיל לחוות השפעות בריאותיות. חברי קבוצות רגישות עלולים לחוות השפעות חמורות יותר.</span></li>
-        <li><span class="aqi-very-unhealthy">5 - גרועה</span><span class="description">אזהרות בריאותיות של מצבי חירום. כלל האוכלוסייה סביר שתושפע.</span></li>
-    </ul>
-</section>
+        <section class="weather-explanation">
+            <h2><i class="fas fa-graduation-cap"></i> הבנת נתוני מזג האוויר</h2>
+            <div class="explanation-grid">
+                <div class="explanation-item">
+                    <h3><i class="fas fa-thermometer-half"></i> טמפרטורה</h3>
+                    <p>מציגה את מידת החום או הקור באוויר, נמדדת במעלות צלזיוס. "מרגיש כמו" מתייחס לטמפרטורה המורגשת
+                        בפועל, בהתחשב בגורמים כמו רוח ולחות.</p>
+                </div>
+                <div class="explanation-item">
+                    <h3><i class="fas fa-tint"></i> לחות</h3>
+                    <p>אחוז אדי המים באוויר. לחות גבוהה יכולה לגרום לתחושת חום גבוהה יותר בקיץ ותחושת קור בחורף.</p>
+                </div>
+                <div class="explanation-item">
+                    <h3><i class="fas fa-wind"></i> רוח</h3>
+                    <p>מהירות הרוח נמדדת במטרים לשנייה. כיוון הרוח מצוין במעלות, כאשר 0° או 360° מציין רוח צפונית.</p>
+                </div>
+                <div class="explanation-item">
+                    <h3><i class="fas fa-compress-arrows-alt"></i> לחץ אטמוספרי</h3>
+                    <p>נמדד ביחידות של הקטופסקל (hPa). לחץ גבוה מ-1013 hPa מעיד בדרך כלל על מזג אוויר יציב, בעוד לחץ
+                        נמוך יותר עשוי להצביע על סיכוי לגשם.</p>
+                </div>
+                <div class="explanation-item">
+                    <h3><i class="fas fa-cloud"></i> עננות</h3>
+                    <p>אחוז השמיים המכוסה בעננים. 0% מציין שמיים בהירים לחלוטין, בעוד 100% מציין שמיים מעוננים
+                        לגמרי.</p>
+                </div>
+                <div class="explanation-item">
+                    <h3><i class="fas fa-eye"></i> ראות</h3>
+                    <p>המרחק המקסימלי שניתן לראות בבירור, נמדד במטרים. ראות נמוכה יכולה להיות בשל ערפל, גשם או זיהום
+                        אוויר.</p>
+                </div>
+            </div>
+        </section>
 
-            <section class="features">
-                <h2><i class="fas fa-star"></i> תכונות מרכזיות</h2>
-                <ul>
-                    <li><i class="fas fa-map-marked-alt"></i> תחזית מדויקת לכל עיר בישראל</li>
-                    <li><i class="fas fa-calendar-alt"></i> תחזית מפורטת ל-5 ימים קדימה</li>
-                    <li><i class="fas fa-chart-line"></i> גרפים ויזואליים של מגמות מזג האוויר</li>
-                    <li><i class="fas fa-bell"></i> התראות על תנאי מזג אוויר קיצוניים</li>
-                    <li><i class="fas fa-history"></i> היסטוריית מזג אוויר ונתונים סטטיסטיים</li>
-                    <li><i class="fas fa-mobile-alt"></i> ממשק ידידותי למשתמש ומותאם למובייל</li>
-                </ul>
-            </section>
+        <section class="air-quality-explanation">
+            <h2><i class="fas fa-wind"></i> הבנת מדד איכות האוויר</h2>
+            <p>מדד איכות האוויר (AQI) הוא מדד המשמש להערכת איכות האוויר ורמת הזיהום. המדד נע בין 1 ל-5, כאשר:</p>
+            <ul>
+                <li><span class="aqi-good">1 - טובה</span><span class="description">איכות אוויר משביעת רצון, זיהום אוויר מועט או ללא זיהום.</span>
+                </li>
+                <li><span class="aqi-moderate">2 - סבירה</span><span class="description">איכות אוויר קבילה. עם זאת, עבור חלק קטן מהאנשים יתכנו חששות בריאותיים.</span>
+                </li>
+                <li><span class="aqi-unhealthy-sensitive">3 - בינונית</span><span class="description">חברי קבוצות רגישות עלולים לחוות השפעות בריאותיות. הציבור הרחב פחות מושפע.</span>
+                </li>
+                <li><span class="aqi-unhealthy">4 - ירודה</span><span class="description">כל אחד עלול להתחיל לחוות השפעות בריאותיות. חברי קבוצות רגישות עלולים לחוות השפעות חמורות יותר.</span>
+                </li>
+                <li><span class="aqi-very-unhealthy">5 - גרועה</span><span class="description">אזהרות בריאותיות של מצבי חירום. כלל האוכלוסייה סביר שתושפע.</span>
+                </li>
+            </ul>
+        </section>
 
-            <section class="why-us">
-                <h2><i class="fas fa-question-circle"></i> למה כיף פה?</h2>
-                <p>
-                    אפליקציית מזג האוויר שלנו מציעה יותר מסתם תחזית. אנו משלבים נתונים ממקורות מהימנים, טכנולוגיה מתקדמת וממשק ידידותי למשתמש כדי לספק לכם:
-                </p>
-                <ul>
-                    <li><i class="fas fa-check-circle"></i> תחזיות מדויקות ואמינות</li>
-                    <li><i class="fas fa-check-circle"></i> עדכונים בזמן אמת</li>
-                    <li><i class="fas fa-check-circle"></i> מידע מפורט ומקיף</li>
-                    <li><i class="fas fa-check-circle"></i> התאמה אישית לצרכים שלכם</li>
-                    <li><i class="fas fa-check-circle"></i> תמיכה בכל המכשירים</li>
-                    <li><i class="fas fa-check-circle"></i>נגיש לשימוש חינם בכל מקום ובכל זמן</li>
-                </ul>
-                <p>
-                    עם האפליקציה שלנו, תוכלו לתכנן את יומכם בביטחון, בין אם אתם מתכננים טיול, אירוע בחוץ או פשוט רוצים לדעת מה ללבוש מחר.
-                </p>
-            </section>
-        </main>
-       <footer>
-            <p>&copy; 2024 אפליקציית מזג האוויר המתקדמת של ישראל | פותח על ידי <a href="https://yehudaheller.github.io/" target="_blank" rel="noopener">Yehuda Heller</a> <i class="fas fa-code"></i></p>
-        </footer>
-    </div>
-    <script src="shared.js" defer></script>
-    <script src="app.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <section class="features">
+            <h2><i class="fas fa-star"></i> תכונות מרכזיות</h2>
+            <ul>
+                <li><i class="fas fa-map-marked-alt"></i> תחזית מדויקת לכל עיר בישראל</li>
+                <li><i class="fas fa-calendar-alt"></i> תחזית מפורטת ל-5 ימים קדימה</li>
+                <li><i class="fas fa-chart-line"></i> גרפים ויזואליים של מגמות מזג האוויר</li>
+                <li><i class="fas fa-bell"></i> התראות על תנאי מזג אוויר קיצוניים</li>
+                <li><i class="fas fa-history"></i> היסטוריית מזג אוויר ונתונים סטטיסטיים</li>
+                <li><i class="fas fa-mobile-alt"></i> ממשק ידידותי למשתמש ומותאם למובייל</li>
+            </ul>
+        </section>
+
+        <section class="why-us">
+            <h2><i class="fas fa-question-circle"></i> למה כיף פה?</h2>
+            <p>
+                אפליקציית מזג האוויר שלנו מציעה יותר מסתם תחזית. אנו משלבים נתונים ממקורות מהימנים, טכנולוגיה מתקדמת
+                וממשק ידידותי למשתמש כדי לספק לכם:
+            </p>
+            <ul>
+                <li><i class="fas fa-check-circle"></i> תחזיות מדויקות ואמינות</li>
+                <li><i class="fas fa-check-circle"></i> עדכונים בזמן אמת</li>
+                <li><i class="fas fa-check-circle"></i> מידע מפורט ומקיף</li>
+                <li><i class="fas fa-check-circle"></i> התאמה אישית לצרכים שלכם</li>
+                <li><i class="fas fa-check-circle"></i> תמיכה בכל המכשירים</li>
+                <li><i class="fas fa-check-circle"></i>נגיש לשימוש חינם בכל מקום ובכל זמן</li>
+            </ul>
+            <p>
+                עם האפליקציה שלנו, תוכלו לתכנן את יומכם בביטחון, בין אם אתם מתכננים טיול, אירוע בחוץ או פשוט רוצים לדעת
+                מה ללבוש מחר.
+            </p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 אפליקציית מזג האוויר המתקדמת של ישראל | פותח על ידי <a href="https://yehudaheller.github.io/"
+                                                                              target="_blank" rel="noopener">Yehuda
+            Heller</a> <i class="fas fa-code"></i></p>
+    </footer>
+</div>
+<script src="app.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </body>
 </html>

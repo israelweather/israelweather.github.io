@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+     <style>
+        /* הוספת סגנון להודעת הסרת האחריות */
+        .disclaimer {
+            background-color: #f8d7da;
+            border: 1px solid #f5c6cb;
+            border-radius: 5px;
+            color: #721c24;
+            padding: 15px;
+            margin-top: 20px;
+            font-size: 0.9em;
+            line-height: 1.5;
+            text-align: center;
+        }
+        .disclaimer-title {
+            font-weight: bold;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>אודות אפליקציית מזג האוויר המתקדמת של ישראל</title>
+    <meta name="description" content="למד עוד על אפליקציית מזג האוויר המתקדמת של ישראל, המספקת תחזיות מדויקות ומידע מקיף על מזג האוויר בכל רחבי ישראל, תוך שמירה על ערכי היהדות.">
+    <meta name="keywords" content="מזג אוויר, ישראל, תחזית, אפליקציה, יהודה הלר, פיתוח, מטאורולוגיה">
+    <meta name="author" content="Yehuda Heller">
+    <link rel="canonical" href="https://israelweather.github.io/about.html">
+    <meta property="og:title" content="אודות אפליקציית מזג האוויר המתקדמת של ישראל">
+    <meta property="og:description" content="למד עוד על אפליקציית מזג האוויר המתקדמת של ישראל, המשלבת טכנולוגיה מתקדמת עם ערכי היהדות.">
+    <meta property="og:url" content="https://israelweather.github.io/about.html">
+    <meta property="og:type" content="website">
+    <link rel="shortcut icon" href="x-icon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="x-icon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .about-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .about-section {
+            background-color: var(--bg-color);
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .about-section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .about-section h2 {
+            margin-bottom: 1rem;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .about-section h2 i {
+            margin-left: 10px;
+            font-size: 1.5em;
+        }
+
+        .tech-icons {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 1.5rem;
+        }
+
+        .tech-icons i {
+            font-size: 3em;
+            transition: transform 0.3s ease;
+        }
+
+        .tech-icons i:hover {
+            transform: scale(1.2);
+        }
+
+        .back-to-home {
+            display: inline-flex;
+            align-items: center;
+            margin-top: 1.5rem;
+            padding: 0.75rem 1.5rem;
+            background-color: var(--primary-color);
+            color: var(--bg-color);
+            text-decoration: none;
+            border-radius: 30px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            font-weight: bold;
+        }
+
+        .back-to-home:hover {
+            background-color: var(--accent-color);
+            transform: translateY(-3px);
+        }
+
+        .back-to-home i {
+            margin-left: 10px;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .about-section {
+            animation: fadeIn 0.6s ease-out forwards;
+            opacity: 0;
+        }
+
+        .about-section:nth-child(1) { animation-delay: 0.1s; }
+        .about-section:nth-child(2) { animation-delay: 0.2s; }
+        .about-section:nth-child(3) { animation-delay: 0.3s; }
+        .about-section:nth-child(4) { animation-delay: 0.4s; }
+        .about-section:nth-child(5) { animation-delay: 0.5s; }
+
+        @media (max-width: 768px) {
+            .about-container {
+                padding: 1rem;
+            }
+
+            .about-section {
+                padding: 1.5rem;
+            }
+
+            .tech-icons i {
+                font-size: 2.5em;
+            }
+        }
+    </style>
+<</head>
+<body>
+    <button id="scrollToTopBtn" class="scroll-to-top" aria-label="גלול למעלה">
+        <i class="fas fa-chevron-up" aria-hidden="true"></i>
+    </button>
+    <button id="darkModeToggle" class="dark-mode-toggle" aria-label="החלף למצב לילה">
+        <i class="fas fa-moon" aria-hidden="true"></i>
+    </button>
+    <div class="about-container">
+        <header>
+            <h1><i class="fas fa-info-circle" style="color: #3498db;"></i> אודות אפליקציית מזג האוויר המתקדמת של ישראל</h1>
+        </header>
+        <main>
+            <section class="about-section">
+                <h2><i class="fas fa-user" style="color: #e74c3c;"></i> מי אני</h2>
+                <p><i class="fas fa-hand-peace" style="color: #f39c12;"></i> שלום, אני יהודה הלר, מפתח ויוצר של אפליקציית מזג האוויר המתקדמת של ישראל. כמפתח תוכנה וחובב מטאורולוגיה, שילבתי את התשוקה שלי לטכנולוגיה עם העניין שלי במזג האוויר כדי ליצור את האפליקציה המקיפה והמדויקת ביותר למזג האוויר בישראל.</p>
+            </section>
+
+            <section class="about-section">
+                <h2><i class="fas fa-bullseye" style="color: #2ecc71;"></i> המשימה שלי</h2>
+                <p><i class="fas fa-chart-line" style="color: #3498db;"></i> המטרה שלי היא להנגיש מידע מטאורולוגי מורכב בצורה פשוטה וידידותית למשתמש. אני מאמין שגישה למידע מדויק ועדכני על מזג האוויר יכולה לשפר את איכות החיים ולסייע בקבלת החלטות יומיומיות חכמות יותר. שאיפתי היא להפוך את האפליקציה למקור האמין והנוח ביותר למידע על מזג האוויר בישראל.</p>
+            </section>
+
+            <section class="about-section">
+                <h2><i class="fas fa-cogs" style="color: #9b59b6;"></i> הטכנולוגיה</h2>
+                <p><i class="fas fa-database" style="color: #e67e22;"></i> אני משתמש ב-API מתקדמים ומהימנים לאיסוף נתוני מזג אוויר ממקורות מובילים בעולם. האפליקציה בנויה בטכנולוגיות החדישות ביותר, כולל HTML5, CSS3, JavaScript ו-Python, כדי להבטיח חוויית משתמש חלקה ומהירה. אני מתעדכן באופן קבוע כדי להביא לכם את הנתונים המדויקים ביותר בזמן אמת.</p>
+                <div class="tech-icons">
+                    <i class="fab fa-html5" style="color: #e34c26;" title="HTML5"></i>
+                    <i class="fab fa-css3-alt" style="color: #264de4;" title="CSS3"></i>
+                    <i class="fab fa-js" style="color: #f0db4f;" title="JavaScript"></i>
+                    <i class="fab fa-python" style="color: #306998;" title="Python"></i>
+                </div>
+            </section>
+
+            <section class="about-section">
+                <h2><i class="fas fa-fingerprint" style="color: #1abc9c;"></i> מה מייחד את האפליקציה</h2>
+                <p><i class="fas fa-star" style="color: #f1c40f;"></i> הייחודיות של האפליקציה טמונה בדיוק הגבוה של התחזיות, בממשק המשתמש הידידותי, ובהתאמה המלאה לצרכים המקומיים של ישראל. האפליקציה מספקת לא רק תחזיות יומיות, אלא גם ניתוחים מעמיקים של מגמות מזג אוויר, התראות בזמן אמת על תנאי מזג אוויר קיצוניים, וטיפים מותאמים אישית לכל משתמש.</p>
+            </section>
+
+            <section class="about-section">
+                <h2><i class="fas fa-shield-alt" style="color: #3498db;"></i> פרטיות ואחריות</h2>
+                <p><i class="fas fa-user-shield" style="color: #e74c3c;"></i> אני מחויב לשמירה על פרטיות המשתמשים. כל המידע שנאסף משמש אך ורק לשיפור חוויית השימוש באפליקציה ולא נעשה בו שימוש למטרות אחרות. חשוב לציין כי למרות מאמציי להביא את המידע המדויק ביותר, השימוש בתחזיות ובמידע המסופק באפליקציה הוא על אחריות המשתמש בלבד.</p>
+            </section>
+
+            <section class="about-section">
+                <h2><i class="fas fa-comments" style="color: #3498db;"></i> משוב ויצירת קשר</h2>
+                <p><i class="fas fa-envelope" style="color: #e74c3c;"></i> אני מעריך מאוד את המשוב שלכם. אם יש לכם הצעות לשיפור, שאלות או אם נתקלתם בבעיות בשימוש באפליקציה, אנא אל תהססו ליצור איתי קשר. המשוב שלכם עוזר לי להשתפר ולהתאים את האפליקציה לצרכים שלכם. ניתן ליצור איתי קשר דרך הפרופיל שלי ב-<a href="https://www.linkedin.com/in/yourprofile" target="_blank" rel="noopener">LinkedIn <i class="fab fa-linkedin" style="color: #0077B5;"></i></a>.</p>
+            </section>
+
+            <div class="disclaimer">
+        <div class="disclaimer-title"><i class="fas fa-exclamation-triangle" style="color: #721c24;"></i> הסרת אחריות</div>
+        <p>המידע המוצג באפליקציה זו מסופק "כפי שהוא" ללא כל אחריות, מפורשת או משתמעת. למרות מאמצינו לספק מידע מדויק ועדכני, איננו מתחייבים לדיוק, שלמות, או התאמה למטרה מסוימת של המידע המוצג. השימוש באפליקציה ובמידע המסופק בה הוא על אחריות המשתמש בלבד. אנו ממליצים תמיד לבדוק מקורות מידע נוספים ורשמיים בעת קבלת החלטות הקשורות למזג האוויר ובפרט להסתמך על מקורות רשמיים של מדינת ישראל.</p>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 אפליקציית מזג האוויר המתקדמת של ישראל | פותח על ידי <a href="https://www.linkedin.com/in/yourprofile" target="_blank" rel="noopener">יהודה הלר <i class="fab fa-linkedin" style="color: #0077B5;"></i></a></p>
+    </footer>
+    </div>
+
+            <a href="index.html" class="back-to-home"><i class="fas fa-home" style="color: #ffffff;"></i> חזרה לעמוד הראשי</a>
+        </main>
+        <footer>
+            <p>&copy; 2024 אפליקציית מזג האוויר המתקדמת של ישראל | פותח על ידי <a href="https://www.linkedin.com/in/yourprofile" target="_blank" rel="noopener">יהודה הלר <i class="fab fa-linkedin" style="color: #0077B5;"></i></a></p>
+        </footer>
+    </div>
+
+
+    <script src="shared.js" defer></script>
+</body>
+</html>
