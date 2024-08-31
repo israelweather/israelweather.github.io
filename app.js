@@ -294,12 +294,17 @@ function displayWeatherData(data, cityHebrew) {
         const forecastTemps = document.createElement('div');
         forecastTemps.classList.add('forecast-temps');
 
-        const maxTemp = document.createElement('span');
+        const tempRangeLabel = document.createElement('div');
+        tempRangeLabel.classList.add('temp-range-label');
+        tempRangeLabel.textContent = 'טווח טמפ\'';
+        forecastTemps.appendChild(tempRangeLabel);
+
+        const maxTemp = document.createElement('div');
         maxTemp.classList.add('temp', 'max-temp');
         maxTemp.innerHTML = `<i class="fas fa-arrow-up"></i> ${formatTemperature(forecastData.temp_max)}`;
         forecastTemps.appendChild(maxTemp);
 
-        const minTemp = document.createElement('span');
+        const minTemp = document.createElement('div');
         minTemp.classList.add('temp', 'min-temp');
         minTemp.innerHTML = `<i class="fas fa-arrow-down"></i> ${formatTemperature(forecastData.temp_min)}`;
         forecastTemps.appendChild(minTemp);
