@@ -181,7 +181,7 @@ function displayWeatherData(data, cityHebrew) {
 
     const feelsLike = document.createElement('div');
     feelsLike.classList.add('feels-like');
-    feelsLike.innerHTML = `<i class="fas fa-thermometer-half"></i> ${formatTemperature(currentWeather.feels_like)}`;
+    feelsLike.innerHTML = `<i class="fas fa-thermometer-half"></i>  ${formatTemperature(currentWeather.feels_like)}`;
     temperatureDiv.appendChild(feelsLike);
 
     mainInfo.appendChild(temperatureDiv);
