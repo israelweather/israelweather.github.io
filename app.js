@@ -202,8 +202,8 @@ function displayWeatherData(data, cityHebrew) {
         { icon: 'fa-compress-arrows-alt', text: `לחץ: ${currentWeather.pressure} hPa` },
         { icon: 'fa-eye', text: `ראות: ${currentWeather.visibility} מטר` },
         { icon: 'fa-cloud', text: `עננות: ${currentWeather.cloudiness}%` },
-        { icon: 'fa-sun', text: `זריחה: ${currentWeather.sunrise}` },
-        { icon: 'fa-moon', text: `שקיעה: ${currentWeather.sunset}` },
+        { icon: 'fa-sun', text: `זריחה: ${adjustTime(currentWeather.sunrise)}` },
+        { icon: 'fa-moon', text: `שקיעה: ${adjustTime(currentWeather.sunset)}` },
         { icon: 'fa-cloud-rain', text: `גשם: ${currentWeather.rain} מ"מ` },
         { icon: 'fa-snowflake', text: `שלג: ${currentWeather.snow} מ"מ` }
     ];
@@ -672,3 +672,13 @@ function getPollutantName(pollutant) {
     }
 }
 
+function adjustTime(timeString) {
+    const [hours, minutes] = timeString.split(':').map(Number);
+    let adjustedHours = hours + 3;
+
+    if (adjustedHours >= 24) {
+        adjustedHours -= 24;
+    }
+
+    return `${adjustedHours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}`;
+}
