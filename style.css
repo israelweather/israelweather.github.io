@@ -1979,3 +1979,89 @@ canvas {
 body {
     padding-top: 20px;
 }
+
+
+/* Accessibility Menu Styles */
+.accessibility-menu {
+    position: fixed;
+    top: 100px; /* Moved down */
+    right: 20px;
+    z-index: 9999;
+}
+
+#accessibility-toggle {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+
+#accessibility-toggle:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+}
+
+.accessibility-options {
+    display: none;
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    margin-top: 10px;
+}
+
+.accessibility-options.show {
+    display: block;
+}
+
+.accessibility-options button {
+    display: block;
+    width: 100%;
+    background-color: #f8f9fa;
+    color: #333;
+    border: none;
+    padding: 10px;
+    margin: 5px 0;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    text-align: right;
+}
+
+.accessibility-options button:hover {
+    background-color: #e9ecef;
+}
+
+.accessibility-options i {
+    margin-left: 10px;
+    font-size: 18px;
+}
+
+/* Accessibility Classes */
+.high-contrast {
+    background-color: black !important;
+    color: yellow !important;
+}
+
+.grayscale {
+    filter: grayscale(100%) !important;
+}
+
+.readable-font {
+    font-family: Arial, sans-serif !important;
+    line-height: 1.5 !important;
+}
+
+.underline-links a {
+    text-decoration: underline !important;
+}
+
+.increased-spacing {
+    letter-spacing: 1px !important;
+    word-spacing: 3px !important;
+}
