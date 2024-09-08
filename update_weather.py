@@ -7,20 +7,10 @@ from datetime import datetime, timedelta
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
-API_KEY = os.environ['OPENWEATHERMAP_API_KEY']
+API_KEY = '2480e87306578aee0e2b4063641d2414'
 
 CITIES = [
-    'ירושלים', 'תל אביב-יפו', 'חיפה', 'ראשון לציון', 'פתח תקווה', 'אשדוד', 'נתניה', 'באר שבע', 'חולון', 'בני ברק',
-    'רמת גן', 'אשקלון', 'רחובות', 'בת ים', 'בית שמש', 'כפר סבא', 'הרצליה', 'חדרה', 'נצרת', 'לוד',
-    'רמלה', 'רעננה', 'גבעתיים', 'הוד השרון', 'קריית אתא', 'קריית גת', 'נהריה', 'קריית מוצקין', 'אילת', 'אום אל-פחם',
-    'ראש העין', 'עפולה', 'עכו', 'אלעד', 'כרמיאל', 'טבריה', 'נס ציונה', 'יבנה', 'מודיעין עילית', 'דימונה',
-    'קריית ביאליק', 'קריית ים', 'קריית אונו', 'צפת', 'אור יהודה', 'נתיבות', 'ביתר עילית', 'שפרעם', 'טירה', 'אופקים',
-    'טמרה', 'מגדל העמק', 'טייבה', 'קריית שמונה', 'נשר', 'קלנסווה', 'כפר קאסם', 'אריאל', 'טירת כרמל', 'אור עקיבא',
-    'בית שאן', 'עראבה', 'שדרות', 'ערד', 'כפר יונה', 'גבעת שמואל', 'כפר כנא', 'ירכא', 'רכסים', 'אבו סנאן',
-    'טורעאן', 'באר יעקב', 'בית גן', 'גת', 'דבוריה', 'זכרון יעקב', 'יפיע', 'ירוחם', 'כסיפה', 'כפר ברא',
-    'כפר מנדא', 'כפר קרע', 'להבים', 'מזכרת בתיה', 'מעיליא', 'מצפה רמון', 'משהד', 'נחף', 'עומר', 'עין מאהל',
-    'עספיא', 'ערערה', 'פוריידיס', 'פסוטה', 'פרדס חנה-כרכור', 'פרדסיה', 'צור הדסה', 'קצרין', 'קריית טבעון', 'ראמה',
-    'ריינה', 'רמת ישי', 'שוהם', 'שלומי', 'שעב', 'תל מונד','מעלות תרשיחא'
+    'ירושלים', 'תל אביב-יפו', 'חיפה'
 ]
 
 def get_air_pollution(lat, lon):
@@ -45,6 +35,7 @@ def get_air_pollution(lat, lon):
         logging.error(f"Error fetching air pollution data: {e}")
         raise
 
+
 def get_weather(city):
     try:
         current_url = f"http://api.openweathermap.org/data/2.5/weather?q={city},IL&appid={API_KEY}&units=metric"
@@ -59,8 +50,26 @@ def get_weather(city):
         current_data = current_response.json()
         forecast_data = forecast_response.json()
 
-        # Process 5-day forecast
+        # Process current day and 5-day forecast
         daily_forecasts = {}
+        current_date = datetime.now().strftime('%Y-%m-%d')
+
+        # Initialize current day with current weather data
+        daily_forecasts[current_date] = {
+            'temp_min': current_data['main']['temp_min'],
+            'temp_max': current_data['main']['temp_max'],
+            'feels_like': current_data['main']['feels_like'],
+            'description': current_data['weather'][0]['description'],
+            'icon': current_data['weather'][0]['icon'],
+            'humidity': current_data['main']['humidity'],
+            'wind_speed': current_data['wind']['speed'],
+            'wind_direction': current_data['wind']['deg'],
+            'pressure': current_data['main']['pressure'],
+            'cloudiness': current_data['clouds']['all'],
+            'rain': current_data.get('rain', {}).get('1h', 0),
+            'snow': current_data.get('snow', {}).get('1h', 0)
+        }
+
         for item in forecast_data['list']:
             date = datetime.fromtimestamp(item['dt']).strftime('%Y-%m-%d')
             if date not in daily_forecasts:
@@ -96,8 +105,8 @@ def get_weather(city):
             'current': {
                 'temperature': current_data['main']['temp'],
                 'feels_like': current_data['main']['feels_like'],
-                'temp_min': current_data['main']['temp_min'],
-                'temp_max': current_data['main']['temp_max'],
+                'temp_min': daily_forecasts[current_date]['temp_min'],
+                'temp_max': daily_forecasts[current_date]['temp_max'],
                 'description': current_data['weather'][0]['description'],
                 'icon': current_data['weather'][0]['icon'],
                 'humidity': current_data['main']['humidity'],
